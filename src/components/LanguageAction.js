@@ -26,7 +26,7 @@ export default function LanguageAction() {
   const storage = localStorage.getItem("i18nextLng");
 
   const fr = "fr";
-  const FR = "fr-FR";
+  /*const FR = "fr-FR";
   /*const BE = "fr-BE";
   const CA = "fr-CA";
   const CH = "fr-CH";
@@ -34,9 +34,9 @@ export default function LanguageAction() {
   const MC = "fr-MC";*/
   const langFr = "Français";
   const preferenceLangFr =
-    storage === fr || FR; /*|| BE || CA || CH || LU || MC;*/
+    storage === fr; /*|| FR; /*|| BE || CA || CH || LU || MC;*/
   if (
-    storage === fr ||
+    storage === fr /*||
     storage === FR /*||
     storage === BE ||
     storage === CA ||
@@ -47,7 +47,7 @@ export default function LanguageAction() {
     localStorage.setItem("preference-lang", langFr);
   }
 
-  const en = "en";
+  const en = "en"; /*
   const US = "en-US";
   /*const TT = "en-TT";
   const ZA = "en-ZA";
@@ -62,7 +62,7 @@ export default function LanguageAction() {
   const BZ = "en-BZ";
   const AU = "en-AU";*/
   const langEn = "English";
-  const preferenceLangEn = storage === en || US;
+  const preferenceLangEn = storage === en; /*|| US;
   /*TT ||
     ZA ||
     ZW ||
@@ -76,7 +76,7 @@ export default function LanguageAction() {
     BZ ||
     AU;*/
   if (
-    storage === en ||
+    storage === en /*||
     storage === US
     /*storage === TT ||
     storage === ZA ||
