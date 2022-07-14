@@ -25,11 +25,16 @@ export default function LanguageAction() {
   const storage = localStorage.getItem("i18nextLng");
 
   const fr = "fr";
+  const FR = "fr-FR";
   const langFr = "Français";
-  const preferenceLangFr = storage === fr;
-  if (storage === fr) {
+  const preferenceLangFr = storage === fr || FR;
+  if (storage === fr || storage === FR) {
     localStorage.setItem("preference-lang", langFr);
   }
+  /*
+  if (storage === FR) {
+    localStorage.setItem("preference-lang", langFr);
+  }*/
 
   const en = "en";
   const langEn = "English";
