@@ -26,21 +26,22 @@ export default function LanguageAction() {
 
   const fr = "fr";
   const FR = "fr-FR";
-  const BE = "fr-BE";
+  /*const BE = "fr-BE";
   const CA = "fr-CA";
   const CH = "fr-CH";
   const LU = "fr-LU";
-  const MC = "fr-MC";
+  const MC = "fr-MC";*/
   const langFr = "Français";
-  const preferenceLangFr = storage === fr || FR || BE || CA || CH || LU || MC;
+  const preferenceLangFr =
+    storage === fr || FR; /*|| BE || CA || CH || LU || MC;*/
   if (
     storage === fr ||
-    storage === FR ||
+    storage === FR /*||
     storage === BE ||
     storage === CA ||
     storage === CH ||
     storage === LU ||
-    storage === MC
+    storage === MC*/
   ) {
     localStorage.setItem("preference-lang", langFr);
   }
