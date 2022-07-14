@@ -18,6 +18,8 @@ export default function App() {
         <Route path="/P/ThreeMin" element={<ThreeMin />} />
         <Route path="/P/Search" element={<Search />} />
         <Route path="/P/Post" element={<Post />} />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/DarkMode" element={<DarkMode />} />
         <Route path="/Language" element={<Language />} />
         <Route path="*" element={<Home />} />

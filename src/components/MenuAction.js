@@ -13,13 +13,13 @@ export default function MenuAction() {
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div className="right">
           <h1>Menu</h1>
-          <NavLink className="navlink" to="/profile">
+          <NavLink className="navlink" to="/Profile">
             <li>Profile</li>
           </NavLink>
           <NavLink className="navlink" to="/DarkMode">
             <li>DarkMode</li>
           </NavLink>
-          <NavLink className="navlink" to="/settings">
+          <NavLink className="navlink" to="/Settings">
             <li>Parametres</li>
           </NavLink>
           <NavLink className="navlink" to="/Language">
