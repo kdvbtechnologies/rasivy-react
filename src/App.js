@@ -7,6 +7,8 @@ import Post from "./Pages/Post";
 import DarkMode from "./Pages/DarkMode";
 import Home from "./Pages/Home";
 import Language from "./Pages/Language";
+import Profile from "./Pages/Profile";
+import Settings from "./Pages/Settings";
 
 export default function App() {
   return (
