@@ -136,6 +136,9 @@ export default function LanguageAction() {
           <div className="language-select-language-btn">
             <div className="language-select">
               <select id="lang" onChange={selectLanguage} value={status}>
+                <option value="en">
+                  <p>&#127760;</p> English
+                </option>
                 <option value="" id="mylang">
                   <p>&#127760;</p>
                   {localStorage.getItem("preference-lang")}
@@ -143,9 +146,6 @@ export default function LanguageAction() {
                 <option value="">- - -</option>
                 <option value="fr">
                   <p>&#127760;</p> Français
-                </option>
-                <option value="en">
-                  <p>&#127760;</p> English
                 </option>
               </select>
             </div>
