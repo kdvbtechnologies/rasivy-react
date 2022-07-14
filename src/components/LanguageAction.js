@@ -26,7 +26,7 @@ export default function LanguageAction() {
   const storage = localStorage.getItem("i18nextLng");
 
   const fr = "fr";
-  /*const FR = "fr-FR";
+  const FR = "fr-FR";
   /*const BE = "fr-BE";
   const CA = "fr-CA";
   const CH = "fr-CH";
@@ -34,9 +34,9 @@ export default function LanguageAction() {
   const MC = "fr-MC";*/
   const langFr = "Français";
   const preferenceLangFr =
-    storage === fr; /*|| FR; /*|| BE || CA || CH || LU || MC;*/
+    storage === fr || FR; /*|| BE || CA || CH || LU || MC;*/
   if (
-    storage === fr /*||
+    storage === fr ||
     storage === FR /*||
     storage === BE ||
     storage === CA ||
