@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
+import "../darkmode.css";
 
 export default function LanguageAction() {
   const { t, i18n } = useTranslation();
