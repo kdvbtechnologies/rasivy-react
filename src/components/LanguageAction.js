@@ -26,20 +26,71 @@ export default function LanguageAction() {
 
   const fr = "fr";
   const FR = "fr-FR";
+  const BE = "fr-BE";
+  const CA = "fr-CA";
+  const CH = "fr-CH";
+  const LU = "fr-LU";
+  const MC = "fr-MC";
   const langFr = "Français";
-  const preferenceLangFr = storage === fr || FR;
-  if (storage === fr || storage === FR) {
+  const preferenceLangFr = storage === fr || FR || BE || CA || CH || LU || MC;
+  if (
+    storage === fr ||
+    storage === FR ||
+    storage === BE ||
+    storage === CA ||
+    storage === CH ||
+    storage === LU ||
+    storage === MC
+  ) {
     localStorage.setItem("preference-lang", langFr);
   }
-  /*
-  if (storage === FR) {
-    localStorage.setItem("preference-lang", langFr);
-  }*/
 
   const en = "en";
+  const TT = "en-TT";
+  const US = "en-US";
+  const ZA = "en-ZA";
+  const ZW = "en-ZW";
+  const PH = "en-PH";
+  const NZ = "en-NZ";
+  const JM = "en-JM";
+  const IE = "en-IE";
+  const GB = "en-GB";
+  const CB = "en-CB";
+  const enCA = "en-CA";
+  const BZ = "en-BZ";
+  const AU = "en-AU";
   const langEn = "English";
-  const preferenceLangEn = storage === en;
-  if (storage === en) {
+  const preferenceLangEn =
+    storage === en ||
+    TT ||
+    US ||
+    ZA ||
+    ZW ||
+    PH ||
+    NZ ||
+    JM ||
+    IE ||
+    GB ||
+    CB ||
+    enCA ||
+    BZ ||
+    AU;
+  if (
+    storage === en ||
+    storage === TT ||
+    storage === US ||
+    storage === ZA ||
+    storage === ZW ||
+    storage === PH ||
+    storage === NZ ||
+    storage === JM ||
+    storage === IE ||
+    storage === GB ||
+    storage === CB ||
+    storage === enCA ||
+    storage === BZ ||
+    storage === AU
+  ) {
     localStorage.setItem("preference-lang", langEn);
   }
 
