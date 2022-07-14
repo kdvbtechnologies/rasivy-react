@@ -46,8 +46,8 @@ export default function LanguageAction() {
   }
 
   const en = "en";
-  const TT = "en-TT";
   const US = "en-US";
+  /*const TT = "en-TT";
   const ZA = "en-ZA";
   const ZW = "en-ZW";
   const PH = "en-PH";
@@ -58,12 +58,10 @@ export default function LanguageAction() {
   const CB = "en-CB";
   const enCA = "en-CA";
   const BZ = "en-BZ";
-  const AU = "en-AU";
+  const AU = "en-AU";*/
   const langEn = "English";
-  const preferenceLangEn =
-    storage === en ||
-    TT ||
-    US ||
+  const preferenceLangEn = storage === en || US;
+  /*TT ||
     ZA ||
     ZW ||
     PH ||
@@ -74,11 +72,11 @@ export default function LanguageAction() {
     CB ||
     enCA ||
     BZ ||
-    AU;
+    AU;*/
   if (
     storage === en ||
-    storage === TT ||
-    storage === US ||
+    storage === US
+    /*storage === TT ||
     storage === ZA ||
     storage === ZW ||
     storage === PH ||
@@ -89,7 +87,7 @@ export default function LanguageAction() {
     storage === CB ||
     storage === enCA ||
     storage === BZ ||
-    storage === AU
+    storage === AU*/
   ) {
     localStorage.setItem("preference-lang", langEn);
   }
