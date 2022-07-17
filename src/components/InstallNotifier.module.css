@@ -1,0 +1,14 @@
+.host {
+    background: red;
+    border: none;
+    color: green;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.host:focus,
+.host:hover {
+    color: yellow;
+    outline: none;
+}
