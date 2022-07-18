@@ -10,7 +10,10 @@ const CACHED_FILES = [
   `${BASE}/favicon.ico`,
   `${BASE}/logo192.png`,
   `${BASE}/logo.svg`,
+  `${BASE}/static/css/main.d350960e.css`,
+  `${BASE}/static/js/main.9b51523e.js`,
   `${BASE}`,
+  "https://jamelfase.com/",
 ];
 
 self.addEventListener("install", (event) => {
