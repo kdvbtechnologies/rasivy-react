@@ -10,6 +10,7 @@ const CACHED_FILES = [
   `${BASE}/favicon.ico`,
   `${BASE}/logo192.png`,
   `${BASE}/logo.svg`,
+  `${BASE}`,
 ];
 
 self.addEventListener("install", (event) => {
