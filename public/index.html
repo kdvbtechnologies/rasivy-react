@@ -9,6 +9,13 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>rasivy</title>
+    <script>
+      window.addEventListener('load', () => {
+          if ("serviceWorker" in navigator) {
+              navigator.serviceWorker.register('/sw.js')
+          }
+      })
+  </script>
   </head>
   <body>
     <main id="root"><img alt="" src="logo.svg" /></main>
