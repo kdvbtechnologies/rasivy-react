@@ -1,22 +1,22 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V4";
+const PREFIX = "V2";
 const CACHED_FILES = [
-  /*"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
-   */
+  // production
+  `${BASE}/static/js/main.fa57e256.js`,
+  `${BASE}/static/css/main.d350960e.css`,
+  `${BASE}`,
   `${BASE}/App.js`,
   `${BASE}/sw.js`,
-  `${BASE}/static/js/bundle.js`,
   `${BASE}/manifest.json`,
   `${BASE}/favicon.ico`,
   `${BASE}/logo192.png`,
   `${BASE}/logo.svg`,
-  `${BASE}/static/css/main.d350960e.css`,
-  `${BASE}/static/js/main.9b51523e.js`,
   `${BASE}/Profile`,
-  `${BASE}`,
-  //"https://jamelfase.com/",
-  `${BASE}/static/js/main.fa57e256.js`,
   "https://reqres.in/api/unknown",
+  //"https://jamelfase.com/",
+
+  // developpement
+  //`${BASE}/static/js/bundle.js`,
 ];
 
 self.addEventListener("install", (event) => {
