@@ -15,7 +15,7 @@ const CACHED_FILES = [
   `${BASE}/Profile`,
   `${BASE}`,
   //"https://jamelfase.com/",
-  `${BASE}/js/main.fa57e256.js`,
+  `${BASE}/static/js/main.fa57e256.js`,
   "https://reqres.in/api/unknown",
 ];
 
