@@ -14,8 +14,9 @@ const CACHED_FILES = [
   `${BASE}/static/js/main.9b51523e.js`,
   `${BASE}/Profile`,
   `${BASE}`,
-  "https://reqres.in/api/unknown",
   //"https://jamelfase.com/",
+  `${BASE}/js/main.fa57e256.js`,
+  "https://reqres.in/api/unknown",
 ];
 
 self.addEventListener("install", (event) => {
