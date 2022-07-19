@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V2";
+const PREFIX = "V4";
 const CACHED_FILES = [
   /*"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
    */
@@ -14,8 +14,8 @@ const CACHED_FILES = [
   `${BASE}/static/js/main.9b51523e.js`,
   `${BASE}/Profile`,
   `${BASE}`,
-  "http://jsonplaceholder.typicode.com/posts",
-  "https://jamelfase.com/",
+  "https://reqres.in/api/unknown",
+  //"https://jamelfase.com/",
 ];
 
 self.addEventListener("install", (event) => {

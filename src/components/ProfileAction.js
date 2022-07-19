@@ -10,8 +10,8 @@ export default function ProfileAction() {
 
   useEffect(() => {
     axios
-      .get("http://jsonplaceholder.typicode.com/posts")
-      .then((res) => setPosts(res.data));
+      .get("https://reqres.in/api/unknown")
+      .then((res) => setPosts(res.data.data));
   }, []);
 
   return (
@@ -26,8 +26,8 @@ export default function ProfileAction() {
           <ul>
             {posts.map((post) => (
               <li key={post.id}>
-                <h4>{post.title}</h4>
-                <p>{post.body}</p>
+                <h4>{post.name}</h4>
+                <p>{post.color}</p>
               </li>
             ))}
           </ul>
