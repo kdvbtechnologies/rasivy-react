@@ -12,8 +12,10 @@ const CACHED_FILES = [
   `${BASE}/logo.svg`,
   `${BASE}/static/css/main.d350960e.css`,
   `${BASE}/static/js/main.9b51523e.js`,
+  `${BASE}/Profile`,
   `${BASE}`,
-  "https://jamelfase.com/",
+  "http://jsonplaceholder.typicode.com/posts",
+  //"https://jamelfase.com/",
 ];
 
 self.addEventListener("install", (event) => {
@@ -21,11 +23,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(PREFIX);
-      await Promise.all(
-        [...CACHED_FILES, "/index.html"].map((path) => {
-          return cache.add(new Request(path));
-        })
-      );
+      await cache.addAll([...CACHED_FILES, "/index.html"]);
     })()
   );
   console.log(`${PREFIX} Install`);
@@ -57,10 +55,16 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       (async () => {
         try {
+          // Respond from the cache if we can
+          //const cachedResponse = await caches.match(event.request);
+          //if (cachedResponse) return cachedResponse;
+
+          // Else, use preloaded response, if it's there
           const preloadResponse = await event.preloadResponse;
           if (preloadResponse) {
             return preloadResponse;
           }
+          // Else try the network
           return await fetch(event.request);
         } catch (error) {
           // if offline mode
