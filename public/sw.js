@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V1";
+const PREFIX = "V2";
 const CACHED_FILES = [
   /*"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
    */
