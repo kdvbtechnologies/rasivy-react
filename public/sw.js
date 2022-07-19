@@ -15,7 +15,7 @@ const CACHED_FILES = [
   `${BASE}/Profile`,
   `${BASE}`,
   "http://jsonplaceholder.typicode.com/posts",
-  //"https://jamelfase.com/",
+  "https://jamelfase.com/",
 ];
 
 self.addEventListener("install", (event) => {
