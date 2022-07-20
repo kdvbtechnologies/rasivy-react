@@ -26,6 +26,12 @@ export default function ThreeMinAction() {
               alt=""
             />
           </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/rasivyy/image/upload/v1657222555/Mes%20images-multiple/cah6po0mkm9oosixbsyq.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </>
