@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V2";
+const PREFIX = "V1";
 const CACHED_FILES = [
   // production
   `${BASE}/static/js/main.fa57e256.js`,
@@ -13,7 +13,6 @@ const CACHED_FILES = [
   `${BASE}/logo.svg`,
   `${BASE}/Profile`,
   "https://reqres.in/api/unknown",
-  //"https://jamelfase.com/",
 
   // developpement
   //`${BASE}/static/js/bundle.js`,
