@@ -9,20 +9,14 @@
     "axios": "^0.27.2",
     "i18next": "^21.8.13",
     "i18next-browser-languagedetector": "^6.1.4",
+    "js-cookie": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.18.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "start": "^5.1.0",
-    "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4",
-    "workbox-core": "^6.5.3",
-    "workbox-expiration": "^6.5.3",
-    "workbox-precaching": "^6.5.3",
-    "workbox-routing": "^6.5.3",
-    "workbox-strategies": "^6.5.3"
+    "react-scripts": "^5.0.1",
+    "universal-cookie": "^4.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

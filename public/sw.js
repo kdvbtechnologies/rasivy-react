@@ -2,8 +2,8 @@ const BASE = location.protocol + "//" + location.host;
 const PREFIX = "V1";
 const CACHED_FILES = [
   // production
-  `${BASE}/static/js/main.fa57e256.js`,
-  `${BASE}/static/css/main.d350960e.css`,
+  //`${BASE}/static/js/main.fa57e256.js`,
+  //`${BASE}/static/css/main.d350960e.css`,
   `${BASE}`,
   `${BASE}/App.js`,
   `${BASE}/sw.js`,
@@ -15,7 +15,7 @@ const CACHED_FILES = [
   "https://reqres.in/api/unknown",
 
   // developpement
-  //`${BASE}/static/js/bundle.js`,
+  `${BASE}/static/js/bundle.js`,
 ];
 
 self.addEventListener("install", (event) => {

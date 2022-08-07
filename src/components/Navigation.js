@@ -5,7 +5,7 @@ export default function Navigation() {
     <div className="navigation">
       <div className="left-navigation">
         <NavLink className="navlink" to="/">
-          <li>rasivy</li>
+          <li>ertiden</li>
         </NavLink>
       </div>
       <div className="right-navigation">

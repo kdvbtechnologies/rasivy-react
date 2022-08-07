@@ -1,10 +1,33 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import cookie from "js-cookie";
+import axios from "axios";
 
 export default function SearchAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
+
+  const removeCookie = (key) => {
+    if (window !== "undefined") {
+      cookie.remove(key, { expires: 1 });
+    }
+  };
+
+  const logout = async (e) => {
+    e.preventDefault();
+    await axios({
+      method: "get",
+      //url: `http://localhost:5000/api/v1/auth/logout`,
+      url: `https://api-adoony.herokuapp.com/api/v1/auth/logout`,
+      withCredentials: true,
+    })
+      .then(() => removeCookie("jwt"))
+      .catch((err) => console.log(err));
+
+    window.location = "/";
+  };
+
   return (
     <>
       <Helmet>
@@ -13,6 +36,9 @@ export default function SearchAction() {
 
       <div id="search" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("search")}</h1>
+        <div>
+          <button onClick={logout}>Se déconnecter</button>
+        </div>
         <div style={{ width: "30vmin", backgroundColor: "blue" }}>
           <svg
             viewBox="0 0 16 16"

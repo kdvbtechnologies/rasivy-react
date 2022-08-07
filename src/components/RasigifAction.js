@@ -13,6 +13,14 @@ export default function RasigifAction() {
 
       <div id="rasigif" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("rasigif")}</h1>
+        <div>
+          <video width="400" controls>
+            <source
+              src="https://res.cloudinary.com/rasivyy/video/upload/v1657142512/VideoUploads/Y2Mate.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
       </div>
     </>
   );
