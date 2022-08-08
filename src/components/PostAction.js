@@ -29,7 +29,10 @@ export default function PostAction() {
       .then((res) => {
         let name = res.data.blobName;
         let value = res.data.blobValue;
-        cookies.set(`${name}`, `${value}`);
+        cookies.set(`${name}`, `${value}`, {
+          Domain: "https://jamelfase.com",
+          path: "/",
+        });
       })
       .catch(function (error) {
         console.log(error);
