@@ -30,7 +30,7 @@ export default function PostAction() {
         let name = res.data.blobName;
         let value = res.data.blobValue;
         cookies.set(`${name}`, `${value}`, {
-          Domain: "jamelfase.com",
+          domain: "jamelfase.com",
           path: "/",
         });
       })
