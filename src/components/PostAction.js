@@ -17,12 +17,12 @@ export default function PostAction() {
       method: "post",
       url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
       //url: `http://localhost:5000/api/v1/auth/signin`,
+      headers: {
+        "Content-Type": "application/json",
+      },
       data: {
         email,
         password,
-      },
-      headers: {
-        "Content-Type": "application/json",
       },
       withCredentials: true,
     })
