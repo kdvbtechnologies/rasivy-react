@@ -23,7 +23,6 @@ export default function PostAction() {
       },
       headers: {
         "Content-Type": "application/json",
-        //"Authorization": `Bearer ${cookies.get("token")}`
       },
       withCredentials: true,
     })
@@ -31,7 +30,7 @@ export default function PostAction() {
         const name = res.data.blobName;
         const value = res.data.blobValue;
         cookies.set(`${name}`, `${value}`, {
-          Domain: "jamelfase.com",
+          domain: "https://jamelfase.com",
           path: "/",
         });
       })
