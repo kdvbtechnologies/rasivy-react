@@ -15,8 +15,8 @@ export default function PostAction() {
     e.preventDefault();
     axios({
       method: "post",
-      //url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
-      url: `http://localhost:5000/api/v1/auth/signin`,
+      url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
+      //url: `http://localhost:5000/api/v1/auth/signin`,
       data: {
         email,
         password,
@@ -29,10 +29,7 @@ export default function PostAction() {
       .then((res) => {
         const name = res.data.blobName;
         const value = res.data.blobValue;
-        cookies.set(`${name}`, `${value}`, {
-          domain: "https://jamelfase.com",
-          path: "/",
-        });
+        cookies.set(`${name}`, `${value}`);
       })
       .catch(function (error) {
         console.log(error);
