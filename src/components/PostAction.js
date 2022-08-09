@@ -25,6 +25,7 @@ export default function PostAction() {
         "Content-Type": "application/json",
       },
       withCredentials: true,
+      credentials: "include",
     })
       .then((res) => {
         const name = res.data.blobName;
