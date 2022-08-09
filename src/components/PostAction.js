@@ -11,26 +11,27 @@ export default function PostAction() {
   const [password, setPassword] = useState("");
   const cookies = new Cookies();
 
-  async function Signin(e) {
+  function Signin(e) {
     e.preventDefault();
-    await axios({
+    axios({
       method: "post",
-      url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
-      //url: `http://localhost:5000/api/v1/auth/signin`,
+      //url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
+      url: `http://localhost:5000/api/v1/auth/signin`,
       data: {
         email,
         password,
       },
       headers: {
         "Content-Type": "application/json",
+        //"Authorization": `Bearer ${cookies.get("token")}`
       },
       withCredentials: true,
     })
       .then((res) => {
-        let name = res.data.blobName;
-        let value = res.data.blobValue;
+        const name = res.data.blobName;
+        const value = res.data.blobValue;
         cookies.set(`${name}`, `${value}`, {
-          domain: "jamelfase.com",
+          Domain: "jamelfase.com",
           path: "/",
         });
       })
