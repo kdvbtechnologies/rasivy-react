@@ -83,7 +83,6 @@
 	color: #059819;
 }
 
-
 #title .language-select-language-btn .language-btn {
 	display: flex;
 	justify-content: center;
@@ -95,7 +94,8 @@
 	text-decoration: none; 
 	cursor: pointer; 
 	color: #f5f5f5; 
-	background-color: #0000FF; 
+	background-color: #ff0000;
+	/*background-color: #0000FF; */
 	border-radius: 5px; 
 	border: none;
 	font-size: 17px; 

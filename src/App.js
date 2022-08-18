@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Pages/Menu";
 import Search from "./Pages/Search";
-import RasiGIF from "./Pages/RasiGIF";
-import ThreeMin from "./Pages/ThreeMin";
+import Photos from "./Pages/Photos";
+import Streaming from "./Pages/Streaming";
 import Post from "./Pages/Post";
 import DarkMode from "./Pages/DarkMode";
 import Home from "./Pages/Home";
@@ -16,8 +16,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/P/Menu" element={<Menu />} />
-        <Route path="/P/RasiGIF" element={<RasiGIF />} />
-        <Route path="/P/ThreeMin" element={<ThreeMin />} />
+        <Route path="/P/Photos" element={<Photos />} />
+        <Route path="/P/Streaming" element={<Streaming />} />
         <Route path="/P/Search" element={<Search />} />
         <Route path="/P/Post" element={<Post />} />
         <Route path="/Settings" element={<Settings />} />

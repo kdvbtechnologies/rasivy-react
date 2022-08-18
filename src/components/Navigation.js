@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Navigation() {
+  const { t } = useTranslation();
+
   return (
     <div className="navigation">
       <div className="left-navigation">
@@ -12,11 +15,11 @@ export default function Navigation() {
         <NavLink className="navlink" to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink className="navlink" to="/P/ThreeMin">
-          <li>ThreeMin</li>
+        <NavLink className="navlink" to="/P/Photos">
+          <li>Photos</li>
         </NavLink>
-        <NavLink className="navlink" to="/P/RasiGIF">
-          <li>RasiGIF</li>
+        <NavLink className="navlink" to="/P/Streaming">
+          <li>{t("Streaming Video")}</li>
         </NavLink>
         <NavLink className="navlink" to="/P/Post">
           <li>Post</li>

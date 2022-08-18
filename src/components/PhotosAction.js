@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 
-export default function ThreeMinAction() {
+export default function PhotosAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   return (
@@ -11,8 +11,8 @@ export default function ThreeMinAction() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
 
-      <div id="threemin" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("threemin")}</h1>
+      <div id="rasigif" className={`${dark ? "dark" : "light"}`}>
+        <h1>{t("rasigif")}</h1>
         <div className="myimage">
           <div className="image">
             <img

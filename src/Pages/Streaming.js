@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
-import ThreeMinAction from "../components/ThreeMinAction";
+import StreamingAction from "../components/StreamingAction";
 
-export default function ThreeMin() {
+export default function Streaming() {
   const family = {
     fontFamily:
       '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -9,7 +9,7 @@ export default function ThreeMin() {
   return (
     <div style={family}>
       <Navigation />
-      <ThreeMinAction />
+      <StreamingAction />
     </div>
   );
 }

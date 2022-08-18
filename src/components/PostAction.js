@@ -16,7 +16,7 @@ export default function PostAction() {
     axios({
       method: "post",
       //url: `https://api-adoony.herokuapp.com/api/v1/auth/signin`,
-      baseURL: `http://localhost:5000/api/v1/auth/signin`,
+      url: `http://localhost:5000/api/v1/auth/signin`,
       data: {
         email,
         password,
@@ -25,7 +25,7 @@ export default function PostAction() {
         "Content-Type": "application/json",
       },
       withCredentials: true,
-      credentials: "include",
+      //credentials: "include",
     })
       .then((res) => {
         const name = res.data.blobName;

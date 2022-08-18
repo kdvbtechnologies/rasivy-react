@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
-import RasigifAction from "../components/RasigifAction";
+import PhotosAction from "../components/PhotosAction";
 
-export default function RasiGIF() {
+export default function Photos() {
   const family = {
     fontFamily:
       '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -9,7 +9,7 @@ export default function RasiGIF() {
   return (
     <div style={family}>
       <Navigation />
-      <RasigifAction />
+      <PhotosAction />
     </div>
   );
 }
