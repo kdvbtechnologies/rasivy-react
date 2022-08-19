@@ -6,7 +6,7 @@ const CACHED_FILES = [
   //`${BASE}/static/css/main.d350960e.css`,
   `${BASE}`,
   `${BASE}/App.js`,
-  `${BASE}/sw.js`,
+  "https://jamelfase.com/sw.js",
   `${BASE}/manifest.json`,
   `${BASE}/favicon.ico`,
   `${BASE}/logo192.png`,
