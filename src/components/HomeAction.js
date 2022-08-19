@@ -23,7 +23,7 @@ export default function HomeAction() {
       },
     }).then((res) => {
       const userStore = res.data.message;
-      if (userStore) {
+      if (!userStore) {
         setErrors(errors);
       }
       localStorage.setItem("https://jamelfase.com/user-id", userStore);
