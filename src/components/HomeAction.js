@@ -9,7 +9,7 @@ export default function HomeAction() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  let userStore;
+  const [errors, setErrors] = useState("");
 
   const Signup = async (e) => {
     e.preventDefault();
@@ -22,7 +22,10 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      userStore = res.data.message;
+      const userStore = res.data.message;
+      if (userStore) {
+        setErrors(errors);
+      }
       localStorage.setItem("https://jamelfase.com/user-id", userStore);
     });
   };
@@ -35,7 +38,7 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {userStore && <h2>Inscription reussie</h2>}
+          {errors && <h2>Inscription reussie</h2>}
           <form action="" onSubmit={Signup}>
             <h1>Inscription</h1>
             <div>
