@@ -19,7 +19,7 @@ i18n
           search: "Search",
           profile: "Profile",
           settings: "Settings",
-          "--signup-success": "Successful registration. Welcome to jamelfase!",
+          "--signup-success": "Successful registration. Welcome to jamelfase !",
         },
       },
 
@@ -34,7 +34,7 @@ i18n
           search: "Recherche",
           profile: "Profil",
           settings: "Paramètres",
-          "--signup-success": "Successful registration. Welcome to jamelfase!",
+          "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
         },
       },
     },

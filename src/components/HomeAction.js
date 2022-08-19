@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
-//import "../darkmode.css";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -12,6 +11,7 @@ export default function HomeAction() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
 
+  //Signup
   const Signup = async (e) => {
     e.preventDefault();
     await axios({
@@ -33,7 +33,8 @@ export default function HomeAction() {
 
   const success = localStorage.getItem("https://jamelfase.com/user-id");
 
-  //console.log(errors);
+  //getAllPost
+
   return (
     <>
       <Helmet>
