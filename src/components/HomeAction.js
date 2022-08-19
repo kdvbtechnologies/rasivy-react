@@ -11,6 +11,8 @@ export default function HomeAction() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
 
+  //const [post, setPost] = useState([]);
+
   //Signup
   const Signup = async (e) => {
     e.preventDefault();
@@ -34,6 +36,11 @@ export default function HomeAction() {
   const success = localStorage.getItem("https://jamelfase.com/user-id");
 
   //getAllPost
+  axios
+    .get({ url: `https://api-adoony.herokuapp.com/api/post` })
+    .then((res) => {
+      console.log(res);
+    });
 
   return (
     <>
