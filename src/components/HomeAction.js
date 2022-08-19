@@ -21,7 +21,7 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      console.log(res);
+      console.log(res.data.message);
     });
   };
 
