@@ -37,7 +37,7 @@ export default function SearchAction() {
       <div id="search" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("search")}</h1>
         <div>
-          <button onClick={logout}>Se déconnecter</button>
+          <button onClick={logout}></button>
         </div>
         <div style={{ width: "30vmin", backgroundColor: "green" }}>
           <svg

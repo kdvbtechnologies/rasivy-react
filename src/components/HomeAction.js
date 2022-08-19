@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
 
 export default function HomeAction() {
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
