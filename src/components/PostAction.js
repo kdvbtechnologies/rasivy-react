@@ -1,14 +1,36 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
-//import axios from "axios";
-//import Cookies from "universal-cookie";
+import axios from "axios";
 
 export default function PostAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-  const [post, setPost] = useState("");
-  //const cookies = new Cookies();
+  //const [userId, setUserId] = useState(localStorage.getItem("user-id") === "true");
+  const [desc, setDesc] = useState("");
+  const user = localStorage.getItem("user-id");
+
+  function Post(e) {
+    e.preventDefault();
+    axios({
+      method: "post",
+      url: `https://api-adoony.herokuapp.com/api/post/add`,
+      data: {
+        userId: user,
+        desc,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   /*
   function Signin(e) {
@@ -54,13 +76,15 @@ export default function PostAction() {
               <input
                 type="text"
                 name="post"
-                value={post}
-                onChange={(e) => setPost(e.target.value)}
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
                 placeholder="Write your post here"
                 required
               />
             </div>
-            <button type="submit">Post</button>
+            <button onClick={Post} type="submit">
+              Post
+            </button>
           </div>
         </div>
       </div>
