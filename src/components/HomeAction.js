@@ -22,7 +22,7 @@ export default function HomeAction() {
       },
     }).then((res) => {
       const userStore = res.data.message;
-      localStorage.setItem(`user-id-${userStore}`, userStore);
+      localStorage.setItem("user-id", userStore);
     });
   };
 
