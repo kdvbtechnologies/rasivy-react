@@ -43,11 +43,11 @@ export default function HomeAction() {
           <form action="" onSubmit={Signup}>
             {errors ? (
               <>
-                <h2>Inscription reussie</h2>
+                <div className="loader"></div>
               </>
             ) : (
               <>
-                <div className="loader"></div>
+                <h2>Inscription reussie</h2>
               </>
             )}
             <h1>Inscription</h1>
