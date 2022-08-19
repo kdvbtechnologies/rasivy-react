@@ -36,14 +36,7 @@ export default function HomeAction() {
   const success = localStorage.getItem("https://jamelfase.com/user-id");
 
   //getAllPost
-  axios({
-    method: "get",
-    url: `https://api-adoony.herokuapp.com/api/post`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    withCredentials: true,
-  }).then((res) => {
+  axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
     console.log(res);
   });
 
