@@ -1,15 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
-import axios from "axios";
-import Cookies from "universal-cookie";
+//import axios from "axios";
+//import Cookies from "universal-cookie";
 
 export default function PostAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [post, setPost] = useState("");
-  const cookies = new Cookies();
+  //const cookies = new Cookies();
 
+  /*
   function Signin(e) {
     e.preventDefault();
     axios({
@@ -34,7 +35,7 @@ export default function PostAction() {
       .catch(function (error) {
         console.log(error);
       });
-  }
+  }*/
 
   /* input de type="file"  */
 
