@@ -4,9 +4,9 @@ const CACHED_FILES = [
   // production
   //`${BASE}/static/js/main.fa57e256.js`,
   //`${BASE}/static/css/main.d350960e.css`,
-  `${BASE}`,
+  //`${BASE}`,
   `${BASE}/App.js`,
-  "https://jamelfase.com/sw.js",
+  `${BASE}/sw.js`,
   `${BASE}/manifest.json`,
   `${BASE}/favicon.ico`,
   `${BASE}/logo192.png`,
@@ -16,9 +16,9 @@ const CACHED_FILES = [
 
   // developpement
   //`${BASE}/static/js/bundle.js`,
-  `https://jamelfase.com/static/js/main.ee6b10f7.js`,
-  `https://jamelfase.com/static/css/main.ff3d4f45.css`,
-  "https://jamelfase.com/",
+  `${BASE}/static/js/main.ee6b10f7.js`,
+  `${BASE}/static/css/main.ff3d4f45.css`,
+  `${BASE}/`,
 ];
 
 self.addEventListener("install", (event) => {
