@@ -9,6 +9,7 @@ export default function HomeAction() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let userStore;
 
   const Signup = async (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      const userStore = res.data.message;
+      userStore = res.data.message;
       localStorage.setItem("https://jamelfase.com/user-id", userStore);
     });
   };
@@ -34,6 +35,7 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
+          {userStore && <h2>Inscription reussie</h2>}
           <form action="" onSubmit={Signup}>
             <h1>Inscription</h1>
             <div>
