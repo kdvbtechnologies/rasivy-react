@@ -14,7 +14,7 @@ export default function HomeAction() {
     e.preventDefault();
     await axios({
       method: "post",
-      url: `https://api-adoony.herokuapp.com/api/v1/auth/signup`,
+      url: `https://api-adoony.herokuapp.com/api/auth/signup`,
       data: {
         username,
         email,
