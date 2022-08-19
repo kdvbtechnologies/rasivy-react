@@ -21,7 +21,8 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      console.log(res.data.message);
+      const userStore = res.data.message;
+      localStorage.setItem("user-id", userStore);
     });
   };
 
