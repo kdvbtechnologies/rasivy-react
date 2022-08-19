@@ -16,19 +16,25 @@ export default function PhotosAction() {
         <div className="myimage">
           <div className="image">
             <img
-              src="https://res.cloudinary.com/rasivyy/image/upload/v1657222558/Mes%20images-multiple/bp2w8b5mojr2ewkxvubr.jpg"
+              src="https://res.cloudinary.com/rasivyy/image/upload/v1660878007/Mes%20images/magic-photo1_cy9ftf.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              src="https://res.cloudinary.com/rasivyy/image/upload/v1657222555/Mes%20images-multiple/uveyixizk1jdwyk6zrmz.jpg"
+              src="https://res.cloudinary.com/rasivyy/image/upload/v1660878006/Mes%20images/magic-petite-fille_okjqvt.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              src="https://res.cloudinary.com/rasivyy/image/upload/v1657222555/Mes%20images-multiple/cah6po0mkm9oosixbsyq.jpg"
+              src="https://res.cloudinary.com/rasivyy/image/upload/v1660878006/Mes%20images/magic-policiere_qxjkag.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/rasivyy/image/upload/v1660877983/Mes%20images/magic-fille_ivhge0.jpg"
               alt=""
             />
           </div>
