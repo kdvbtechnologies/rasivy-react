@@ -19,6 +19,10 @@ export default function StreamingAction() {
               src="https://res.cloudinary.com/rasivyy/video/upload/v1660877107/VideoUploads/Humood_-_Kun_Anta___%D8%AD%D9%85%D9%88%D8%AF_%D8%A7%D9%84%D8%AE%D8%B6%D8%B1_-_%D9%83%D9%86_%D8%A3%D9%86%D8%AA___Official_Music_Video_ok9dga.mp4"
               type="video/mp4"
             />
+            <source
+              src="https://res.cloudinary.com/rasivyy/video/upload/v1660877501/VideoUploads/ROSAL%C3%8DA_J_Balvin_-_Con_Altura_Official_Video_ft._El_Guincho_zrsbv6.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>
