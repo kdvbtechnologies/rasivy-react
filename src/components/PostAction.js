@@ -9,6 +9,7 @@ export default function PostAction() {
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [post, setPost] = useState("");
   const cookies = new Cookies();
 
   function Signin(e) {
@@ -76,7 +77,14 @@ export default function PostAction() {
           <br />
           <div>
             <div>
-              <input type="text" placeholder="Write your post here" />
+              <input
+                type="text"
+                name="post"
+                value={post}
+                onChange={(e) => setPost(e.target.value)}
+                placeholder="Write your post here"
+                required
+              />
             </div>
             <button type="submit">Post</button>
           </div>
