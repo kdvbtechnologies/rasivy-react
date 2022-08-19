@@ -49,7 +49,6 @@ export default function PostAction() {
         <h1>{t("post")}</h1>
         <div>
           <br />
-          <br />
           <div>
             <div>
               <input
