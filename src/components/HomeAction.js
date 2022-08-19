@@ -40,16 +40,16 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {errors ? (
-            <>
-              <h2>Inscription reussie</h2>
-            </>
-          ) : (
-            <>
-              <div className="loader"></div>
-            </>
-          )}
           <form action="" onSubmit={Signup}>
+            {errors ? (
+              <>
+                <h2>Inscription reussie</h2>
+              </>
+            ) : (
+              <>
+                <div className="loader"></div>
+              </>
+            )}
             <h1>Inscription</h1>
             <div>
               <input
