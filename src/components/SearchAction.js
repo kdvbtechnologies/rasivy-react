@@ -1,19 +1,19 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
-import cookie from "js-cookie";
-import axios from "axios";
+//import cookie from "js-cookie";
+//import axios from "axios";
 
 export default function SearchAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-
+  /*
   const removeCookie = (key) => {
     if (window !== "undefined") {
       cookie.remove(key, { expires: 1 });
     }
   };
-
+/*
   const logout = async (e) => {
     e.preventDefault();
     await axios({
@@ -26,11 +26,7 @@ export default function SearchAction() {
       .catch((err) => console.log(err));
 
     window.location = "/";
-  };
-
-  /* <div>
-          <button onClick={logout}></button>
-        </div>*/
+  };*/
 
   return (
     <>
