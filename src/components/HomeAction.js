@@ -40,50 +40,48 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <form>
-            {errors ? (
-              <>
-                <h2>Inscription reussie</h2>
-                <h2>{errors}</h2>
-              </>
-            ) : (
-              <>
-                <div className="loader"></div>
-              </>
-            )}
-
-            <h1>Inscription</h1>
-            <div>
-              <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <button type="submit" onClick={Signup}>
-              S'inscrire
-            </button>
-          </form>
+          {errors ? (
+            <>
+              <h2>Inscription reussie</h2>
+              <h2>{errors}</h2>
+            </>
+          ) : (
+            <>
+              <form>
+                <h1>Inscription</h1>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <button type="submit" onClick={Signup}>
+                  S'inscrire
+                </button>
+              </form>
+            </>
+          )}
         </div>
       </div>
     </>
