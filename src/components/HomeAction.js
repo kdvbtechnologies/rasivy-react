@@ -41,15 +41,16 @@ export default function HomeAction() {
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
           <form>
-            {Signup && errors ? (
-              <>
-                <div className="loader"></div>
-              </>
-            ) : (
+            {errors ? (
               <>
                 <h2>Inscription reussie</h2>
               </>
+            ) : (
+              <>
+                <div className="loader"></div>
+              </>
             )}
+
             <h1>Inscription</h1>
             <div>
               <input
