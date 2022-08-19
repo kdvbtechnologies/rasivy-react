@@ -16,8 +16,8 @@ const CACHED_FILES = [
 
   // developpement
   //`${BASE}/static/js/bundle.js`,
-  `${BASE}/static/js/main.ee6b10f7.js`,
-  `${BASE}/static/css/main.ff3d4f45.css`,
+  `https://jamelfase.com/static/js/main.ee6b10f7.js`,
+  `https://jamelfase.com/static/css/main.ff3d4f45.css`,
   "https://jamelfase.com/",
 ];
 
