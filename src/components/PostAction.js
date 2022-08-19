@@ -74,6 +74,7 @@ export default function PostAction() {
             <div>
               <input type="text" placeholder="Write your post here" />
             </div>
+            <button type="submit">Post</button>
           </div>
         </div>
       </div>
