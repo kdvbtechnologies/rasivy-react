@@ -93,9 +93,9 @@ export default function HomeAction() {
           <div>
             <div>
               {posts.map((post) => (
-                <li className="post">
+                <div className="post" key={post.id}>
                   <h4>{post.desc}</h4>
-                </li>
+                </div>
               ))}
             </div>
           </div>
