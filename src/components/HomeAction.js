@@ -31,6 +31,8 @@ export default function HomeAction() {
     });
   };
 
+  const success = localStorage.getItem("https://jamelfase.com/user-id");
+
   console.log(errors);
   return (
     <>
@@ -40,7 +42,7 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {errors ? (
+          {success ? (
             <>
               <h2>Inscription reussie</h2>
               <h2>{errors}</h2>
