@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function HomeAction() {
@@ -36,9 +36,11 @@ export default function HomeAction() {
   const success = localStorage.getItem("https://jamelfase.com/user-id");
 
   //getAllPost
-  axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
-    setPosts(res.data);
-  });
+  useEffect(() => {
+    axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
+      setPosts(res.data);
+    });
+  }, []);
 
   return (
     <>
