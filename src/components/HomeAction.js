@@ -20,6 +20,8 @@ export default function HomeAction() {
         email,
         password,
       },
+    }).then((res) => {
+      console.log(res);
     });
   };
 
