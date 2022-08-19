@@ -40,8 +40,8 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <form action="" onSubmit={Signup}>
-            {errors ? (
+          <form>
+            {Signup && errors ? (
               <>
                 <div className="loader"></div>
               </>
@@ -78,7 +78,9 @@ export default function HomeAction() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button type="submit">S'inscrire</button>
+            <button type="submit" onClick={Signup}>
+              S'inscrire
+            </button>
           </form>
         </div>
       </div>
