@@ -37,6 +37,8 @@ export default function PostAction() {
       });
   }
 
+  /* input de type="file"  */
+
   return (
     <>
       <Helmet>
@@ -70,6 +72,8 @@ export default function PostAction() {
             </div>
             <button type="submit">Se connecter</button>
           </form>
+          <br />
+          <br />
           <div>
             <div>
               <input type="text" placeholder="Write your post here" />
