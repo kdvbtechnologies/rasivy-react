@@ -40,7 +40,7 @@ export default function HomeAction() {
     axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
       setPosts(res.data);
     });
-  }, []);
+  }, [posts]);
 
   return (
     <>
