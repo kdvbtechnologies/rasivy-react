@@ -11,7 +11,7 @@ export default function HomeAction() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
 
-  //const [post, setPost] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   //Signup
   const Signup = async (e) => {
@@ -37,7 +37,7 @@ export default function HomeAction() {
 
   //getAllPost
   axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
-    console.log(res);
+    setPosts(res.data);
   });
 
   return (
@@ -89,6 +89,16 @@ export default function HomeAction() {
               </form>
             </>
           )}
+
+          <div>
+            <div>
+              {posts.map((post) => (
+                <li className="post">
+                  <h4>{post.desc}</h4>
+                </li>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
