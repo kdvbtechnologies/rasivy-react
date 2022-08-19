@@ -2,6 +2,7 @@
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
+import "../darkmode.css";
 
 export default function HomeAction() {
   //const { t } = useTranslation();
@@ -39,7 +40,15 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {errors && <h2>Inscription reussie</h2>}
+          {errors ? (
+            <>
+              <h2>Inscription reussie</h2>
+            </>
+          ) : (
+            <>
+              <div className="loader"></div>
+            </>
+          )}
           <form action="" onSubmit={Signup}>
             <h1>Inscription</h1>
             <div>
