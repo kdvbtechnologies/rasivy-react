@@ -33,7 +33,6 @@ export default function HomeAction() {
         <h1>{t("home")}</h1>
         <div>
           <form action="" onSubmit={Signup}>
-            <h1>Inscription</h1>
             <div>
               <input
                 type="text"
