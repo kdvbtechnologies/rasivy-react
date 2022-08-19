@@ -39,7 +39,7 @@ export default function SearchAction() {
         <div>
           <button onClick={logout}>Se déconnecter</button>
         </div>
-        <div style={{ width: "30vmin", backgroundColor: "blue" }}>
+        <div style={{ width: "30vmin", backgroundColor: "green" }}>
           <svg
             viewBox="0 0 16 16"
             fill="none"

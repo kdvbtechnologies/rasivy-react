@@ -8,7 +8,7 @@ export default function Navigation() {
     <div className="navigation">
       <div className="left-navigation">
         <NavLink className="navlink" to="/">
-          <li>ertiden</li>
+          <li>jamelfase</li>
         </NavLink>
       </div>
       <div className="right-navigation">
