@@ -70,6 +70,11 @@ export default function PostAction() {
             </div>
             <button type="submit">Se connecter</button>
           </form>
+          <div>
+            <div>
+              <input type="text" placeholder="Write your post here" />
+            </div>
+          </div>
         </div>
       </div>
     </>
