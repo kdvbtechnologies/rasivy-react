@@ -25,7 +25,7 @@ export default function HomeAction() {
     }).then((res) => {
       const userStore = res.data.message;
       if (userStore) {
-        setErrors("Bienvenue sur jamelfase !");
+        setErrors("Inscription réussie. Bienvenue sur jamelfase !");
       }
       localStorage.setItem("https://jamelfase.com/user-id", userStore);
     });
@@ -44,7 +44,6 @@ export default function HomeAction() {
         <div>
           {success ? (
             <>
-              <h2>Inscription reussie</h2>
               <h2>{errors}</h2>
             </>
           ) : (
