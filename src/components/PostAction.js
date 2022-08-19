@@ -7,8 +7,6 @@ import Cookies from "universal-cookie";
 export default function PostAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [post, setPost] = useState("");
   const cookies = new Cookies();
 
