@@ -30,9 +30,9 @@ export default function HomeAction() {
       </Helmet>
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("home")}</h1>
         <div>
           <form action="" onSubmit={Signup}>
+            <h1>Inscription</h1>
             <div>
               <input
                 type="text"
