@@ -1,11 +1,11 @@
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
-import "../darkmode.css";
+//import "../darkmode.css";
 
 export default function HomeAction() {
-  //const { t } = useTranslation();
+  const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ export default function HomeAction() {
     }).then((res) => {
       const userStore = res.data.message;
       if (userStore) {
-        setErrors("Inscription réussie. Bienvenue sur jamelfase !");
+        setErrors(`${t("--signup-success")}`);
       }
       localStorage.setItem("https://jamelfase.com/user-id", userStore);
     });
@@ -33,7 +33,7 @@ export default function HomeAction() {
 
   const success = localStorage.getItem("https://jamelfase.com/user-id");
 
-  console.log(errors);
+  //console.log(errors);
   return (
     <>
       <Helmet>

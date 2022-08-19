@@ -19,6 +19,7 @@ i18n
           search: "Search",
           profile: "Profile",
           settings: "Settings",
+          "--signup-success": "Successful registration. Welcome to jamelfase!",
         },
       },
 
@@ -33,11 +34,14 @@ i18n
           search: "Recherche",
           profile: "Profil",
           settings: "Paramètres",
+          "--signup-success": "Successful registration. Welcome to jamelfase!",
         },
       },
     },
     fallbackLng: "en",
     debug: true,
+
+    //"--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
 
     // have a common namespace used around the full app
     ns: ["translations"],
