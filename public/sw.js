@@ -15,7 +15,10 @@ const CACHED_FILES = [
   "https://reqres.in/api/unknown",
 
   // developpement
-  `${BASE}/static/js/bundle.js`,
+  //`${BASE}/static/js/bundle.js`,
+  `${BASE}/static/js/main.ee6b10f7.js`,
+  `${BASE}/static/css/main.ff3d4f45.css`,
+  "https://jamelfase.com/",
 ];
 
 self.addEventListener("install", (event) => {
