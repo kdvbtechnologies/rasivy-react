@@ -14,15 +14,15 @@ export default function MenuAction() {
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div className="right">
-          <h1>Menu</h1>
+          <h1>{t("--menu")}</h1>
           <NavLink className="navlink" to="/Profile">
-            <li>Profile</li>
+            <li>{t("--profil")}</li>
           </NavLink>
           <NavLink className="navlink" to="/DarkMode">
-            <li>DarkMode</li>
+            <li>{t("--darkmode")}</li>
           </NavLink>
           <NavLink className="navlink" to="/Settings">
-            <li>Parametres</li>
+            <li>{t("--settings")}</li>
           </NavLink>
           <NavLink className="navlink" to="/Language">
             <li>{t("--language")}</li>
