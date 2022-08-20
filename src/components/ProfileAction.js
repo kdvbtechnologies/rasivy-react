@@ -10,8 +10,8 @@ export default function ProfileAction() {
 
   useEffect(() => {
     axios
-      .get("https://reqres.in/api/unknown")
-      .then((res) => setPosts(res.data.data));
+      .get("https://api-adoony.herokuapp.com/api/post")
+      .then((res) => setPosts(res.data));
   }, []);
 
   return (
@@ -25,10 +25,9 @@ export default function ProfileAction() {
         <div>
           <ul>
             {posts.map((post) => (
-              <li key={post.id}>
-                <h4>{post.name}</h4>
-                <p>{post.color}</p>
-              </li>
+              <div key={post.id}>
+                <h2>{post.desc}</h2>
+              </div>
             ))}
           </ul>
         </div>
