@@ -16,7 +16,7 @@ export default function Navigation() {
           <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10vmin"
+              width="9vmin"
               height="auto"
               x="0"
               y="0"
@@ -34,12 +34,26 @@ export default function Navigation() {
           <li>Photos</li>
         </NavLink>
         <NavLink className="navlink" to="/P/Streaming">
-          <li>stream</li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="9vmin"
+              height="auto"
+              x="0"
+              y="0"
+              enableBackground="new 0 0 350.953 350.953"
+              version="1.1"
+              viewBox="0 0 350.953 350.953"
+              xmlSpace="preserve"
+            >
+              <path d="M276.199 342.977c-1.988 0-3.985-.475-5.814-1.436l-94.908-49.896-94.908 49.896a12.502 12.502 0 01-18.137-13.179L80.557 222.68 3.775 147.836a12.5 12.5 0 016.928-21.321l106.111-15.418 47.454-96.153a12.498 12.498 0 0122.417 0l47.454 96.153 106.11 15.418a12.501 12.501 0 016.928 21.321l-76.783 74.845 18.126 105.682a12.503 12.503 0 01-12.321 14.614zM39.362 147.615l63.352 61.752a12.494 12.494 0 013.594 11.063l-14.955 87.196 78.306-41.17a12.504 12.504 0 0111.634 0l78.306 41.168-14.956-87.194a12.498 12.498 0 013.595-11.063l63.353-61.752-87.549-12.722a12.5 12.5 0 01-9.412-6.838l-39.152-79.334-39.153 79.334a12.501 12.501 0 01-9.412 6.838l-87.551 12.722z"></path>
+            </svg>
+          </li>
         </NavLink>
         <NavLink className="navlink" to="/P/Post">
           <li>
             <svg
-              width="10vmin"
+              width="9vmin"
               height="auto"
               className="svg-icon"
               viewBox="0 0 20 20"
@@ -53,7 +67,7 @@ export default function Navigation() {
           <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10vmin"
+              width="9vmin"
               height="auto"
               x="0"
               y="0"
