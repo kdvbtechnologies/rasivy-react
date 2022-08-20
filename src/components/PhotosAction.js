@@ -12,7 +12,7 @@ export default function PhotosAction() {
       </Helmet>
 
       <div id="rasigif" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("Publish photo")}</h1>
+        <h1>{t("--post-photo")}</h1>
         <div className="myimage">
           <div className="image">
             <img

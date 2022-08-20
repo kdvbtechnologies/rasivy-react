@@ -10,13 +10,8 @@ i18n
     resources: {
       en: {
         translations: {
-          darkmode: "DarkMode",
-          home: "Home Page",
-          "Publish photo": "Publish a photo",
           post: "Feel free to post something",
           search: "Search",
-          profile: "Profile",
-          settings: "Settings",
           "--streaming-video": "Video Streaming",
           "--signup-success": "Successful registration. Welcome to jamelfase !",
           "--jamelfase": "jamelfase",
@@ -28,6 +23,8 @@ i18n
           "--darkmode": "Dark Mode",
           "--profil": "Profil",
           "--menu": "Menu",
+          "--post-photo": "Post a photo",
+
           "--": "",
         },
       },
@@ -45,18 +42,14 @@ i18n
           "--darkmode": "Modo Escuro",
           "--profil": "Perfil",
           "--menu": "Menu",
+          "--post-photo": "",
         },
       },
 
       fr: {
         translations: {
-          darkmode: "Mode Sombre",
-          home: "Page d'accueil",
-          "Publish photo": "Publier une photo",
           post: "N'hésitez pas à publier quelque chose",
           search: "Recherche",
-          profile: "Profil",
-          settings: "Paramètres",
           "--streaming-video": "Streaming Vidéo",
           "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
           "--jamelfase": "jamelfase",
@@ -68,6 +61,7 @@ i18n
           "--darkmode": "Mode Sombre",
           "--profil": "Profile",
           "--menu": "Menu",
+          "--post-photo": "Publier une photo",
         },
       },
     },
