@@ -75,7 +75,7 @@ export default function PostAction() {
                 name="post"
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
-                placeholder="Write your post here"
+                placeholder={t("--input-post-placeholder")}
                 required
               />
             </div>

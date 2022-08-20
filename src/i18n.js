@@ -24,6 +24,7 @@ i18n
           "--post-photo": "Post a photo",
           "--post": "Feel free to post something",
           "--search": "Search",
+          "--input-post-placeholder": "Write your post here...",
 
           "--": "",
         },
@@ -45,6 +46,7 @@ i18n
           "--post-photo": "Postar uma foto",
           "--post": "Fique a vontade para postar algo",
           "--search": "Pesquise",
+          "--input-post-placeholder": "Escreva seu post aqui...",
         },
       },
 
@@ -64,6 +66,7 @@ i18n
           "--post-photo": "Publier une photo",
           "--post": "N'hésitez pas à publier quelque chose",
           "--search": "Recherche",
+          "--input-post-placeholder": "Écrivez votre publication ici...",
         },
       },
     },
