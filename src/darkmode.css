@@ -23,6 +23,11 @@
 	--menu-navigation-color-title: yellow;
 } 
 
+/* svg-fill- navigation.js */
+.navigation .right-navigation .navlink li .svg-navbar-icon{
+	fill: var(--color-mytag);
+}
+
 
 /** threminaction */
 .myimage {
@@ -211,7 +216,3 @@
   padding: 5px;
 }
 
-/* svg-fill- navigation.js */
-.navigation .right-navigation .navlink li .svg-navbar-icon{
-	fill: var(--color-mytag);
-}
