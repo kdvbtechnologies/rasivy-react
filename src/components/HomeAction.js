@@ -56,6 +56,7 @@ export default function HomeAction() {
       };
     });
   }, [online]);
+  console.log(online);
 
   return (
     <>
