@@ -77,7 +77,7 @@ export default function HomeAction() {
                 <div>
                   <input
                     type="text"
-                    placeholder="Username"
+                    placeholder={t("--username")}
                     name="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
@@ -86,7 +86,7 @@ export default function HomeAction() {
                 <div>
                   <input
                     type="email"
-                    placeholder="Email"
+                    placeholder={t("--email")}
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -95,14 +95,14 @@ export default function HomeAction() {
                 <div>
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder={t("--password")}
                     name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <button type="submit" onClick={Signup}>
-                  S'inscrire
+                  {t("--signup-btn")}
                 </button>
               </div>
             </>
