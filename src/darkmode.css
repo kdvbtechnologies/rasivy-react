@@ -198,13 +198,17 @@
 
 /* post - HomeAction.js */
 
+.posts {
+	padding: 30px 50%;
+}
+
 .posts .post {
 	width:50%;
-	height:300px;
+	height:auto;
 	background-color:#FFFFFF;
 	border:1px solid;
 	border-color: rgba(0, 255, 0, 0.5);  
 	border-radius: 5px;
-	padding: 30px 0px;
+	padding: 20px 0px;
    
 }
