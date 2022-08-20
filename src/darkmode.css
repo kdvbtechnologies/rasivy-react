@@ -199,18 +199,13 @@
 /* post - HomeAction.js */
 .posts {
 	padding: 20px 0px;
-	align-items: center;
-	width:50%;
-  height:300px;
+	
 }
 .posts .post {
-  text-decoration: none; 
-  color: goldenrod; 
-  cursor: pointer; 
-  background-color: white; 
-  border-color: red;
-  border-radius: 5px; 
-  border:5px solid;
-  font-size: 17px;  
+	width:50%;
+	height:300px;
+	background-color:#FFFFFF;
+	border:5px solid;
+	border-color: rgba(0, 255, 0, 0.5);  
    
 }
