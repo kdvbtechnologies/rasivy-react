@@ -37,11 +37,34 @@ export default function Navigation() {
           <li>stream</li>
         </NavLink>
         <NavLink className="navlink" to="/P/Post">
-          <li>Post</li>
+          <li>
+            <svg
+              width="10vmin"
+              height="auto"
+              className="svg-icon"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.68 9.448h-3.128V6.319a.552.552 0 00-1.104 0v3.129H6.319a.551.551 0 000 1.102h3.129v3.129a.552.552 0 001.104 0V10.55h3.128a.552.552 0 100-1.102zM10 .968a9.031 9.031 0 100 18.063A9.031 9.031 0 0010 .968zm0 16.934a7.903 7.903 0 11.002-15.806A7.903 7.903 0 0110 17.902z"></path>
+            </svg>
+          </li>
         </NavLink>
 
         <NavLink className="navlink" to="/P/Search">
-          <li>Search</li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10vmin"
+              height="auto"
+              x="0"
+              y="0"
+              enableBackground="new 0 0 487.95 487.95"
+              version="1.1"
+              viewBox="0 0 487.95 487.95"
+              xmlSpace="preserve"
+            >
+              <path d="M481.8 453l-140-140.1c27.6-33.1 44.2-75.4 44.2-121.6C386 85.9 299.5.2 193.1.2S0 86 0 191.4s86.5 191.1 192.9 191.1c45.2 0 86.8-15.5 119.8-41.4l140.5 140.5c8.2 8.2 20.4 8.2 28.6 0 8.2-8.2 8.2-20.4 0-28.6zM41 191.4c0-82.8 68.2-150.1 151.9-150.1s151.9 67.3 151.9 150.1-68.2 150.1-151.9 150.1S41 274.1 41 191.4z"></path>
+            </svg>
+          </li>
         </NavLink>
 
         <NavLink className="navlink" to="/P/Menu">
