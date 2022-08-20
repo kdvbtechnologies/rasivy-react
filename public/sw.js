@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V3";
+const PREFIX = "V4";
 const CACHED_FILES = [
   // production
   //`${BASE}/static/js/main.fa57e256.js`,
@@ -12,6 +12,7 @@ const CACHED_FILES = [
   `${BASE}/logo192.png`,
   `${BASE}/logo.svg`,
   `${BASE}/Profile`,
+  "https://api-adoony.herokuapp.com/api/post",
 
   // developpement
   `${BASE}/static/js/main.9864c411.js`,
