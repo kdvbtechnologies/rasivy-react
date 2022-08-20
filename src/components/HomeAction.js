@@ -52,11 +52,11 @@ export default function HomeAction() {
         <div>
           {success ? (
             <>
-              <h2>{errors}</h2>
+              <h2 style={{ color: "blue" }}>{errors}</h2>
             </>
           ) : (
             <>
-              <form>
+              <div>
                 <h1>Inscrivez-vous</h1>
                 <div>
                   <input
@@ -88,7 +88,7 @@ export default function HomeAction() {
                 <button type="submit" onClick={Signup}>
                   S'inscrire
                 </button>
-              </form>
+              </div>
             </>
           )}
 
