@@ -96,7 +96,17 @@ export default function HomeAction() {
             <div>
               {posts.map((post) => (
                 <div className="posts" key={post.id}>
-                  <div className="post">{post.desc}</div>
+                  {posts ? (
+                    <>
+                      <div className="post">{post.desc}</div>
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <h1>Verifier votre connexion internet</h1>
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
