@@ -40,9 +40,22 @@ export default function HomeAction() {
   useEffect(() => {
     axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
       setPosts(res.data);
-      setOnline();
+
+      //update network status
+      function handleStatusChange() {
+        setOnline(navigator.onLine);
+      }
+      //Listen to the online status
+      window.addEventListener("online", handleStatusChange);
+      //Listen to the offline status
+      window.addEventListener("offline", handleStatusChange);
+      //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
+      return () => {
+        window.removeEventListener("online", handleStatusChange);
+        window.removeEventListener("offline", handleStatusChange);
+      };
     });
-  }, []);
+  }, [online]);
 
   return (
     <>
