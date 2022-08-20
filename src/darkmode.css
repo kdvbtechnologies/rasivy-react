@@ -213,5 +213,5 @@
 
 /* svg-fill- navigation.js */
 .navigation .right-navigation .navlink li .svg-navbar-icon{
-	fill: white;
+	fill: var(--color-mytag);
 }
