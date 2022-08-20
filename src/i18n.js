@@ -22,6 +22,7 @@ i18n
           "--signup-success": "Successful registration. Welcome to jamelfase !",
           "--jamelfase": "jamelfase",
           "--check-internet": "Check your internet connection",
+          "--signup": "Sign up",
         },
       },
 
@@ -31,6 +32,7 @@ i18n
           "--signup-success": "Registro bem sucedido. Bem-vindo ao jamelfase!",
           "--jamelfase": "jamelfase",
           "--check-internet": "Verifique a sua conexão com a internet",
+          "--signup": "Inscreve-te",
         },
       },
 
@@ -48,6 +50,7 @@ i18n
           "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
           "--jamelfase": "jamelfase",
           "--check-internet": "Vérifier votre connexion internet",
+          "--signup": "Inscrivez-vous",
         },
       },
     },

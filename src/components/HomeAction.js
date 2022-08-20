@@ -73,7 +73,7 @@ export default function HomeAction() {
           ) : (
             <>
               <div>
-                <h1>Inscrivez-vous</h1>
+                <h1>{t("--signup")}</h1>
                 <div>
                   <input
                     type="text"
