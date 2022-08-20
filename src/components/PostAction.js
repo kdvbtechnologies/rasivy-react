@@ -23,13 +23,9 @@ export default function PostAction() {
         "Content-Type": "application/json",
       },
       withCredentials: true,
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    }).then((res) => {
+      console.log(res);
+    });
   }
 
   /*

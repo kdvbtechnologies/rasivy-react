@@ -57,7 +57,7 @@ export default function HomeAction() {
           ) : (
             <>
               <form>
-                <h1>Inscription</h1>
+                <h1>Inscrivez-vous</h1>
                 <div>
                   <input
                     type="text"
