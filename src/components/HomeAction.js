@@ -40,9 +40,9 @@ export default function HomeAction() {
   useEffect(() => {
     axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
       setPosts(res.data);
-      setOnline();
     });
   }, []);
+  setOnline(online);
 
   return (
     <>
