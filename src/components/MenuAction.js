@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 
 export default function MenuAction() {
+  const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
 
   return (
@@ -23,7 +25,7 @@ export default function MenuAction() {
             <li>Parametres</li>
           </NavLink>
           <NavLink className="navlink" to="/Language">
-            <li>Langues</li>
+            <li>{t("--language")}</li>
           </NavLink>
         </div>
       </div>

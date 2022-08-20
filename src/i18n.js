@@ -23,6 +23,7 @@ i18n
           "--check-internet": "Check your internet connection",
           "--signup": "Sign up",
           "--choose-language": "Choose your language",
+          "--language": "Language",
         },
       },
 
@@ -34,6 +35,7 @@ i18n
           "--check-internet": "Verifique a sua conexão com a internet",
           "--signup": "Inscreve-te",
           "--choose-language": "Escolha seu idioma",
+          "--language": "Língua",
         },
       },
 
@@ -52,6 +54,7 @@ i18n
           "--check-internet": "Vérifier votre connexion internet",
           "--signup": "Inscrivez-vous",
           "--choose-language": "Choisissez votre langue",
+          "--language": "Langue",
         },
       },
     },
