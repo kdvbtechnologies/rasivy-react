@@ -205,7 +205,7 @@
 }
 
 .posts .post {
-	border: 2px solid blue;
+  border: 2px solid #ddd;
   border-radius: 12px;
   padding: 5px;
    
