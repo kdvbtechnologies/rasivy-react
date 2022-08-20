@@ -37,14 +37,9 @@ export default function HomeAction() {
 
   //getAllPost
   useEffect(() => {
-    async function ThePost() {
-      await axios
-        .get("https://api-adoony.herokuapp.com/api/post")
-        .then((res) => {
-          setPosts(res.data);
-        });
-    }
-    console.log(ThePost);
+    axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
+      setPosts(res.data);
+    });
   }, []);
 
   return (
