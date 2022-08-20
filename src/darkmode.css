@@ -198,5 +198,6 @@
 /* post - HomeAction.js */
 .posts {
 	background-color: blue;
-	border-radius: 10%;
+	width: 100px;
+  height: 100px;
 }
