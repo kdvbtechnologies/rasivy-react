@@ -25,6 +25,7 @@ export default function PostAction() {
       withCredentials: true,
     }).then((res) => {
       console.log(res);
+      window.location = "/";
     });
   }
 
