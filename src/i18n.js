@@ -10,7 +10,6 @@ i18n
     resources: {
       en: {
         translations: {
-          "ma tradu title": "Choose your language",
           darkmode: "DarkMode",
           home: "Home Page",
           "Publish photo": "Publish a photo",
@@ -23,6 +22,7 @@ i18n
           "--jamelfase": "jamelfase",
           "--check-internet": "Check your internet connection",
           "--signup": "Sign up",
+          "--choose-language": "Choose your language",
         },
       },
 
@@ -33,12 +33,12 @@ i18n
           "--jamelfase": "jamelfase",
           "--check-internet": "Verifique a sua conexão com a internet",
           "--signup": "Inscreve-te",
+          "--choose-language": "Escolha seu idioma",
         },
       },
 
       fr: {
         translations: {
-          "ma tradu title": "Choisissez votre langue",
           darkmode: "Mode Sombre",
           home: "Page d'accueil",
           "Publish photo": "Publier une photo",
@@ -51,6 +51,7 @@ i18n
           "--jamelfase": "jamelfase",
           "--check-internet": "Vérifier votre connexion internet",
           "--signup": "Inscrivez-vous",
+          "--choose-language": "Choisissez votre langue",
         },
       },
     },

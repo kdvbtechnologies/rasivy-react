@@ -33,34 +33,7 @@ export default function LanguageAction() {
   const preferenceLangFr = storage === fr || FR || BE || CA || CH || LU || MC;
 
   const en = "en";
-  const US = "en-US";
-  const TT = "en-TT";
-  const ZA = "en-ZA";
-  const ZW = "en-ZW";
-  const PH = "en-PH";
-  const NZ = "en-NZ";
-  const JM = "en-JM";
-  const IE = "en-IE";
-  const GB = "en-GB";
-  const CB = "en-CB";
-  const enCA = "en-CA";
-  const BZ = "en-BZ";
-  const AU = "en-AU";
-  const preferenceLangEn =
-    storage === en ||
-    US ||
-    TT ||
-    ZA ||
-    ZW ||
-    PH ||
-    NZ ||
-    JM ||
-    IE ||
-    GB ||
-    CB ||
-    enCA ||
-    BZ ||
-    AU;
+  const preferenceLangEn = storage === en;
 
   // toggle language model + localstorage
   useEffect(() => {
@@ -73,7 +46,7 @@ export default function LanguageAction() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
       <div id="title" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("ma tradu title")}</h1>
+        <h1>{t("--choose-language")}</h1>
         <div className="language-select-language-btn">
           <div className="language-btn">
             <button
