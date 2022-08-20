@@ -21,7 +21,7 @@ export default function ProfileAction() {
       </Helmet>
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("profile")}</h1>
+        <h1>{t("--profil")}</h1>
         <div>
           <ul>
             {posts.map((post) => (

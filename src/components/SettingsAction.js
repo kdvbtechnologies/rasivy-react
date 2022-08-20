@@ -12,7 +12,7 @@ export default function SettingsAction() {
       </Helmet>
 
       <div id="settings" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("settings")}</h1>
+        <h1>{t("--settings")}</h1>
       </div>
     </>
   );
