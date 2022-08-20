@@ -20,6 +20,7 @@ i18n
           profile: "Profile",
           settings: "Settings",
           "--signup-success": "Successful registration. Welcome to jamelfase !",
+          "--jamelfase": "jamelfase",
         },
       },
 
@@ -35,6 +36,7 @@ i18n
           profile: "Profil",
           settings: "Paramètres",
           "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
+          "--jamelfase": "jamelfase",
         },
       },
     },

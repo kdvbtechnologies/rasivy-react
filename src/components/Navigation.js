@@ -8,7 +8,7 @@ export default function Navigation() {
     <div className="navigation">
       <div className="left-navigation">
         <NavLink className="navlink" to="/">
-          <li>jamelfase</li>
+          <li>{t("--jamelfase")}</li>
         </NavLink>
       </div>
       <div className="right-navigation">
@@ -19,7 +19,7 @@ export default function Navigation() {
           <li>Photos</li>
         </NavLink>
         <NavLink className="navlink" to="/P/Streaming">
-          <li>{t("Streaming Video")}</li>
+          <li>stream</li>
         </NavLink>
         <NavLink className="navlink" to="/P/Post">
           <li>Post</li>
