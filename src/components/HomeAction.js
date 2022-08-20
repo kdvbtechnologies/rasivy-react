@@ -12,6 +12,7 @@ export default function HomeAction() {
   const [errors, setErrors] = useState("");
 
   const [posts, setPosts] = useState([]);
+  const [online, setOnline] = useState(navigator.onLine);
 
   //Signup
   const Signup = async (e) => {
@@ -39,10 +40,9 @@ export default function HomeAction() {
   useEffect(() => {
     axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
       setPosts(res.data);
+      setOnline();
     });
   }, []);
-
-  const nav = navigator.onLine;
 
   return (
     <>
@@ -98,7 +98,7 @@ export default function HomeAction() {
             <div>
               {posts.map((post) => (
                 <div className="posts" key={post.id}>
-                  {nav ? (
+                  {online ? (
                     <>
                       <div className="post">{post.desc}</div>
                     </>
