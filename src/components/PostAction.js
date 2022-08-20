@@ -80,7 +80,7 @@ export default function PostAction() {
               />
             </div>
             <button onClick={Post} type="submit">
-              Post
+              {t("--post-btn")}
             </button>
           </div>
         </div>

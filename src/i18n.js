@@ -26,6 +26,7 @@ i18n
           "--search": "Search",
           "--input-post-placeholder": "Write your post here...",
 
+          "--post-btn": "Post",
           "--": "",
         },
       },
@@ -47,6 +48,7 @@ i18n
           "--post": "Fique a vontade para postar algo",
           "--search": "Pesquise",
           "--input-post-placeholder": "Escreva seu post aqui...",
+          "--post-btn": "Postar",
         },
       },
 
@@ -67,6 +69,7 @@ i18n
           "--post": "N'hésitez pas à publier quelque chose",
           "--search": "Recherche",
           "--input-post-placeholder": "Écrivez votre publication ici...",
+          "--post-btn": "Publier",
         },
       },
     },
