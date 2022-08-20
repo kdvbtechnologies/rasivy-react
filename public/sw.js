@@ -15,7 +15,7 @@ const CACHED_FILES = [
 
   // developpement
   `${BASE}/static/js/main.76e2f1c1.js`,
-  `${BASE}/static/css/main.6eefc347.css`,
+  `${BASE}/static/css/main.9936db02.css`,
 ];
 
 self.addEventListener("install", (event) => {
