@@ -34,6 +34,8 @@ export default function Navigation() {
           <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              width="8vmin"
+              height="auto"
               x="0"
               y="0"
               enableBackground="new 0 0 479 479"
