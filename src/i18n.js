@@ -21,6 +21,7 @@ i18n
           settings: "Settings",
           "--signup-success": "Successful registration. Welcome to jamelfase !",
           "--jamelfase": "jamelfase",
+          "--check-internet": "Vérifier votre connexion internet",
         },
       },
 
@@ -37,6 +38,7 @@ i18n
           settings: "Paramètres",
           "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
           "--jamelfase": "jamelfase",
+          "--check-internet": "Vérifier votre connexion internet",
         },
       },
     },

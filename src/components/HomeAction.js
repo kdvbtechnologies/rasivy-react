@@ -121,7 +121,7 @@ export default function HomeAction() {
                     </>
                   ) : (
                     <>
-                      <h1>Verifier votre connexion internet</h1>
+                      <h1>{t("--check-internet")}</h1>
                     </>
                   )}
                 </div>
