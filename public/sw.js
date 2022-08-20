@@ -12,10 +12,9 @@ const CACHED_FILES = [
   `${BASE}/logo192.png`,
   `${BASE}/logo.svg`,
   `${BASE}/Profile`,
-  "https://reqres.in/api/unknown",
 
   // developpement
-  `${BASE}/static/js/main.8f704817.js`,
+  `${BASE}/static/js/main.9864c411.js`,
   `${BASE}/static/css/main.a61e60b3.css`,
 ];
 
