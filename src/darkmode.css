@@ -197,7 +197,7 @@
 /* color: #666; */
 
 /* post - HomeAction.js */
-.posts {
+.posts li {
 	border-top: 1px solid #ddd;
     
 }
