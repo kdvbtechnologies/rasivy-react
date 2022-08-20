@@ -56,6 +56,7 @@ export default function Navigation() {
               xmlns="http://www.w3.org/2000/svg"
               width="6vmin"
               height="auto"
+              className="svg-navbar-icon"
               x="0"
               y="0"
               enableBackground="new 0 0 350.953 350.953"
@@ -72,7 +73,7 @@ export default function Navigation() {
             <svg
               width="6vmin"
               height="auto"
-              className="svg-icon"
+              className="svg-navbar-icon"
               viewBox="0 0 20 20"
             >
               <path d="M13.68 9.448h-3.128V6.319a.552.552 0 00-1.104 0v3.129H6.319a.551.551 0 000 1.102h3.129v3.129a.552.552 0 001.104 0V10.55h3.128a.552.552 0 100-1.102zM10 .968a9.031 9.031 0 100 18.063A9.031 9.031 0 0010 .968zm0 16.934a7.903 7.903 0 11.002-15.806A7.903 7.903 0 0110 17.902z"></path>
@@ -86,6 +87,7 @@ export default function Navigation() {
               xmlns="http://www.w3.org/2000/svg"
               width="6vmin"
               height="auto"
+              className="svg-navbar-icon"
               x="0"
               y="0"
               enableBackground="new 0 0 487.95 487.95"
