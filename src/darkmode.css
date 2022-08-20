@@ -210,3 +210,8 @@
   border-radius: 12px;
   padding: 5px;
 }
+
+/* svg-fill- navigation.js */
+.svg-navbar-icon{
+	fill: var(--color-mytag);
+}

@@ -103,7 +103,7 @@ export default function Navigation() {
             <svg
               width="6vmin"
               height="auto"
-              className="svg-icon"
+              className="svg-navbar-icon"
               viewBox="0 0 20 20"
             >
               <path d="M3.314 4.8h13.372a.743.743 0 000-1.486H3.314a.743.743 0 000 1.486zm13.372 10.4H3.314a.743.743 0 000 1.486h13.372a.743.743 0 000-1.486zm0-5.943H3.314a.743.743 0 000 1.486h13.372a.743.743 0 000-1.486z"></path>
