@@ -98,13 +98,13 @@ export default function HomeAction() {
                 <div className="posts" key={post.id}>
                   {post.desc ? (
                     <>
-                      <div>
-                        <h1>Verifier votre connexion internet</h1>
-                      </div>
+                      <div className="post">{post.desc}</div>
                     </>
                   ) : (
                     <>
-                      <div className="post">{post.desc}</div>
+                      <div>
+                        <h1>Verifier votre connexion internet</h1>
+                      </div>
                     </>
                   )}
                 </div>
