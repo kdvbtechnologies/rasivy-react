@@ -212,6 +212,6 @@
 }
 
 /* svg-fill- navigation.js */
-.svg-navbar-icon{
+.navlink .svg-navbar-icon{
 	fill: var(--color-mytag);
 }
