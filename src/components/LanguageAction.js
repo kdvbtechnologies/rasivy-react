@@ -24,13 +24,7 @@ export default function LanguageAction() {
   const preferenceLangPt = storage === pt;
 
   const fr = "fr";
-  const FR = "fr-FR";
-  const BE = "fr-BE";
-  const CA = "fr-CA";
-  const CH = "fr-CH";
-  const LU = "fr-LU";
-  const MC = "fr-MC";
-  const preferenceLangFr = storage === fr || FR || BE || CA || CH || LU || MC;
+  const preferenceLangFr = storage === fr;
 
   const en = "en";
   const preferenceLangEn = storage === en;
