@@ -197,6 +197,9 @@
 /* color: #666; */
 
 /* post - HomeAction.js */
+.posts {
+	padding: 30px;
+}
 .posts li {
 	border-top: 1px solid #ddd;
     
