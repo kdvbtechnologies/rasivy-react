@@ -20,6 +20,9 @@ export default function LanguageAction() {
   const storage = localStorage.getItem("i18nextLng");
   //const prefLang = localStorage.getItem("preference-lang");
 
+  const pt = "pt";
+  const preferenceLangPt = storage === pt;
+
   const fr = "fr";
   const FR = "fr-FR";
   const BE = "fr-BE";
@@ -84,6 +87,12 @@ export default function LanguageAction() {
               onClick={() => changeLanguage("en")}
             >
               English
+            </button>
+            <button
+              className={`${preferenceLangPt ? "btn-active" : "btn"}`}
+              onClick={() => changeLanguage("pt")}
+            >
+              Português
             </button>
           </div>
         </div>
