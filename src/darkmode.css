@@ -202,5 +202,5 @@
 }
 .posts li {
 	border-top: 1px solid #ddd;
-    
+	border-radius: 50px 10px;
 }
