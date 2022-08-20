@@ -194,7 +194,7 @@
 	font-size: 22px;
 }
 
-/* color: #666; */
+/* color: #666; border: 2px solid #ddd */
 
 /* post - HomeAction.js */
 
@@ -209,5 +209,4 @@
   border: 2px solid #cdcdcd;
   border-radius: 12px;
   padding: 5px;
-   
 }
