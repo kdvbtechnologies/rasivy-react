@@ -195,7 +195,9 @@
 }
 
 .svg-navbar-icon {
-	background-color: var(--color-svg-navbar);
+	fill: var(--color-svg-navbar);
+	width: 6vmin;
+    height: auto
 }
 
 /* color: #666; border: 2px solid #ddd */
