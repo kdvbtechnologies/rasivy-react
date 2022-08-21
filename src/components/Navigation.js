@@ -15,7 +15,7 @@ export default function Navigation() {
         <NavLink className="navlink" to="/">
           <li>
             <svg
-              className="svg-navbar-icon"
+              className="btn-darkmode"
               xmlns="http://www.w3.org/2000/svg"
               x="0"
               y="0"
