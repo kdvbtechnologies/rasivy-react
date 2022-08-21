@@ -16,8 +16,6 @@ export default function Navigation() {
           <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="6vmin"
-              height="auto"
               className="svg-navbar-icon"
               x="0"
               y="0"
