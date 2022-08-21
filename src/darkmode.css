@@ -27,7 +27,7 @@
 
 /* svg-fill- navigation.js */
 .navigation .right-navigation .navlink li .svg-navbar-icon{
-	fill: var(--color-svg-navbar);
+	fill:blue;
 }
 
 
