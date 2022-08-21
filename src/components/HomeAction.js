@@ -71,7 +71,9 @@ export default function HomeAction() {
         password: passwordd,
       },
     }).then((res) => {
-      console.log(res);
+      console.log(res.data.token);
+      const tokenStore = res.data.token;
+      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
     });
   };
 
