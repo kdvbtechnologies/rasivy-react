@@ -8,7 +8,7 @@ export default function PostAction() {
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   //const [userId, setUserId] = useState(localStorage.getItem("user-id") === "true");
   const [desc, setDesc] = useState("");
-  const user = localStorage.getItem("https://jamelfase.com/user-id");
+  const user = localStorage.getItem("https://jamelfase.com/user-token");
 
   function Post(e) {
     e.preventDefault();
