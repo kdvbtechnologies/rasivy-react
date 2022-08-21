@@ -15,14 +15,12 @@
 	--body-color: black; 
 	--color-mytag: black;
 	--color-menu-navigation-title:black;
-	--color-svg-navbar: rgb(16, 255, 96);
 }
 
 .dark {
 	--body-color: white; 
 	--color-mytag: white;
 	--menu-navigation-color-title: yellow;
-	--color-svg-navbar: rgb(255, 46, 46);
 } 
 
 /** threminaction */
@@ -195,7 +193,7 @@
 }
 
 .svg-navbar-icon {
-	fill: var(--color-svg-navbar);
+	fill: var(--color-mytag);
 	width: 6vmin;
     height: auto
 }
