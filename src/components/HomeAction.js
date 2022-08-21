@@ -28,15 +28,15 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      const userStore = res.data.message;
-      if (userStore) {
+      const tokenStore = res.data.token;
+      if (tokenStore) {
         setErrors(`${t("--signup-success")}`);
       }
-      localStorage.setItem("https://jamelfase.com/user-id", userStore);
+      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
     });
   };
 
-  const success = localStorage.getItem("https://jamelfase.com/user-id");
+  const success = localStorage.getItem("https://jamelfase.com/user-token");
 
   //getAllPost
   useEffect(() => {
