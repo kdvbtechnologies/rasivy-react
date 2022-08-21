@@ -137,7 +137,7 @@ export default function HomeAction() {
                   type="email"
                   placeholder={t("--email")}
                   name="email"
-                  value={email}
+                  value={emaill}
                   onChange={(e) => setEmaill(e.target.value)}
                 />
               </div>
@@ -146,7 +146,7 @@ export default function HomeAction() {
                   type="password"
                   placeholder={t("--password")}
                   name="password"
-                  value={password}
+                  value={passwordd}
                   onChange={(e) => setPasswordd(e.target.value)}
                 />
               </div>
