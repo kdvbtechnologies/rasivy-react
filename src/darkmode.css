@@ -15,19 +15,19 @@
 	--body-color: black; 
 	--color-mytag: black;
 	--color-menu-navigation-title:black;
-	--color-svg-navbar: black;
+	--color-svg-navbar: rgb(16, 255, 96);
 }
 
 .dark {
 	--body-color: white; 
 	--color-mytag: white;
 	--menu-navigation-color-title: yellow;
-	--color-svg-navbar: white;
+	--color-svg-navbar: rgb(255, 46, 46);
 } 
 
 /* svg-fill- navigation.js */
 .navigation .right-navigation .navlink li .svg-navbar-icon{
-	fill: white;
+	fill: var(--color-svg-navbar);
 }
 
 
