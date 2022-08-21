@@ -30,6 +30,8 @@ i18n
           "--username": "Username",
           "--email": "E-mail",
           "--password": "Password",
+          "--signin": "",
+
           "--": "",
         },
       },
@@ -81,6 +83,8 @@ i18n
           "--username": "Nom d'utilisateur",
           "--email": "E-mail",
           "--password": "Mot de passe",
+          "--signin": "Connexion",
+          "--signin-btn": "Se connecter",
         },
       },
     },

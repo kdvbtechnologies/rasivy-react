@@ -108,6 +108,35 @@ export default function HomeAction() {
             </>
           )}
           <br />
+          <div>
+            <div>
+              <h2>{t("--signin")}</h2>
+            </div>
+            <div>
+              <div>
+                <input
+                  type="email"
+                  placeholder={t("--email")}
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="password"
+                  placeholder={t("--password")}
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <button type="submit" onClick={Signup}>
+                {t("--signin-btn")}
+              </button>
+            </div>
+          </div>
+
           <br />
           <br />
 
