@@ -8,7 +8,9 @@ export default function HomeAction() {
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [emaill, setEmaill] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordd, setPasswordd] = useState("");
   const [errors, setErrors] = useState("");
 
   const [posts, setPosts] = useState([]);
@@ -57,6 +59,21 @@ export default function HomeAction() {
     });
   }, [online]);
   console.log(online);
+
+  //SignIn
+  const SignIn = async (e) => {
+    e.preventDefault();
+    await axios({
+      method: "post",
+      url: `https://api-adoony.herokuapp.com/api/auth/signin`,
+      data: {
+        email: emaill,
+        password: passwordd,
+      },
+    }).then((res) => {
+      console.log(res);
+    });
+  };
 
   return (
     <>
@@ -107,7 +124,9 @@ export default function HomeAction() {
               </div>
             </>
           )}
+
           <br />
+
           <div>
             <div>
               <h2>{t("--signin")}</h2>
@@ -119,7 +138,7 @@ export default function HomeAction() {
                   placeholder={t("--email")}
                   name="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmaill(e.target.value)}
                 />
               </div>
               <div>
@@ -128,10 +147,10 @@ export default function HomeAction() {
                   placeholder={t("--password")}
                   name="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPasswordd(e.target.value)}
                 />
               </div>
-              <button type="submit" onClick={Signup}>
+              <button type="submit" onClick={SignIn}>
                 {t("--signin-btn")}
               </button>
             </div>
