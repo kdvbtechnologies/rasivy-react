@@ -30,7 +30,7 @@ export default function HomeAction() {
     }).then((res) => {
       const userIdStore = res.data.message;
       if (userIdStore) {
-        setErrors("hello");
+        setErrors(`${t("--signup-success")}`);
         console.log(errors);
       }
       localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
