@@ -134,7 +134,9 @@ export default function HomeAction() {
 
           <br />
 
-          {!getToken && (
+          {getToken ? (
+            <></>
+          ) : (
             <div>
               <div>
                 <h2>{t("--signin")}</h2>
