@@ -121,7 +121,7 @@ export default function HomeAction() {
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div className="inputs">
                       <input
                         type="password"
                         placeholder={t("--password")}
