@@ -131,8 +131,6 @@ export default function HomeAction() {
                       />
                     </div>
                     <br />
-                    <p>J'ai déjà un compte. Se connecter</p>
-                    <br />
                     <button type="submit" onClick={Signup}>
                       {t("--signup-btn")}
                     </button>
