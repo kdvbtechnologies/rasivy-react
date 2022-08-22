@@ -10,15 +10,17 @@ i18n
     resources: {
       en: {
         translations: {
-          "--streaming-video": "Video Streaming",
-          "--signup-success": "Successful registration. Now log in!",
-          "--jamelfase": "jamelfase",
-          "--check-internet": "Check your internet connection",
           "--signup": "Sign up",
           "--signup-btn": "Sign up",
+          "--signup-success": "Successful registration. Now log in !",
+          "--signin": "",
+          "--signin-success": "You are connected !",
+          "--jamelfase": "jamelfase",
+          "--check-internet": "Check your internet connection",
           "--choose-language": "Choose your language",
           "--language": "Language",
           "--settings": "Settings",
+          "--streaming-video": "Video Streaming",
           "--darkmode": "Dark Mode",
           "--profil": "Profil",
           "--menu": "Menu",
@@ -30,7 +32,6 @@ i18n
           "--username": "Username",
           "--email": "E-mail",
           "--password": "Password",
-          "--signin": "",
 
           "--": "",
         },
@@ -40,6 +41,7 @@ i18n
         translations: {
           "--streaming-video": "Transmissão vídeo",
           "--signup-success": "Registro bem sucedido. Agora faça login !",
+          "--signin-success": "",
           "--jamelfase": "jamelfase",
           "--check-internet": "Verifique a sua conexão com a internet",
           "--signup": "Inscreve-te",
@@ -63,16 +65,19 @@ i18n
 
       fr: {
         translations: {
-          "--streaming-video": "Streaming Vidéo",
-          "--signup-success":
-            "Inscription réussie. Maintenant connectez-vous !",
-          "--jamelfase": "jamelfase",
-          "--check-internet": "Vérifier votre connexion internet",
           "--signup": "Inscrivez-vous",
           "--signup-btn": "S'inscrire",
+          "--signup-success":
+            "Inscription réussie. Maintenant connectez-vous !",
+          "--signin": "Connexion",
+          "--signin-btn": "Se connecter",
+          "--signin-success": "Vous êtes connecté !",
           "--choose-language": "Choisissez votre langue",
           "--language": "Langue",
           "--settings": "Paramètres",
+          "--check-internet": "Vérifier votre connexion internet",
+          "--jamelfase": "jamelfase",
+          "--streaming-video": "Streaming Vidéo",
           "--darkmode": "Mode Sombre",
           "--profil": "Profile",
           "--menu": "Menu",
@@ -84,8 +89,6 @@ i18n
           "--username": "Nom d'utilisateur",
           "--email": "E-mail",
           "--password": "Mot de passe",
-          "--signin": "Connexion",
-          "--signin-btn": "Se connecter",
         },
       },
     },
