@@ -227,6 +227,7 @@
 	border-radius: 30px;
 	padding: 40px 60px;
 	width: 300px;
+	height: auto;
   }
 
   .inputs input[type="text"],
