@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
-import "../darkmode.css";
+//import { Helmet } from "react-helmet";
 
 export default function DarkModeAction() {
   const { t } = useTranslation();
@@ -19,9 +18,6 @@ export default function DarkModeAction() {
 
   return (
     <>
-      <Helmet>
-        <body className={`${dark ? "dark-body" : "light-body"}`}></body>
-      </Helmet>
       <div id="darkmode" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("--darkmode")}</h1>
 
