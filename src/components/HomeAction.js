@@ -28,9 +28,9 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      const msg = res.data.message;
-      console.log(res);
-      if (msg) {
+      const messageJamelfase = res.data.message;
+      console.log(res.data);
+      if (messageJamelfase) {
         setErrors(`${t("--signup-success")}`);
       }
       //localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
