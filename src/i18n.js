@@ -64,7 +64,8 @@ i18n
       fr: {
         translations: {
           "--streaming-video": "Streaming Vidéo",
-          "--signup-success": "Inscription réussie. Bienvenue sur jamelfase !",
+          "--signup-success":
+            "Inscription réussie. Maintenant connectez-vous !",
           "--jamelfase": "jamelfase",
           "--check-internet": "Vérifier votre connexion internet",
           "--signup": "Inscrivez-vous",
