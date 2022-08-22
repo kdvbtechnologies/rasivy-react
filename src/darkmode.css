@@ -228,3 +228,13 @@
 	padding: 40px 60px;
 	min-width: 300px;
   }
+
+  .inputs input[type="text"],
+input[type="password"] {
+  padding: 15px 40px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  border: none;
+  margin-bottom: 15px;
+  outline: none;
+}
