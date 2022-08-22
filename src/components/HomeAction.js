@@ -29,6 +29,7 @@ export default function HomeAction() {
       },
     }).then((res) => {
       const msg = res.data.message;
+      console.log(res);
       if (msg) {
         setErrors(`${t("--signup-success")}`);
       }
