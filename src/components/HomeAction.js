@@ -28,11 +28,11 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      const tokenStore = res.data.token;
-      if (tokenStore) {
+      const msg = res.data.message;
+      if (msg) {
         setErrors(`${t("--signup-success")}`);
       }
-      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+      //localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
     });
   };
 
