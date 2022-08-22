@@ -222,7 +222,7 @@
 	align-items: center;  
 	flex-direction: column;
 	font-family: "Roboto", sans-serif;
-	background-color: #fff;
+	border: 3px rgb(13, 252, 93);
 	margin-top: 20px;
 	border-radius: 30px;
 	padding: 40px 60px;
