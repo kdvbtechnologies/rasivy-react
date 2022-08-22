@@ -17,6 +17,7 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const success = localStorage.getItem("https://jamelfase.com/user-id");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
+  const getToken = localStorage.getItem("https://jamelfase.com/user-token");
 
   //Signup
   const Signup = async (e) => {
@@ -133,34 +134,36 @@ export default function HomeAction() {
 
           <br />
 
-          <div>
-            <div>
-              <h2>{t("--signin")}</h2>
-            </div>
+          {!getToken && (
             <div>
               <div>
-                <input
-                  type="email"
-                  placeholder={t("--email")}
-                  name="email"
-                  value={emaill || getEmail}
-                  onChange={(e) => setEmaill(e.target.value)}
-                />
+                <h2>{t("--signin")}</h2>
               </div>
               <div>
-                <input
-                  type="password"
-                  placeholder={t("--password")}
-                  name="password"
-                  value={passwordd}
-                  onChange={(e) => setPasswordd(e.target.value)}
-                />
+                <div>
+                  <input
+                    type="email"
+                    placeholder={t("--email")}
+                    name="email"
+                    value={emaill || getEmail}
+                    onChange={(e) => setEmaill(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    placeholder={t("--password")}
+                    name="password"
+                    value={passwordd}
+                    onChange={(e) => setPasswordd(e.target.value)}
+                  />
+                </div>
+                <button type="submit" onClick={SignIn}>
+                  {t("--signin-btn")}
+                </button>
               </div>
-              <button type="submit" onClick={SignIn}>
-                {t("--signin-btn")}
-              </button>
             </div>
-          </div>
+          )}
 
           <br />
           <br />
