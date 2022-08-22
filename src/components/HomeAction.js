@@ -16,7 +16,7 @@ export default function HomeAction() {
   const [posts, setPosts] = useState([]);
   const [online, setOnline] = useState(navigator.onLine);
   const [afterLogin, setAfterLogin] = useState("");
-  const success = localStorage.getItem("https://jamelfase.com/user-id");
+  const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
 
@@ -92,7 +92,7 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {success ? (
+          {getUserId || getToken ? (
             <>
               <h2 style={{ color: "blue" }}>{errors}</h2>
             </>
