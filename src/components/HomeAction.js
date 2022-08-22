@@ -108,16 +108,24 @@ export default function HomeAction() {
             </>
           ) : (
             <>
-              <div>
-                <h2 value={signin} onClick={Auth}>
-                  Connexion
-                </h2>
-              </div>
-              <div>
-                <h1 value={signup} onClick={Auth}>
-                  S'inscrire
-                </h1>
-              </div>
+              {signup ? (
+                <>
+                  <div>
+                    <h2 value={signup} onClick={Auth}>
+                      S'inscrire
+                    </h2>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h1 value={signin} onClick={Auth}>
+                      Connexion
+                    </h1>
+                  </div>
+                </>
+              )}
+
               {!getToken && (
                 <>
                   <form className="signup-form">
