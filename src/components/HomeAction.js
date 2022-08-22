@@ -109,12 +109,12 @@ export default function HomeAction() {
           ) : (
             <>
               <div>
-                <h2 value={signin} onChange={Auth}>
+                <h2 value={signin} onClick={Auth}>
                   Connexion
                 </h2>
               </div>
               <div>
-                <h1 value={signup} onChange={Auth}>
+                <h1 value={signup} onClick={Auth}>
                   S'inscrire
                 </h1>
               </div>
