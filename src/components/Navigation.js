@@ -27,7 +27,6 @@ export default function Navigation() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="svg-navbar-icon"
-                  onChange={setDark(dark)}
                   x="0"
                   y="0"
                   enableBackground="new 0 0 512 512"
