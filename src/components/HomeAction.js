@@ -130,6 +130,9 @@ export default function HomeAction() {
                         onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
+                    <br />
+                    <p>J'ai déjà un compte. Se connecter</p>
+                    <br />
                     <button type="submit" onClick={Signup}>
                       {t("--signup-btn")}
                     </button>
