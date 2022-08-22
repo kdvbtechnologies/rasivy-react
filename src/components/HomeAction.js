@@ -29,12 +29,14 @@ export default function HomeAction() {
       },
     }).then((res) => {
       const userIdStore = res.data.message;
-      console.log(res);
+      const userEmailStore = res.data.email;
+      console.log(res.data);
       if (userIdStore) {
         setErrors(`${t("--signup-success")}`);
         console.log(errors);
       }
       localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
+      localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
     });
   };
 
