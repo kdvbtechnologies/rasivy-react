@@ -41,6 +41,7 @@ export default function HomeAction() {
   };
 
   const success = localStorage.getItem("https://jamelfase.com/user-id");
+  const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
 
   //getAllPost
   useEffect(() => {
@@ -143,7 +144,7 @@ export default function HomeAction() {
                   type="email"
                   placeholder={t("--email")}
                   name="email"
-                  value={emaill}
+                  value={emaill || getEmail}
                   onChange={(e) => setEmaill(e.target.value)}
                 />
               </div>
