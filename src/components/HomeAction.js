@@ -118,18 +118,13 @@ export default function HomeAction() {
                     <h2 value={signup} onClick={signupModal}>
                       S'inscrire
                     </h2>
-                    <h1 value={signin} onClick={signinModal}>
-                      Connexion
-                    </h1>
+
                     <p>Salut, inscrit toi maintenant</p>
                   </div>
                 </>
               ) : (
                 <>
                   <div>
-                    <h2 value={signup} onClick={signupModal}>
-                      S'inscrire
-                    </h2>
                     <h1 value={signin} onClick={signinModal}>
                       Connexion
                     </h1>
