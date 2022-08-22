@@ -15,6 +15,7 @@ export default function HomeAction() {
 
   const [posts, setPosts] = useState([]);
   const [online, setOnline] = useState(navigator.onLine);
+  const [afterLogin, setAfterLogin] = useState("");
   const success = localStorage.getItem("https://jamelfase.com/user-id");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
@@ -76,9 +77,10 @@ export default function HomeAction() {
         password: passwordd,
       },
     }).then((res) => {
-      console.log(res.data.token);
       const tokenStore = res.data.token;
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+      setAfterLogin("Vous etes connecté");
+      console.log(afterLogin);
     });
   };
 
@@ -136,7 +138,7 @@ export default function HomeAction() {
 
           {getToken ? (
             <>
-              <h1>hello world</h1>
+              <h1>{afterLogin}</h1>
             </>
           ) : (
             <div>
