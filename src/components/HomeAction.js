@@ -120,8 +120,8 @@ export default function HomeAction() {
               </div>
               {!getToken && (
                 <>
-                  <h1>{t("--signup")}</h1>
                   <form className="signup-form">
+                    <h1>{t("--signup")}</h1>
                     <div className="inputs">
                       <input
                         type="text"
