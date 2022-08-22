@@ -92,7 +92,7 @@ export default function HomeAction() {
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
         <div>
-          {getUserId || getToken ? (
+          {getUserId ? (
             <>
               <h2 style={{ color: "blue" }}>{errors}</h2>
             </>
