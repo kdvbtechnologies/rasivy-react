@@ -15,6 +15,8 @@ export default function HomeAction() {
 
   const [posts, setPosts] = useState([]);
   const [online, setOnline] = useState(navigator.onLine);
+  const success = localStorage.getItem("https://jamelfase.com/user-id");
+  const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
 
   //Signup
   const Signup = async (e) => {
@@ -39,9 +41,6 @@ export default function HomeAction() {
       localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
     });
   };
-
-  const success = localStorage.getItem("https://jamelfase.com/user-id");
-  const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
 
   //getAllPost
   useEffect(() => {
@@ -72,7 +71,7 @@ export default function HomeAction() {
       method: "post",
       url: `https://api-adoony.herokuapp.com/api/auth/signin`,
       data: {
-        email: emaill,
+        email: emaill || getEmail,
         password: passwordd,
       },
     }).then((res) => {
