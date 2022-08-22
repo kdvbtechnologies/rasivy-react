@@ -5,7 +5,9 @@ import { useState } from "react";
 
 export default function Navigation() {
   const { t } = useTranslation();
-  const [dark] = useState(localStorage.getItem("dark-mode") === "true");
+  const [dark, setDark] = useState(
+    localStorage.getItem("dark-mode") === "true"
+  );
 
   return (
     <>
@@ -27,6 +29,8 @@ export default function Navigation() {
                   className="svg-navbar-icon"
                   x="0"
                   y="0"
+                  value={dark}
+                  onChange={(e) => setDark(e.target.value)}
                   enableBackground="new 0 0 512 512"
                   version="1.1"
                   viewBox="0 0 512 512"
