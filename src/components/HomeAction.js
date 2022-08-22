@@ -88,9 +88,13 @@ export default function HomeAction() {
   };
 
   //Auth Modal
-  function Auth(e) {
+  function signupModal(e) {
     e.preventDefault();
     setSignup(!signup);
+  }
+
+  function signinModal(e) {
+    e.preventDefault();
     setSignin(!signin);
   }
 
@@ -111,10 +115,10 @@ export default function HomeAction() {
               {signup ? (
                 <>
                   <div>
-                    <h2 value={signup} onClick={Auth}>
+                    <h2 value={signup} onClick={signupModal}>
                       S'inscrire
                     </h2>
-                    <h1 value={signin} onClick={Auth}>
+                    <h1 value={signin} onClick={signinModal}>
                       Connexion
                     </h1>
                     <p>Salut, inscrit toi maintenant</p>
@@ -123,10 +127,10 @@ export default function HomeAction() {
               ) : (
                 <>
                   <div>
-                    <h2 value={signup} onClick={Auth}>
+                    <h2 value={signup} onClick={signupModal}>
                       S'inscrire
                     </h2>
-                    <h1 value={signin} onClick={Auth}>
+                    <h1 value={signin} onClick={signinModal}>
                       Connexion
                     </h1>
                     <p>Salut, connecte toi ici</p>
