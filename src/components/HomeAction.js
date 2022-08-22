@@ -2,8 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SignupModal from "./SignupModal";
-import SigninModal from "./SigninModal";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -107,8 +105,6 @@ export default function HomeAction() {
       </Helmet>
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
-        {signup && <SignupModal />}
-        {signin && <SigninModal />}
         <div>
           {getUserId ? (
             <>
@@ -126,19 +122,6 @@ export default function HomeAction() {
                       S'inscrire
                     </h2>
                     <p>Salut, inscrit toi maintenant</p>
-                  </div>
-                </>
-              )}
-              {signin && (
-                <>
-                  <div>
-                    <h2 value={signup} onClick={signupModal}>
-                      S'inscrire
-                    </h2>
-                    <h2 value={signin} onClick={signinModal}>
-                      Connexion
-                    </h2>
-                    <p>Salut, connecte toi ici</p>
                   </div>
                 </>
               )}
