@@ -112,22 +112,22 @@ export default function HomeAction() {
             </>
           ) : (
             <>
-              {signup ? (
+              {signup && (
                 <>
                   <div>
                     <h2 value={signup} onClick={signupModal}>
                       S'inscrire
                     </h2>
-
                     <p>Salut, inscrit toi maintenant</p>
                   </div>
                 </>
-              ) : (
+              )}
+              {signin && (
                 <>
                   <div>
-                    <h1 value={signin} onClick={signinModal}>
+                    <h2 value={signin} onClick={signinModal}>
                       Connexion
-                    </h1>
+                    </h2>
                     <p>Salut, connecte toi ici</p>
                   </div>
                 </>
