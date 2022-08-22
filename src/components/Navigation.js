@@ -5,13 +5,9 @@ import { useState, useEffect } from "react";
 
 export default function Navigation() {
   const { t } = useTranslation();
-  const [dark, setDark] = useState(
-    localStorage.getItem("dark-mode") === "true"
-  );
+  const [dark] = useState(localStorage.getItem("dark-mode") === "true");
 
-  useEffect(() => {
-    setDark(!dark);
-  }, [dark]);
+  useEffect(() => {}, [dark]);
 
   return (
     <>
