@@ -222,7 +222,7 @@
 	align-items: center;  
 	flex-direction: column;
 	font-family: "Roboto", sans-serif;
-	border: 3px solid rgb(13, 252, 93);
+	border: 3px solid  #f2f2f2;
 	margin-top: 20px;
 	border-radius: 30px;
 	padding: 40px 60px;
@@ -243,7 +243,7 @@ input[type="password"], input[type="email"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color:  #f2f2f2;
+	background-color: rgb(45, 161, 60);
 	border: none;
 	color: white;
 	font-size: 16px;
