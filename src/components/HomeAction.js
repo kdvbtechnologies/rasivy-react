@@ -16,9 +16,10 @@ export default function HomeAction() {
   const [posts, setPosts] = useState([]);
   const [online, setOnline] = useState(navigator.onLine);
   const [afterLogin, setAfterLogin] = useState("");
-  const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
+  const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
+  const getUsername = "Sarah Labelle";
 
   //Signup
   const Signup = async (e) => {
@@ -81,7 +82,7 @@ export default function HomeAction() {
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
       setAfterLogin(`${t("--signin-success")}`);
       localStorage.removeItem("https://jamelfase.com/user-email");
-      console.log(afterLogin);
+      localStorage.setItem("https://jamelfase.com/username", getUsername);
     });
   };
 

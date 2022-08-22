@@ -6,6 +6,8 @@ import { useState } from "react";
 export default function MenuAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
+  //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
+  //const getToken = localStorage.getItem("https://jamelfase.com/user-token");
 
   return (
     <>
