@@ -114,9 +114,9 @@ export default function HomeAction() {
               <div>
                 <h1 onChange={Auth}>S'inscrire</h1>
               </div>
-              <h1>{t("--signup")}</h1>
               {!getToken && (
                 <>
+                  <h1>{t("--signup")}</h1>
                   <form className="signup-form">
                     <div className="inputs">
                       <input
