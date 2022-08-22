@@ -98,11 +98,7 @@ export default function HomeAction() {
             </>
           ) : (
             <>
-              {getToken ? (
-                <>
-                  <h1>aaa</h1>
-                </>
-              ) : (
+              {!getToken && (
                 <>
                   <div>
                     <h1>{t("--signup")}</h1>
