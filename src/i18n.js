@@ -11,7 +11,7 @@ i18n
       en: {
         translations: {
           "--streaming-video": "Video Streaming",
-          "--signup-success": "Successful registration. Welcome to jamelfase !",
+          "--signup-success": "Successful registration. Now log in!",
           "--jamelfase": "jamelfase",
           "--check-internet": "Check your internet connection",
           "--signup": "Sign up",
@@ -39,7 +39,7 @@ i18n
       pt: {
         translations: {
           "--streaming-video": "Transmissão vídeo",
-          "--signup-success": "Registro bem sucedido. Bem-vindo ao jamelfase!",
+          "--signup-success": "Registro bem sucedido. Agora faça login !",
           "--jamelfase": "jamelfase",
           "--check-internet": "Verifique a sua conexão com a internet",
           "--signup": "Inscreve-te",
