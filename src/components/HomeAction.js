@@ -177,8 +177,6 @@ export default function HomeAction() {
             </div>
           )}
 
-          <br />
-
           <div>
             <div>
               {posts.map((post) => (
