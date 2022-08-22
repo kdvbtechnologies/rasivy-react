@@ -19,8 +19,6 @@ export default function HomeAction() {
   const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
-  const [signup, setSignup] = useState(true);
-  const [signin, setSignin] = useState(false);
 
   //Signup
   const Signup = async (e) => {
@@ -87,17 +85,6 @@ export default function HomeAction() {
     });
   };
 
-  //Auth Modal
-  function signupModal(e) {
-    e.preventDefault();
-    setSignup(!signup);
-  }
-
-  function signinModal(e) {
-    e.preventDefault();
-    setSignin(!signin);
-  }
-
   return (
     <>
       <Helmet>
@@ -112,20 +99,6 @@ export default function HomeAction() {
             </>
           ) : (
             <>
-              {signup && (
-                <>
-                  <div>
-                    <h2 value={signin} onClick={signinModal}>
-                      Connexion
-                    </h2>
-                    <h2 value={signup} onClick={signupModal}>
-                      S'inscrire
-                    </h2>
-                    <p>Salut, inscrit toi maintenant</p>
-                  </div>
-                </>
-              )}
-
               {!getToken && (
                 <>
                   <form className="signup-form">
