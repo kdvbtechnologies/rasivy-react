@@ -79,7 +79,7 @@ export default function HomeAction() {
     }).then((res) => {
       const tokenStore = res.data.token;
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
-      setAfterLogin("--signin-success");
+      setAfterLogin(`${t("--signin-success")}`);
       console.log(afterLogin);
     });
   };
