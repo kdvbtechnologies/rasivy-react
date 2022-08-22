@@ -101,7 +101,7 @@ export default function HomeAction() {
             <>
               {!getToken && (
                 <>
-                  <div>
+                  <form className="signup-form">
                     <h1>{t("--signup")}</h1>
                     <div>
                       <input
@@ -133,7 +133,7 @@ export default function HomeAction() {
                     <button type="submit" onClick={Signup}>
                       {t("--signup-btn")}
                     </button>
-                  </div>
+                  </form>
                 </>
               )}
             </>
