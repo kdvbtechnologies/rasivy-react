@@ -28,16 +28,16 @@ export default function HomeAction() {
         password,
       },
     }).then((res) => {
-      const messageJamelfase = res.data.message;
-      if (messageJamelfase) {
+      const userIdStore = res.data.message;
+      if (userIdStore) {
         setErrors("hello");
         console.log(errors);
       }
-      //localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+      localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
     });
   };
 
-  const success = localStorage.getItem("https://jamelfase.com/user-token");
+  const success = localStorage.getItem("https://jamelfase.com/user-id");
 
   //getAllPost
   useEffect(() => {
