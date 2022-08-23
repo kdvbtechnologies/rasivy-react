@@ -26,7 +26,7 @@ export default function ProfileAction() {
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
         {getToken ? (
           <>
-            <h1>{getUsername}</h1>
+            <h1>@{getUsername}</h1>
           </>
         ) : (
           <>

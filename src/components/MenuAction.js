@@ -21,7 +21,7 @@ export default function MenuAction() {
           <NavLink className="navlink" to="/Profile">
             {getToken ? (
               <>
-                <h1>@{getUsername}</h1>
+                <h1>{getUsername}</h1>
               </>
             ) : (
               <>
