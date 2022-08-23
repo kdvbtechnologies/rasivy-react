@@ -271,12 +271,13 @@ input[type="password"], input[type="email"] {
 	justify-content: space-between;
 	align-items: center;
   border: 2px solid #cdcdcd;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 5px;
 }
 
 .users .user h2 {
 	background-color: blue;
 	color: white;
-	border-radius: 12px;
+	border-radius: 20px;
+	font-size: 16px;
 }
