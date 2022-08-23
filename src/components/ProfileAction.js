@@ -7,6 +7,9 @@ export default function ProfileAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [posts, setPosts] = useState([]);
+  //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
+  const getToken = localStorage.getItem("https://jamelfase.com/user-token");
+  const getUsername = localStorage.getItem("https://jamelfase.com/username");
 
   useEffect(() => {
     axios
@@ -21,7 +24,15 @@ export default function ProfileAction() {
       </Helmet>
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("--profil")}</h1>
+        {getToken ? (
+          <>
+            <h1>{getUsername}</h1>
+          </>
+        ) : (
+          <>
+            <h1>{t("--profil")}</h1>
+          </>
+        )}
         <div>
           <ul>
             {posts.map((post) => (
