@@ -101,7 +101,7 @@ export default function PostAction() {
                     <div className="user">
                       <div>{user.username}</div>
                       <div>
-                        <h6>S'abonner</h6>{" "}
+                        <h2>S'abonner</h2>{" "}
                       </div>
                     </div>
                   </>

@@ -275,6 +275,6 @@ input[type="password"], input[type="email"] {
   padding: 5px;
 }
 
-.users .user h6 {
-	color: blue;
+.users .user h2 {
+	background-color: blue;
 }
