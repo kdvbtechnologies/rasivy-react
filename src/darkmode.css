@@ -260,6 +260,8 @@ input[type="password"], input[type="email"] {
   /* friends - PostAction.js */
 
 .users {
+	display: flex;
+	justify-content: space-between;
 	height: auto;
 	width: 300px;
 	padding-bottom: 30px;
@@ -267,8 +269,7 @@ input[type="password"], input[type="email"] {
 }
 
 .users .user {
-	display: flex;
-	justify-content: space-between;
+	
   border: 2px solid #cdcdcd;
   border-radius: 12px;
   padding: 5px;
