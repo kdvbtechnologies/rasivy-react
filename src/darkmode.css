@@ -267,12 +267,12 @@ input[type="password"], input[type="email"] {
 }
 
 .users .user {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid #cdcdcd;
   border-radius: 32px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .users .user h2 {
