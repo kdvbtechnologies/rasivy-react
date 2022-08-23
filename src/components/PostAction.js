@@ -1,15 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
-import axios from "axios";
+//import axios from "axios";
 
 export default function PostAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   //const [userId, setUserId] = useState(localStorage.getItem("user-id") === "true");
-  const [desc, setDesc] = useState("");
-  const user = localStorage.getItem("https://jamelfase.com/user-id");
+  //const [desc, setDesc] = useState("");
+  ///const user = localStorage.getItem("https://jamelfase.com/user-id");
 
+  /*
   function Post(e) {
     e.preventDefault();
     axios({
@@ -27,7 +28,7 @@ export default function PostAction() {
       console.log(res);
       window.location = "/";
     });
-  }
+  }*/
 
   /*
   function Signin(e) {
@@ -69,19 +70,7 @@ export default function PostAction() {
         <div>
           <br />
           <div>
-            <div>
-              <input
-                type="text"
-                name="post"
-                value={desc}
-                onChange={(e) => setDesc(e.target.value)}
-                placeholder={t("--input-post-placeholder")}
-                required
-              />
-            </div>
-            <button onClick={Post} type="submit">
-              {t("--post-btn")}
-            </button>
+            <h1>Bienvenue !</h1>
           </div>
         </div>
       </div>
