@@ -14,23 +14,28 @@ export default function PostAction() {
 
   //getAllPost
   useEffect(() => {
-    axios.get("https://api-adoony.herokuapp.com/api/user").then((res) => {
-      setUsers(res.data);
+    axios
+      .get("https://api-adoony.herokuapp.com/api/user")
+      .then((res) => {
+        setUsers(res.data);
 
-      //update network status
-      function handleStatusChange() {
-        setOnline(navigator.onLine);
-      }
-      //Listen to the online status
-      window.addEventListener("online", handleStatusChange);
-      //Listen to the offline status
-      window.addEventListener("offline", handleStatusChange);
-      //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
-      return () => {
-        window.removeEventListener("online", handleStatusChange);
-        window.removeEventListener("offline", handleStatusChange);
-      };
-    });
+        //update network status
+        function handleStatusChange() {
+          setOnline(navigator.onLine);
+        }
+        //Listen to the online status
+        window.addEventListener("online", handleStatusChange);
+        //Listen to the offline status
+        window.addEventListener("offline", handleStatusChange);
+        //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
+        return () => {
+          window.removeEventListener("online", handleStatusChange);
+          window.removeEventListener("offline", handleStatusChange);
+        };
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [online]);
   console.log(online);
 
