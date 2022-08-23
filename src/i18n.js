@@ -33,7 +33,7 @@ i18n
           "--username": "Username",
           "--email": "E-mail",
           "--password": "Password",
-
+          "--friends": "Find friends",
           "--": "",
         },
       },
@@ -63,6 +63,7 @@ i18n
           "--username": "Nome de utilizador",
           "--email": "E-mail",
           "--password": "Palavra-passe",
+          "--friends": "Encontrar amigos",
         },
       },
 
