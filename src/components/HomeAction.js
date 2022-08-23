@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
+import Posts from "./Posts";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -13,8 +14,6 @@ export default function HomeAction() {
   const [passwordd, setPasswordd] = useState("");
   const [errors, setErrors] = useState("");
 
-  const [posts, setPosts] = useState([]);
-  const [online, setOnline] = useState(navigator.onLine);
   const [afterLogin, setAfterLogin] = useState("");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
@@ -35,37 +34,15 @@ export default function HomeAction() {
     }).then((res) => {
       const userIdStore = res.data.message;
       const userEmailStore = res.data.email;
-      console.log(res.data);
+      //console.log(res.data);
       if (userIdStore) {
         setErrors(`${t("--signup-success")}`);
-        console.log(errors);
+        //console.log(errors);
       }
       localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
       localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
     });
   };
-
-  //getAllPost
-  useEffect(() => {
-    axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
-      setPosts(res.data);
-
-      //update network status
-      function handleStatusChange() {
-        setOnline(navigator.onLine);
-      }
-      //Listen to the online status
-      window.addEventListener("online", handleStatusChange);
-      //Listen to the offline status
-      window.addEventListener("offline", handleStatusChange);
-      //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
-      return () => {
-        window.removeEventListener("online", handleStatusChange);
-        window.removeEventListener("offline", handleStatusChange);
-      };
-    });
-  }, [online]);
-  console.log(online);
 
   //SignIn
   const SignIn = async (e) => {
@@ -181,25 +158,8 @@ export default function HomeAction() {
           <br />
           <br />
           <br />
-          <br />
 
-          <div>
-            <div>
-              {posts.map((post) => (
-                <div className="posts" key={post.id}>
-                  {online ? (
-                    <>
-                      <div className="post">{post.desc}</div>
-                    </>
-                  ) : (
-                    <>
-                      <h1>{t("--check-internet")}</h1>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <Posts />
         </div>
       </div>
     </>
