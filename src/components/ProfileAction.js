@@ -1,21 +1,35 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-  const [posts, setPosts] = useState([]);
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = localStorage.getItem("https://jamelfase.com/username");
+  const [desc, setDesc] = useState("");
+  const user = localStorage.getItem("https://jamelfase.com/user-id");
 
-  useEffect(() => {
-    axios
-      .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => setPosts(res.data));
-  }, []);
+  function Post(e) {
+    e.preventDefault();
+    axios({
+      method: "post",
+      url: `https://api-adoony.herokuapp.com/api/post/add`,
+      data: {
+        userId: user,
+        desc,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    }).then((res) => {
+      console.log(res);
+      window.location = "/";
+    });
+  }
 
   return (
     <>
@@ -33,14 +47,24 @@ export default function ProfileAction() {
             <h1>{t("--profil")}</h1>
           </>
         )}
+        <h1>{t("--post")}</h1>
         <div>
-          <ul>
-            {posts.map((post) => (
-              <div key={post.id}>
-                <h2>{post.desc}</h2>
-              </div>
-            ))}
-          </ul>
+          <br />
+          <div>
+            <div>
+              <input
+                type="text"
+                name="post"
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+                placeholder={t("--input-post-placeholder")}
+                required
+              />
+            </div>
+            <button onClick={Post} type="submit">
+              {t("--post-btn")}
+            </button>
+          </div>
         </div>
       </div>
     </>
