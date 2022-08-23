@@ -15,7 +15,7 @@ export default function PostAction() {
   //getAllPost
   useEffect(() => {
     axios
-      .get("https://api-adoony.herokuapp.com/api/user", {
+      .get("/api/user", {
         headers: {
           Accept: "accept",
           Authorization: "authorise",
