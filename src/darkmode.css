@@ -14,13 +14,13 @@
 .light {
 	--body-color: black; 
 	--color-mytag: black;
-	--color-menu-navigation-title:black;
+	--color-menu-navigation-title:#4e4e4e;
 }
 
 .dark {
 	--body-color: white; 
 	--color-mytag: white;
-	--menu-navigation-color-title: yellow;
+	--menu-navigation-color-title: #4e4e4e;
 } 
 
 /** threminaction */
