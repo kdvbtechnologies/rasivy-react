@@ -255,3 +255,20 @@ input[type="password"], input[type="email"] {
 	padding-top: 14px;
 	cursor: pointer;
   }
+
+
+  /* friends - PostAction.js */
+
+.users {
+	display: flex;
+	height: auto;
+	width: 300px;
+	padding-bottom: 30px;
+	color: #4e4e4e;
+}
+
+.users .user {
+  border: 2px solid #cdcdcd;
+  border-radius: 12px;
+  padding: 5px;
+}

@@ -95,10 +95,10 @@ export default function PostAction() {
           <br />
           <div>
             {users.map((user) => (
-              <div className="posts" key={user.id}>
+              <div className="users" key={user.id}>
                 {online ? (
                   <>
-                    <div className="post">
+                    <div className="user">
                       {user.username} <h6>S'abonner</h6>{" "}
                     </div>
                   </>
