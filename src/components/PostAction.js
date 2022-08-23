@@ -65,7 +65,7 @@ export default function PostAction() {
       </Helmet>
 
       <div id="post" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("--post")}</h1>
+        <h1>{t("--friends")}</h1>
         <div>
           <br />
           <div>

@@ -92,6 +92,7 @@ i18n
           "--username": "Nom d'utilisateur",
           "--email": "E-mail",
           "--password": "Mot de passe",
+          "--friends": "Trouver des amis",
         },
       },
     },
