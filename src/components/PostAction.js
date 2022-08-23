@@ -99,7 +99,10 @@ export default function PostAction() {
                 {online ? (
                   <>
                     <div className="user">
-                      {user.username} <h6>S'abonner</h6>{" "}
+                      <div>{user.username}</div>
+                      <div>
+                        <h6>S'abonner</h6>{" "}
+                      </div>
                     </div>
                   </>
                 ) : (
