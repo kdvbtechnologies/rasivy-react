@@ -47,7 +47,7 @@ export default function HomeAction() {
 
   //getAllPost
   useEffect(() => {
-    axios.get("/api/post").then((res) => {
+    axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
       setPosts(res.data);
 
       //update network status
