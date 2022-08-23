@@ -7,7 +7,8 @@ export default function MenuAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
-  //const getToken = localStorage.getItem("https://jamelfase.com/user-token");
+  const getToken = localStorage.getItem("https://jamelfase.com/user-token");
+  const getUsername = localStorage.getItem("https://jamelfase.com/username");
 
   return (
     <>
@@ -18,7 +19,15 @@ export default function MenuAction() {
         <div className="right">
           <h1>{t("--menu")}</h1>
           <NavLink className="navlink" to="/Profile">
-            <li>{t("--profil")}</li>
+            {getToken ? (
+              <>
+                <h1>{getUsername}</h1>
+              </>
+            ) : (
+              <>
+                <li>{t("--profil")}</li>
+              </>
+            )}
           </NavLink>
           <NavLink className="navlink" to="/DarkMode">
             <li>{t("--darkmode")}</li>
