@@ -1,14 +1,39 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useState } from "react";
-//import axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function PostAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
+  const [users, setUsers] = useState([]);
+  const [online, setOnline] = useState(navigator.onLine);
   //const [userId, setUserId] = useState(localStorage.getItem("user-id") === "true");
   //const [desc, setDesc] = useState("");
   ///const user = localStorage.getItem("https://jamelfase.com/user-id");
+
+  //getAllPost
+  useEffect(() => {
+    axios.get("https://api-adoony.herokuapp.com/api/user/").then((res) => {
+      setUsers(res.data);
+      console.log(res);
+
+      //update network status
+      function handleStatusChange() {
+        setOnline(navigator.onLine);
+      }
+      //Listen to the online status
+      window.addEventListener("online", handleStatusChange);
+      //Listen to the offline status
+      window.addEventListener("offline", handleStatusChange);
+      //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
+      return () => {
+        window.removeEventListener("online", handleStatusChange);
+        window.removeEventListener("offline", handleStatusChange);
+      };
+    });
+  }, [online]);
+  console.log(online);
 
   /*
   function Post(e) {
@@ -70,7 +95,19 @@ export default function PostAction() {
         <div>
           <br />
           <div>
-            <h1>Bienvenue !</h1>
+            {users.map((user) => (
+              <div className="posts" key={user.id}>
+                {online ? (
+                  <>
+                    <div className="post">{user.desc}</div>
+                  </>
+                ) : (
+                  <>
+                    <h1>{t("--check-internet")}</h1>
+                  </>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
