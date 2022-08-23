@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Posts from "./Posts";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -203,7 +202,6 @@ export default function HomeAction() {
           </div>
         </div>
       </div>
-      <Posts />
     </>
   );
 }
