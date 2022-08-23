@@ -271,7 +271,7 @@ input[type="password"], input[type="email"] {
 	justify-content: space-between;
 	align-items: center;
   border: 2px solid #cdcdcd;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 5px;
 }
 
@@ -279,5 +279,6 @@ input[type="password"], input[type="email"] {
 	background-color: blue;
 	color: white;
 	border-radius: 20px;
+	margin: 5px 10px;
 	font-size: 16px;
 }
