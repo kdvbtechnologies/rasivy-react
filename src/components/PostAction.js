@@ -16,7 +16,7 @@ export default function PostAction() {
   useEffect(() => {
     axios.get("https://api-adoony.herokuapp.com/api/user/").then((res) => {
       setUsers(res.data);
-      console.log(res);
+      console.log(res.data.username);
 
       //update network status
       function handleStatusChange() {
@@ -99,7 +99,7 @@ export default function PostAction() {
               <div className="posts" key={user.id}>
                 {online ? (
                   <>
-                    <div className="post">{user.desc}</div>
+                    <div className="post">{user.username}</div>
                   </>
                 ) : (
                   <>
