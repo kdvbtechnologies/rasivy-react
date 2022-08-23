@@ -260,7 +260,6 @@ input[type="password"], input[type="email"] {
   /* friends - PostAction.js */
 
 .users {
-	
 	height: auto;
 	width: 300px;
 	padding-bottom: 30px;
@@ -274,4 +273,8 @@ input[type="password"], input[type="email"] {
   border: 2px solid #cdcdcd;
   border-radius: 12px;
   padding: 5px;
+}
+
+.users .user h6 {
+	color: blue;
 }
