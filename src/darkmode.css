@@ -279,6 +279,6 @@ input[type="password"], input[type="email"] {
 	background-color: blue;
 	color: white;
 	border-radius: 20px;
-	margin: 5px 50px;
+	padding: 5px 50px;
 	font-size: 16px;
 }
