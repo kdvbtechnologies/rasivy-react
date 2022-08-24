@@ -15,10 +15,12 @@ export default function PostAction() {
   //getAllPost
   useEffect(() => {
     axios
-      .get("https://api-adoony.herokuapp.com/api/user", {
+      .get(`https://api-adoony.herokuapp.com/api/user`, {
+        params: {
+          /* whatever data you want to send */
+        },
         headers: {
-          Accept: "accept",
-          Authorization: "authorise",
+          "Content-Type": "application/json",
         },
       })
       .then((res) => {
