@@ -16,9 +16,6 @@ export default function PostAction() {
   useEffect(() => {
     axios
       .get(`https://api-adoony.herokuapp.com/api/user`, {
-        params: {
-          /* whatever data you want to send */
-        },
         headers: {
           "Content-Type": "application/json",
         },
