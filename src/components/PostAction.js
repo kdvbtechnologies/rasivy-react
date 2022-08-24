@@ -15,11 +15,7 @@ export default function PostAction() {
   //getAllPost
   useEffect(() => {
     axios
-      .get(`https://api-adoony.herokuapp.com/api/user`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .get(`https://api-adoony.herokuapp.com/api/user`)
       .then((res) => {
         setUsers(res.data);
 
@@ -41,7 +37,7 @@ export default function PostAction() {
         console.log(err);
       });
   }, [online]);
-  console.log(online);
+  //console.log(online);
 
   /*
   function Post(e) {
