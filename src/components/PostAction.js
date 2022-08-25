@@ -14,9 +14,11 @@ export default function PostAction() {
 
   //getAllPost
   useEffect(() => {
-    axios
-      .get(`https://api-adoony.herokuapp.com/api/user`)
-      .then((res) => {
+    axios({
+      method: "get",
+      url: "https://api-adoony.herokuapp.com/api/user",
+    })
+      .then(function (res) {
         setUsers(res.data);
 
         //update network status
