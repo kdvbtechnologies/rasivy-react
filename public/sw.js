@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V5";
+const PREFIX = "V1";
 const CACHED_FILES = [
   // developpement
   //`${BASE}/static/js/main.fa57e256.js`,
@@ -19,7 +19,7 @@ const CACHED_FILES = [
   //`${BASE}/static/css/main.9936db02.css`,
   `${BASE}/static/css/main.c44a33fe.css`,
   `${BASE}/static/js/main.0582b03c.js`,
-  //"https://api-adoony.herokuapp.com/api/user",
+  "https://api-adoony.herokuapp.com/api/user",
 ];
 
 self.addEventListener("install", (event) => {
