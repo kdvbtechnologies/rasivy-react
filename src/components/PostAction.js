@@ -38,7 +38,7 @@ export default function PostAction() {
       .catch((err) => {
         console.log(err);
       });
-  }, [online, users]);
+  }, [online]);
   //console.log(online);
 
   /*
