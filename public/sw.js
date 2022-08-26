@@ -1,7 +1,7 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V3";
+const PREFIX = "V4";
 const CACHED_FILES = [
-  // production
+  // developpement
   //`${BASE}/static/js/main.fa57e256.js`,
   //`${BASE}/static/css/main.d350960e.css`,
   `${BASE}`,
@@ -13,9 +13,10 @@ const CACHED_FILES = [
   `${BASE}/logo.svg`,
   `${BASE}/Profile`,
 
-  // developpement
+  // production
   `${BASE}/static/js/main.d4caf0c6.js`,
   `${BASE}/static/css/main.9936db02.css`,
+  `${BASE}/P/Post`,
 ];
 
 self.addEventListener("install", (event) => {
