@@ -16,7 +16,7 @@
 	--color-mytag: black;
 	--color-mytag-back-btn-logout: blue;
 	--color-menu-navigation-title:#4e4e4e;
-	--color-search-btn: rgb(45, 161, 60);
+	--color-search-btn-border-color: #717271;
 }
 
 .dark {
@@ -24,7 +24,7 @@
 	--color-mytag: white;
 	--color-mytag-back-btn-logout: yellow;
 	--menu-navigation-color-title: yellow;
-	--color-search-btn: rgb(45, 161, 60);
+	--color-search-btn-border-color: rgb(45, 161, 60);
 } 
 
 /** threminaction */
@@ -362,11 +362,11 @@ input[type="password"], input[type="email"] {
 .search button {
 	margin: 0px 10px;
 	background-color: transparent;
-    color: var(--color-search-btn);
+    color: var(--color-search-btn-border-color);
     text-align: center;
     font-size: 15px;
     padding: 10px 15px;
     border-radius: 20px;
-    border: 3px solid var(--color-search-btn);
+    border: 3px solid var(--color-search-btn-border-color);
 	cursor: pointer;
 }
