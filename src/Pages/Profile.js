@@ -8,7 +8,6 @@ export default function Profile() {
   };
   return (
     <div style={family}>
-      <Navigation />
       <ProfileAction />
     </div>
   );
