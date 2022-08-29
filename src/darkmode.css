@@ -39,7 +39,7 @@
 	margin-bottom: 6%;
 }
 
-/**src /components /DarkModeLogic*/
+/**src /components /DarkModeAction.js*/
 #darkmode h1 {
 	display: flex;
 	justify-content: center;
@@ -58,8 +58,19 @@
 	cursor: pointer;
 }
 
+.back-btn {
+	background-color: transparent;
+    color: rgb(45, 161, 60);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 3px solid rgb(45, 161, 60);
+	cursor: pointer;
+  }
 
-/**src /components /LanguageLogic */
+
+/**src /components /LanguageAction */
 #title h1 {
 	display: flex;
 	justify-content: center;

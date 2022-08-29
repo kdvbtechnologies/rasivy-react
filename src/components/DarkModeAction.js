@@ -24,7 +24,7 @@ export default function DarkModeAction() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
       <div id="darkmode" className={`${dark ? "dark" : "light"}`}>
-        <div>
+        <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <h1>{t("--darkmode")}</h1>

@@ -15,7 +15,7 @@ export default function SettingsNav() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
-        <div>
+        <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <div className="right">
