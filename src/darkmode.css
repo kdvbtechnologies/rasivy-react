@@ -10,21 +10,23 @@
 	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 } 
 
-
 .light {
 	--body-color: black; 
 	--color-mytag: black;
 	--color-mytag-back-btn-logout: blue;
 	--color-menu-navigation-title:#4e4e4e;
 	--color-search-btn-border-color: #717271;
+	--color-search-btn-text-color: black;
 }
+
 
 .dark {
 	--body-color: white; 
 	--color-mytag: white;
 	--color-mytag-back-btn-logout: yellow;
 	--menu-navigation-color-title: yellow;
-	--color-search-btn-border-color: rgb(45, 161, 60);
+	--color-search-btn-border-color:  #717271;
+	--color-search-btn-text-color: white;
 } 
 
 /** threminaction */
@@ -362,7 +364,7 @@ input[type="password"], input[type="email"] {
 .search button {
 	margin: 0px 10px;
 	background-color: transparent;
-    color: var(--color-search-btn-border-color);
+    color: var(--color-search-btn-text-color);
     text-align: center;
     font-size: 15px;
     padding: 10px 15px;
