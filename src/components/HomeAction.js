@@ -153,7 +153,7 @@ export default function HomeAction() {
                 <h2>{t("--signin")}</h2>
               </div>
               <div className="signin">
-                <div>
+                <div className="inputs">
                   <input
                     type="email"
                     placeholder={t("--email")}
@@ -162,7 +162,7 @@ export default function HomeAction() {
                     onChange={(e) => setEmaill(e.target.value)}
                   />
                 </div>
-                <div>
+                <div className="inputs">
                   <input
                     type="password"
                     placeholder={t("--password")}
