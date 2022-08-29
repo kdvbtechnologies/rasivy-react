@@ -13,7 +13,9 @@ export default function LogoutAction() {
 
       <div id="settings" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <button>Retour</button>
+          <a href="https://jamelfase.com/P/Menu">
+            <button>{t("--return")}</button>
+          </a>
         </div>
         <h1>{t("--settings")}</h1>
         <p>Voulez-vous vous déconnecter ?</p>

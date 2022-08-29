@@ -39,7 +39,9 @@ export default function ProfileAction() {
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <button>Retour</button>
+          <a href="https://jamelfase.com/P/Menu">
+            <button>{t("--return")}</button>
+          </a>
         </div>
         {getToken ? (
           <>

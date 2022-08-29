@@ -23,7 +23,9 @@ export default function DarkModeAction() {
       </Helmet>
       <div id="darkmode" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <button>Retour</button>
+          <a href="https://jamelfase.com/P/Menu">
+            <button>{t("--return")}</button>
+          </a>
         </div>
         <h1>{t("--darkmode")}</h1>
 
