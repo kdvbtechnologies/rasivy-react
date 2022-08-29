@@ -13,7 +13,9 @@ export default function SettingsNav() {
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <button>Retour</button>
+          <a href="https://jamelfase.com/P/Menu">
+            <button>Retour</button>
+          </a>
         </div>
         <div className="right">
           <h1>{t("--settings")}</h1>
