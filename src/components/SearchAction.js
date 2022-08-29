@@ -28,16 +28,8 @@ export default function SearchAction() {
     window.location = "/";
   };*/
 
-  return (
-    <>
-      <Helmet>
-        <body className={`${dark ? "dark-body" : "light-body"}`}></body>
-      </Helmet>
-
-      <div id="search" className={`${dark ? "dark" : "light"}`}>
-        <h1>{t("--search")}</h1>
-
-        <div style={{ width: "30vmin", backgroundColor: "green" }}>
+  /*
+  <div style={{ width: "30vmin", backgroundColor: "green" }}>
           <svg
             viewBox="0 0 16 16"
             fill="none"
@@ -72,6 +64,19 @@ export default function SearchAction() {
               stroke-width="1.5"
             />
           </svg>
+        </div>
+        */
+
+  return (
+    <>
+      <Helmet>
+        <body className={`${dark ? "dark-body" : "light-body"}`}></body>
+      </Helmet>
+
+      <div id="search" className={`${dark ? "dark" : "light"}`}>
+        <h1>{t("--search")}</h1>
+        <div className="search">
+          <input type="text" placeholder="Search" />
         </div>
       </div>
     </>
