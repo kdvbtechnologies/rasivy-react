@@ -149,7 +149,7 @@ export default function HomeAction() {
             </>
           ) : (
             <div className="signin-form">
-              <div>
+              <div className="title">
                 <h2>{t("--signin")}</h2>
               </div>
               <div className="signin">
