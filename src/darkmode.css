@@ -258,6 +258,7 @@ input[type="password"], input[type="email"] {
 
   .signin-form button {
 	border-radius: 20px;
+	background-color: none;
 	border: 3px solid  rgb(45, 161, 60);
 	color: rgb(45, 161, 60);
 	border: none;
