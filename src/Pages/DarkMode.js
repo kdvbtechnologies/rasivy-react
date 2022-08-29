@@ -1,5 +1,4 @@
 import DarkModeAction from "../components/DarkModeAction";
-import Navigation from "../components/Navigation";
 
 export default function DarkMode() {
   const family = {
@@ -8,7 +7,6 @@ export default function DarkMode() {
   };
   return (
     <div style={family}>
-      <Navigation />
       <DarkModeAction />
     </div>
   );

@@ -1,4 +1,3 @@
-import Navigation from "../components/Navigation";
 import ProfileAction from "../components/ProfileAction";
 
 export default function Profile() {
