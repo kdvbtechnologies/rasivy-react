@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 export default function DarkModeAction() {
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ export default function DarkModeAction() {
   function darkFunction() {
     setDark(!dark);
   }
+  const navigate = useNavigate();
 
   return (
     <>
@@ -23,9 +25,7 @@ export default function DarkModeAction() {
       </Helmet>
       <div id="darkmode" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <a href="https://jamelfase.com/P/Menu">
-            <button>{t("--return")}</button>
-          </a>
+          <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <h1>{t("--darkmode")}</h1>
 
