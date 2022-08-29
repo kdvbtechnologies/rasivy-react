@@ -75,7 +75,7 @@ export default function SearchAction() {
 
       <div id="search" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("--search")}</h1>
-        <div style={{ width: "30vmin", backgroundColor: "green" }}>
+        <div className="search">
           <input type="text" placeholder="Search" />
         </div>
       </div>

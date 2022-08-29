@@ -349,3 +349,8 @@ input[type="password"], input[type="email"] {
 	font-size: 16px;
 }
 
+/* SearchAction.js */
+.search {
+	background-color: transparent;
+	border: 2px solid green;
+}
