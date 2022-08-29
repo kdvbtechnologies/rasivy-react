@@ -22,6 +22,9 @@ export default function DarkModeAction() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
       <div id="darkmode" className={`${dark ? "dark" : "light"}`}>
+        <div>
+          <button>Retour</button>
+        </div>
         <h1>{t("--darkmode")}</h1>
 
         <div onClick={darkFunction}>
