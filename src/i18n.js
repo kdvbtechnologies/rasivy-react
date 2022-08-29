@@ -36,6 +36,7 @@ i18n
           "--friends": "Find friends",
           "--logout": "Logout",
           "--return": "Return",
+          "--logout-action": "Do you want to disconnect ?",
           "--": "",
         },
       },
@@ -68,6 +69,7 @@ i18n
           "--friends": "Encontrar amigos",
           "--logout": "Sair",
           "--return": "Retorna",
+          "--logout-action": "Você quer se desconectar ?",
         },
       },
 
@@ -100,6 +102,7 @@ i18n
           "--friends": "Trouver des amis",
           "--logout": "Déconnexion",
           "--return": "Retour",
+          "--logout-action": "Voulez-vous vous déconnecter ?",
         },
       },
     },

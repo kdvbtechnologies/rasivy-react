@@ -18,7 +18,7 @@ export default function LogoutAction() {
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <h1>{t("--logout")}</h1>
-        <p>Voulez-vous vous déconnecter ?</p>
+        <p>{t("--logout-action")}</p>
       </div>
     </>
   );
