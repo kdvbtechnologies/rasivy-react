@@ -9,12 +9,14 @@ import Home from "./Pages/Home";
 import Language from "./Pages/Language";
 import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
+import Logout from "./Pages/Logout";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Logout" element={<Logout />} />
         <Route path="/P/Menu" element={<Menu />} />
         <Route path="/P/Photos" element={<Photos />} />
         <Route path="/P/Streaming" element={<Streaming />} />
