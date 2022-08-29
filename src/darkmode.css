@@ -161,6 +161,10 @@
 	font-size: 22px;
 }
 
+#menu-navigation .right .navlink li:hover{
+	color: green;
+}
+
 
 /**src /pages /Menu.js */
 .navigation {
