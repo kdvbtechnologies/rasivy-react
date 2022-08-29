@@ -58,7 +58,7 @@
 	cursor: pointer;
 }
 
-.back-btn {
+.back-btn button{
 	background-color: transparent;
     color: rgb(45, 161, 60);
     text-align: center;
