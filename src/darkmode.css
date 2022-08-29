@@ -256,7 +256,7 @@ input[type="password"], input[type="email"] {
 	cursor: pointer;
   }
 
-  .signin-form .signin button {
+  .signin-form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
