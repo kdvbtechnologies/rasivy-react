@@ -257,10 +257,11 @@ input[type="password"], input[type="email"] {
   }
 
   .signin-form button {
-	border-radius: 5px;
+	border-radius: 20px;
 	background-color: rgb(45, 161, 60);
 	color: white;
 	border: none;
+	padding: 0px 15px;
 
   }
 
