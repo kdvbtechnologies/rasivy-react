@@ -278,6 +278,11 @@ input[type="password"], input[type="email"] {
 }
 
   .signin-form .signin button {
+	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  
 	background-color: transparent;
     color: rgb(45, 161, 60);
     text-align: center;
