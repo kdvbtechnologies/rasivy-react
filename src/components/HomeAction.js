@@ -78,6 +78,7 @@ export default function HomeAction() {
         password: passwordd,
       },
     }).then((res) => {
+      console.log(res);
       const tokenStore = res.data.token;
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
       setAfterLogin(`${t("--signin-success")}`);
