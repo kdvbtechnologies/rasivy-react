@@ -279,9 +279,7 @@ input[type="password"], input[type="email"] {
 
   .signin-form .signin button {
 	
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		
 	  
 	background-color: transparent;
     color: rgb(45, 161, 60);
@@ -290,6 +288,12 @@ input[type="password"], input[type="email"] {
     padding: 10px 20px;
     border-radius: 20px;
     border: 3px solid rgb(45, 161, 60);
+  }
+
+  .btn-signin {
+	display: flex;
+		justify-content: center;
+		align-items: center;
   }
 
 
