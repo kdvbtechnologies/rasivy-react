@@ -264,6 +264,9 @@ input[type="password"], input[type="email"] {
 
   .signin-form .signin .inputs input[type="text"],
 input[type="password"], input[type="email"] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
   padding: 15px 40px;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -273,6 +276,9 @@ input[type="password"], input[type="email"] {
 }
 
   .signin-form .signin button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: transparent;
     color: rgb(45, 161, 60);
     text-align: center;
