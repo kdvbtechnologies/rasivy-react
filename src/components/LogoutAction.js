@@ -12,6 +12,9 @@ export default function LogoutAction() {
       </Helmet>
 
       <div id="settings" className={`${dark ? "dark" : "light"}`}>
+        <div>
+          <button>Retour</button>
+        </div>
         <h1>{t("--settings")}</h1>
         <p>Voulez-vous vous déconnecter ?</p>
       </div>

@@ -12,6 +12,9 @@ export default function SettingsNav() {
         <body className={`${dark ? "dark-body" : "light-body"}`}></body>
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
+        <div>
+          <button>Retour</button>
+        </div>
         <div className="right">
           <h1>{t("--settings")}</h1>
           <NavLink className="navlink" to="/Logout">

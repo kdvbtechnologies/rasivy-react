@@ -38,6 +38,9 @@ export default function ProfileAction() {
       </Helmet>
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
+        <div>
+          <button>Retour</button>
+        </div>
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
