@@ -94,6 +94,7 @@ i18n
           "--email": "E-mail",
           "--password": "Mot de passe",
           "--friends": "Trouver des amis",
+          "--logout": "Logout aa",
         },
       },
     },
