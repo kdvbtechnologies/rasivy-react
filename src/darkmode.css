@@ -17,8 +17,8 @@
 	--color-menu-navigation-title:#4e4e4e;
 	--color-search-btn-border-color: #717271;
 	--color-search-btn-text-color: black;
+	--search-input-border-color: #4e4e4e;
 }
-
 
 .dark {
 	--body-color: white; 
@@ -26,7 +26,8 @@
 	--color-mytag-back-btn-logout: yellow;
 	--menu-navigation-color-title: yellow;
 	--color-search-btn-border-color:  #e1e1e1;
-	--color-search-btn-text-color: white;
+	--color-search-btn-text-color: white; 
+	--search-input-border-color: #c9cdc9;
 } 
 
 /** threminaction */
@@ -356,7 +357,7 @@ input[type="password"], input[type="email"] {
 /* SearchAction.js */
 .search input {
 	background-color: transparent;
-	border: 3px solid #4e4e4e;
+	border: 3px solid var(--search-input-border-color);
 	border-radius: 10px;
 	padding: 10px 20px;
 }
