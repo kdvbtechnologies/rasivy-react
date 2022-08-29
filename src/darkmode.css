@@ -350,7 +350,7 @@ input[type="password"], input[type="email"] {
 }
 
 /* SearchAction.js */
-.search {
+.search input {
 	background-color: transparent;
 	border: 2px solid green;
 }
