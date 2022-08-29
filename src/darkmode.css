@@ -279,7 +279,7 @@ input[type="password"], input[type="email"] {
 	background-color: blue;
 	color: white;
 	border-radius: 20px;
-	padding: 0px 10px;
+	padding: 5px 10px;
 	font-size: 16px;
 }
 
