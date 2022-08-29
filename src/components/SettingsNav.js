@@ -7,9 +7,11 @@ export default function SettingsNav() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
 
+  /*
   function Click(e) {
     e.preventDefault();
-  }
+  }*/
+
   return (
     <>
       <Helmet>
@@ -17,7 +19,7 @@ export default function SettingsNav() {
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <a onClick={Click} href="https://jamelfase.com/P/Menu">
+          <a href="https://jamelfase.com/P/Menu">
             <button>{t("--return")}</button>
           </a>
         </div>
