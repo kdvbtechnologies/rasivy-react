@@ -152,7 +152,7 @@ export default function HomeAction() {
               <div>
                 <h2>{t("--signin")}</h2>
               </div>
-              <div>
+              <div className="signin-form">
                 <div>
                   <input
                     type="email"
@@ -178,7 +178,6 @@ export default function HomeAction() {
             </div>
           )}
 
-          <br />
           <br />
           <br />
           <br />
