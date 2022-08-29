@@ -14,7 +14,7 @@ export default function SettingsNav() {
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div>
           <a href="https://jamelfase.com/P/Menu">
-            <button>Retour</button>
+            <button>{t("--return")}</button>
           </a>
         </div>
         <div className="right">

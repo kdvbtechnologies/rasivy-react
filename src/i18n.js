@@ -35,6 +35,7 @@ i18n
           "--password": "Password",
           "--friends": "Find friends",
           "--": "",
+          "--return": "Return",
         },
       },
 
@@ -64,6 +65,7 @@ i18n
           "--email": "E-mail",
           "--password": "Palavra-passe",
           "--friends": "Encontrar amigos",
+          "--return": "Retorna",
         },
       },
 
@@ -95,6 +97,7 @@ i18n
           "--password": "Mot de passe",
           "--friends": "Trouver des amis",
           "--logout": "Logout aa",
+          "--return": "Retour",
         },
       },
     },
