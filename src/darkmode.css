@@ -262,12 +262,9 @@ input[type="password"], input[type="email"] {
 	align-items: center;
   }
 
-  /*
   .signin-form .title h2{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }*/
+	text-align: center;
+  }
 
   .signin-form .signin .inputs input {
   display: flex;
