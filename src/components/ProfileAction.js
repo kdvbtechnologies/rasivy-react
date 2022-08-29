@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -11,6 +12,7 @@ export default function ProfileAction() {
   const getUsername = localStorage.getItem("https://jamelfase.com/username");
   const [desc, setDesc] = useState("");
   const user = localStorage.getItem("https://jamelfase.com/user-id");
+  const navigate = useNavigate();
 
   function Post(e) {
     e.preventDefault();
@@ -39,9 +41,7 @@ export default function ProfileAction() {
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <a href="https://jamelfase.com/P/Menu">
-            <button>{t("--return")}</button>
-          </a>
+          <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         {getToken ? (
           <>

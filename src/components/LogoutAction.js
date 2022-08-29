@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LogoutAction() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
+  const navigate = useNavigate();
   return (
     <>
       <Helmet>
@@ -13,9 +15,7 @@ export default function LogoutAction() {
 
       <div id="settings" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <a href="https://jamelfase.com/P/Menu">
-            <button>{t("--return")}</button>
-          </a>
+          <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <h1>{t("--settings")}</h1>
         <p>Voulez-vous vous déconnecter ?</p>

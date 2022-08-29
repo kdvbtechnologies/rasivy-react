@@ -2,15 +2,12 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SettingsNav() {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-
-  /*
-  function Click(e) {
-    e.preventDefault();
-  }*/
+  const navigate = useNavigate();
 
   return (
     <>
@@ -19,9 +16,7 @@ export default function SettingsNav() {
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div>
-          <a href="https://jamelfase.com/P/Menu">
-            <button>{t("--return")}</button>
-          </a>
+          <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <div className="right">
           <h1>{t("--settings")}</h1>
