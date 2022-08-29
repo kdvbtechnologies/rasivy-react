@@ -14,12 +14,14 @@
 .light {
 	--body-color: black; 
 	--color-mytag: black;
+	--color-mytag-back-btn-logout: blue;
 	--color-menu-navigation-title:#4e4e4e;
 }
 
 .dark {
 	--body-color: white; 
 	--color-mytag: white;
+	--color-mytag-back-btn-logout: yellow;
 	--menu-navigation-color-title: yellow;
 } 
 
@@ -61,6 +63,17 @@
 .back-btn button{
 	background-color: transparent;
     color: var(--color-mytag);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 3px solid var(--color-mytag);
+	cursor: pointer;
+  }
+
+  .back-btn-logout button{
+	background-color: transparent;
+    color: var(--color-mytag-back-btn-logout);
     text-align: center;
     font-size: 15px;
     padding: 10px 15px;
