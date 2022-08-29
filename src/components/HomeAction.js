@@ -148,11 +148,11 @@ export default function HomeAction() {
               <h1>{afterLogin}</h1>
             </>
           ) : (
-            <div>
+            <div className="signin-form">
               <div>
                 <h2>{t("--signin")}</h2>
               </div>
-              <div className="signin-form">
+              <div className="signin">
                 <div>
                   <input
                     type="email"
