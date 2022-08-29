@@ -354,5 +354,5 @@ input[type="password"], input[type="email"] {
 	background-color: transparent;
 	border: 3px solid #4e4e4e;
 	border-radius: 10px;
-	padding: 20px;
+	padding: 10px 20px;
 }
