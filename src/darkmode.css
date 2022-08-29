@@ -262,6 +262,12 @@ input[type="password"], input[type="email"] {
 	align-items: center;
   }
 
+  .signin-form .title h2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
   .signin-form .signin .inputs input {
   padding: 15px 40px;
   border-radius: 5px;
