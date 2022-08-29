@@ -14,7 +14,7 @@ export default function LogoutAction() {
       </Helmet>
 
       <div id="settings" className={`${dark ? "dark" : "light"}`}>
-        <div>
+        <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         <h1>{t("--logout")}</h1>
