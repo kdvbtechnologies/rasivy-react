@@ -76,7 +76,8 @@ export default function SearchAction() {
       <div id="search" className={`${dark ? "dark" : "light"}`}>
         <h1>{t("--search")}</h1>
         <div className="search">
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="..." />
+          <button>Search</button>
         </div>
       </div>
     </>
