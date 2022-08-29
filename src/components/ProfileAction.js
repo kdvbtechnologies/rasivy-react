@@ -40,7 +40,7 @@ export default function ProfileAction() {
       </Helmet>
 
       <div id="profile" className={`${dark ? "dark" : "light"}`}>
-        <div>
+        <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         {getToken ? (
