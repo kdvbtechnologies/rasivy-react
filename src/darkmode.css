@@ -281,7 +281,6 @@ input[type="password"], input[type="email"] {
 }
 
   .signin-form .signin button {
-
 	background-color: transparent;
     color: rgb(45, 161, 60);
     text-align: center;

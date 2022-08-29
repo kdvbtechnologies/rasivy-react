@@ -167,7 +167,7 @@ export default function HomeAction() {
                     onChange={(e) => setPasswordd(e.target.value)}
                   />
                 </div>
-                <button type="submit" onClick={SignIn}>
+                <button align="center" type="submit" onClick={SignIn}>
                   {t("--signin-btn")}
                 </button>
               </div>
