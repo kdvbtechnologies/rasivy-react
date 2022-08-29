@@ -255,13 +255,14 @@ input[type="password"], input[type="email"] {
 	padding-top: 14px;
 	cursor: pointer;
   }
-/*
+
   .signin-form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
   }
 
+  /*
   .signin-form .title h2{
 	display: flex;
 	justify-content: center;
