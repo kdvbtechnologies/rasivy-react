@@ -171,9 +171,13 @@
 }
 
 
-/**src /components /menu /MenuNavigation.js */
+/**src /components /MenuAction.js */
 #menu-navigation .right .navlink {
 	text-decoration: none;
+}
+
+#menu-navigation .right .navlink:hover {
+	text-decoration: underline rgb(214, 241, 214);
 }
 
 #menu-navigation .right h1 {
@@ -215,7 +219,7 @@
 }
 
 .navigation .right-navigation .navlink {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .navigation .right-navigation .navlink li{
