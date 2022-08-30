@@ -18,6 +18,7 @@
 	--color-search-btn-border-color: #717271;
 	--color-search-btn-text-color: black;
 	--search-input-border-color: #4e4e4e;
+	--menu-navigation-underline-color: rgb(214, 241, 214);
 }
 
 .dark {
@@ -28,6 +29,7 @@
 	--color-search-btn-border-color:  #e1e1e1;
 	--color-search-btn-text-color: white; 
 	--search-input-border-color: #c9cdc9;
+	--menu-navigation-underline-color: green;
 } 
 
 /** threminaction */
@@ -177,7 +179,7 @@
 }
 
 #menu-navigation .right .navlink:hover {
-	text-decoration: underline rgb(214, 241, 214);
+	text-decoration: underline var(--menu-navigation-underline-color);
 }
 
 #menu-navigation .right h1 {
