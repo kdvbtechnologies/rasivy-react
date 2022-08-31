@@ -13,9 +13,12 @@ import Logout from "./Pages/Logout";
 import { UidContext } from "./components/AppContext";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { getUser } from "./actions/user.actions";
 
 export default function App() {
   const [uid, setUid] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchToken = async () => {
@@ -31,6 +34,8 @@ export default function App() {
         .catch((err) => console.log(err));
     };
     fetchToken();
+
+    if (uid) dispatch(getUser(uid));
   }, [uid]);
 
   return (
