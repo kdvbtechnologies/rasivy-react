@@ -19,11 +19,12 @@ export default function ProfileAction() {
 
   //const dispatch = useDispatch();
   //const posts = useSelector((state) => state.pictures.pictures);
+  const [posts, setPosts] = useState([]);
 
   async function MyPost() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/user")
-      .then((res) => console.log(res));
+      .then((res) => setPosts(res.data));
   }
   MyPost();
 
@@ -65,12 +66,12 @@ export default function ProfileAction() {
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
-        {/*posts.map((post) => (
+        {posts.map((post) => (
           <li key={post.id}>
             <h2>{post.username}</h2>
             <p>{post.email}</p>
           </li>
-        ))*/}
+        ))}
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
