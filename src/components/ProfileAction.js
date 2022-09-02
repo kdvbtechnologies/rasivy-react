@@ -4,8 +4,8 @@ import { useState } from "react";
 //import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setPicturesData } from "../feature/pictures.slice";
+//import { useDispatch, useSelector } from "react-redux";
+//import { setPicturesData } from "../feature/pictures.slice";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -17,17 +17,24 @@ export default function ProfileAction() {
   const user = localStorage.getItem("https://jamelfase.com/user-id");
   const navigate = useNavigate();
 
-  const dispatch = useDispatch();
-  const posts = useSelector((state) => state.pictures.pictures);
+  //const dispatch = useDispatch();
+  //const posts = useSelector((state) => state.pictures.pictures);
 
+  async function MyPost() {
+    await axios
+      .get("https://api-adoony.herokuapp.com/api/user")
+      .then((res) => console.log(res));
+  }
+  MyPost();
+
+  /*
   async function MyPost() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/user")
       .then((res) => dispatch(setPicturesData(res.data)));
   }
   MyPost();
-
-  console.log(posts);
+  */
 
   function Post(e) {
     e.preventDefault();
@@ -58,12 +65,12 @@ export default function ProfileAction() {
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
-        {posts.map((post) => (
+        {/*posts.map((post) => (
           <li key={post.id}>
             <h2>{post.username}</h2>
             <p>{post.email}</p>
           </li>
-        ))}
+        ))*/}
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
