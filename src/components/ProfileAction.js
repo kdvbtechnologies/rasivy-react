@@ -27,6 +27,8 @@ export default function ProfileAction() {
   }
   MyPost();
 
+  console.log(posts);
+
   function Post(e) {
     e.preventDefault();
     axios({
@@ -57,9 +59,9 @@ export default function ProfileAction() {
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
-        {posts.map((post) => (
+        {/*posts.map((post) => (
             <li key={post.id}><h2>{post.title}</h2></li>
-          ))}
+          ))*/}
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
