@@ -10,36 +10,10 @@ import Language from "./Pages/Language";
 import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
 import Logout from "./Pages/Logout";
-import { UidContext } from "./components/AppContext";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getUser } from "./actions/user.actions";
 
 export default function App() {
-  const [uid, setUid] = useState(null);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchToken = async () => {
-      await axios({
-        method: "get",
-        url: "https://api-adoony.herokuapp.com/jwtid",
-        withCredentials: true,
-      })
-        .then((res) => {
-          console.log(res);
-          setUid(res.data);
-        })
-        .catch((err) => console.log(err));
-    };
-    fetchToken();
-
-    if (uid) dispatch(getUser(uid));
-  }, [uid]);
 
   return (
-    <UidContext.Provider value={uid}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -56,6 +30,5 @@ export default function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
-    </UidContext.Provider>
   );
 }
