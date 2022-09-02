@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import axios from "axios";
 
 export default function MenuAction() {
   const { t } = useTranslation();
@@ -9,6 +10,14 @@ export default function MenuAction() {
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = localStorage.getItem("https://jamelfase.com/username");
+  const [posts, setPosts] = useState([]);
+
+  async function MyPost() {
+    await axios
+    .get("http://jsonplaceholder.typicode.com/posts")
+    .then((res) => setPosts(res.data))
+  }
+  MyPost();
 
   return (
     <>
@@ -17,6 +26,9 @@ export default function MenuAction() {
       </Helmet>
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div className="right">
+          {posts.map((post) => (
+            <li key={post.id}><h2>{post.title}</h2></li>
+          ))}
           <h1>{t("--menu")}</h1>
           <NavLink className="navlink" to="/Profile">
             {getToken ? (
