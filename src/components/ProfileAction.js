@@ -17,8 +17,9 @@ export default function ProfileAction() {
   const user = localStorage.getItem("https://jamelfase.com/user-id");
   const navigate = useNavigate();
 
-  //const dispatch = useDispatch();
-  //const posts = useSelector((state) => state.pictures.pictures);
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.pictures.pictures);
+  /*
   const [posts, setPosts] = useState([]);
 
   async function MyPost() {
@@ -27,15 +28,14 @@ export default function ProfileAction() {
       .then((res) => setPosts(res.data));
   }
   MyPost();
+*/
 
-  /*
   async function MyPost() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/user")
       .then((res) => dispatch(setPicturesData(res.data)));
   }
   MyPost();
-  */
 
   function Post(e) {
     e.preventDefault();
