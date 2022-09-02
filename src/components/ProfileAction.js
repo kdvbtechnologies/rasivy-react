@@ -4,8 +4,8 @@ import { useState } from "react";
 //import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import { useDispatch, useSelector } from "react-redux";
-//import { setPicturesData } from "../feature/pictures.slice";
+import { useDispatch, useSelector } from "react-redux";
+import { setPicturesData } from "../feature/pictures.slice";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
