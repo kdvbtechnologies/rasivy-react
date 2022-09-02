@@ -23,7 +23,7 @@ export default function ProfileAction() {
   async function MyPost() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/user")
-      .then((res) => console.log(res), dispatch(setPicturesData(res.data)));
+      .then((res) => dispatch(setPicturesData(res.data)));
   }
   MyPost();
 
