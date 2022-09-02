@@ -22,8 +22,8 @@ export default function ProfileAction() {
 
   async function MyPost() {
     await axios
-    .get("https://api-adoony.herokuapp.com/api/user")
-    .then((res) => dispatch(setPicturesData(res.data)));
+      .get("https://api-adoony.herokuapp.com/api/user")
+      .then((res) => console.log(res), dispatch(setPicturesData(res.data)));
   }
   MyPost();
 
@@ -47,7 +47,6 @@ export default function ProfileAction() {
       window.location = "/";
     });
   }
-  
 
   return (
     <>
@@ -60,8 +59,11 @@ export default function ProfileAction() {
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
         {posts.map((post) => (
-            <li key={post.id}><h2>{post.username}</h2><p>{post.email}</p></li>
-          ))}
+          <li key={post.id}>
+            <h2>{post.username}</h2>
+            <p>{post.email}</p>
+          </li>
+        ))}
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
