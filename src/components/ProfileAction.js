@@ -22,7 +22,7 @@ export default function ProfileAction() {
 
   async function MyPost() {
     await axios
-    .get("http://jsonplaceholder.typicode.com/posts")
+    .get("https://api-adoony.herokuapp.com/api/user")
     .then((res) => dispatch(setPicturesData(res.data)));
   }
   MyPost();
