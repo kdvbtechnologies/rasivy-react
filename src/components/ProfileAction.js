@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
-import axios from "axios";
+//import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setPicturesData } from "../feature/pictures.slice";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -13,6 +16,16 @@ export default function ProfileAction() {
   const [desc, setDesc] = useState("");
   const user = localStorage.getItem("https://jamelfase.com/user-id");
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.pictures.pictures);
+
+  async function MyPost() {
+    await axios
+    .get("http://jsonplaceholder.typicode.com/posts")
+    .then((res) => dispatch(setPicturesData(res.data)));
+  }
+  MyPost();
 
   function Post(e) {
     e.preventDefault();
@@ -32,6 +45,7 @@ export default function ProfileAction() {
       window.location = "/";
     });
   }
+  
 
   return (
     <>
@@ -43,6 +57,9 @@ export default function ProfileAction() {
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
+        {posts.map((post) => (
+            <li key={post.id}><h2>{post.title}</h2></li>
+          ))}
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
