@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setPicturesData } from "../feature/pictures.slice";
 
 export default function MenuAction() {
   const { t } = useTranslation();
@@ -10,12 +12,13 @@ export default function MenuAction() {
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = localStorage.getItem("https://jamelfase.com/username");
-  const [posts, setPosts] = useState([]);
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.pictures.pictures);
 
   async function MyPost() {
     await axios
     .get("http://jsonplaceholder.typicode.com/posts")
-    .then((res) => setPosts(res.data))
+    .then((res) => dispatch(setPicturesData(res.data)));
   }
   MyPost();
 
