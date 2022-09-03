@@ -19,16 +19,6 @@ export default function ProfileAction() {
 
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.pictures.pictures);
-  /*
-  const [posts, setPosts] = useState([]);
-
-  async function MyPost() {
-    await axios
-      .get("https://api-adoony.herokuapp.com/api/user")
-      .then((res) => setPosts(res.data));
-  }
-  MyPost();
-*/
 
   async function MyPost() {
     await axios
