@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 //import { useDispatch, useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { getPost } from "../feature/pictures.slice";
+import { setPosts } from "../feature/posts.slice";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -52,7 +52,7 @@ export default function HomeAction() {
   //getAllPost
   async function MyPosts() {
     await axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
-      dispatch(getPost(res.data));
+      dispatch(setPosts(res.data));
     });
   }
   MyPosts();

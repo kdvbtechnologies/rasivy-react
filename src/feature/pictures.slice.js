@@ -13,12 +13,8 @@ export const picturesSlice = createSlice({
     addPicture: (state, { payload }) => {
       state.pictures.push(payload);
     },
-
-    getPost: (state, { payload }) => {
-      state.pictures = payload;
-    },
   },
 });
 
-export const { setPicturesData, addPicture, getPost } = picturesSlice.actions;
+export const { setPicturesData, addPicture } = picturesSlice.actions;
 export default picturesSlice.reducer;
