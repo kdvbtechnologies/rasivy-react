@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setPicturesData } from "../feature/pictures.slice";
+import { addPicture, setPicturesData } from "../feature/pictures.slice";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -51,8 +51,8 @@ export default function ProfileAction() {
       },
       withCredentials: true,
     }).then((res) => {
-      console.log(res);
-      window.location = "/";
+      dispatch(addPicture(res));
+      //window.location = "/";
     });
   }
 
