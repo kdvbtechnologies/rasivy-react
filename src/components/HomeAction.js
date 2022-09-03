@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-//import { useDispatch } from "react-redux";
-import { setPosts } from "../feature/posts.slice";
+import Posts from "./Posts";
 
 export default function HomeAction() {
   const { t } = useTranslation();
@@ -16,14 +14,11 @@ export default function HomeAction() {
   const [passwordd, setPasswordd] = useState("");
   const [errors, setErrors] = useState("");
 
-  const [online, setOnline] = useState(navigator.onLine);
   const [afterLogin, setAfterLogin] = useState("");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
-  const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts.posts);
 
   //Signup
   const Signup = async (e) => {
@@ -48,32 +43,6 @@ export default function HomeAction() {
       localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
     });
   };
-
-  //getAllPost
-  async function MyPosts() {
-    await axios
-      .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => dispatch(setPosts(res.data)));
-  }
-  MyPosts();
-
-  // online
-  useEffect(() => {
-    //update network status
-    function handleStatusChange() {
-      setOnline(navigator.onLine);
-    }
-    //Listen to the online status
-    window.addEventListener("online", handleStatusChange);
-    //Listen to the offline status
-    window.addEventListener("offline", handleStatusChange);
-    //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
-    return () => {
-      window.removeEventListener("online", handleStatusChange);
-      window.removeEventListener("offline", handleStatusChange);
-    };
-  }, [online]);
-  //console.log(online);
 
   //SignIn
   const SignIn = async (e) => {
@@ -189,24 +158,7 @@ export default function HomeAction() {
           <br />
           <br />
           <br />
-
-          <div>
-            <div>
-              {posts?.map((post) => (
-                <div className="posts" key={post.id}>
-                  {online ? (
-                    <>
-                      <div className="post">{post.desc}</div>
-                    </>
-                  ) : (
-                    <>
-                      <h1>{t("--check-internet")}</h1>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <Posts />
         </div>
       </div>
     </>

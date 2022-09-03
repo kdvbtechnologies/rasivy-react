@@ -1,17 +1,24 @@
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { setPosts } from "../feature/posts.slice";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default async function Posts() {
+export default function Posts() {
   const { t } = useTranslation();
-  const [posts, setPosts] = useState([]);
   const [online, setOnline] = useState(navigator.onLine);
-
-  await axios.get("https://api-adoony.herokuapp.com/api/post").then((res) => {
-    setPosts(res.data);
-  });
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.posts.posts);
 
   //getAllPost
+  async function MyPosts() {
+    await axios
+      .get("https://api-adoony.herokuapp.com/api/post")
+      .then((res) => dispatch(setPosts(res.data)));
+  }
+  MyPosts();
+
+  // online
   useEffect(() => {
     //update network status
     function handleStatusChange() {
@@ -29,8 +36,8 @@ export default async function Posts() {
   }, [online]);
   //console.log(online);
   return (
-    <div>
-      {posts.map((post) => (
+    <>
+      {posts?.map((post) => (
         <div className="posts" key={post.id}>
           {online ? (
             <>
@@ -43,6 +50,6 @@ export default async function Posts() {
           )}
         </div>
       ))}
-    </div>
+    </>
   );
 }
