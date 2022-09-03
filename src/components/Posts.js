@@ -8,7 +8,7 @@ export default function Posts() {
   const { t } = useTranslation();
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts.posts);
+  const posts = useSelector((state) => state.posts.posts.posts);
 
   //getAllPost
   async function MyPosts() {
