@@ -23,7 +23,7 @@ export default function HomeAction() {
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.pictures.pictures);
+  const posts = useSelector((state) => state.posts.posts);
 
   //Signup
   const Signup = async (e) => {
