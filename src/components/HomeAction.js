@@ -197,6 +197,7 @@ export default function HomeAction() {
                   {online ? (
                     <>
                       <div className="post">{post.desc}</div>
+                      <h6>{post.userId}</h6>
                     </>
                   ) : (
                     <>
