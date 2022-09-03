@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+//import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getPost } from "../feature/pictures.slice";
 
 export default function HomeAction() {
@@ -22,7 +23,7 @@ export default function HomeAction() {
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.pictures.pictures);
+  //const posts = useSelector((state) => state.pictures.pictures);
 
   //Signup
   const Signup = async (e) => {
@@ -56,7 +57,7 @@ export default function HomeAction() {
   }
   MyPosts();
 
-  // online - offline
+  // online
   useEffect(() => {
     //update network status
     function handleStatusChange() {
@@ -191,7 +192,7 @@ export default function HomeAction() {
 
           <div>
             <div>
-              {posts?.map((post) => (
+              {/*posts?.map((post) => (
                 <div className="posts" key={post.id}>
                   {online ? (
                     <>
@@ -203,7 +204,7 @@ export default function HomeAction() {
                     </>
                   )}
                 </div>
-              ))}
+                  ))*/}
             </div>
           </div>
         </div>
