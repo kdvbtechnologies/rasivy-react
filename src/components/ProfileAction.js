@@ -66,12 +66,7 @@ export default function ProfileAction() {
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
         </div>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <h2>{post.username}</h2>
-            <p>{post.email}</p>
-          </li>
-        ))}
+
         {getToken ? (
           <>
             <h1>@{getUsername}</h1>
@@ -100,6 +95,12 @@ export default function ProfileAction() {
             </button>
           </div>
         </div>
+        {posts?.map((post) => (
+          <li key={post.id}>
+            <h2>{post.username}</h2>
+            <p>{post.email}</p>
+          </li>
+        ))}
       </div>
     </>
   );
