@@ -116,13 +116,6 @@ export default function ProfileAction() {
             </button>
           </div>
         </div>
-        {users?.map((user) => (
-          <li key={user.id}>
-            <h2>{user.username}</h2>
-            <p>{user.email}</p>
-          </li>
-        ))}
-
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             {online ? (
@@ -136,6 +129,12 @@ export default function ProfileAction() {
               </>
             )}
           </div>
+        ))}
+        {users?.map((user) => (
+          <li key={user.id}>
+            <h2>{user.username}</h2>
+            <p>{user.email}</p>
+          </li>
         ))}
       </div>
     </>
