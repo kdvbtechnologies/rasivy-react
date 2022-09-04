@@ -18,7 +18,7 @@ export default function ProfileAction() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.pictures.pictures);
+  const users = useSelector((state) => state.pictures.pictures);
 
   async function MyPost() {
     await axios
@@ -85,10 +85,10 @@ export default function ProfileAction() {
             </button>
           </div>
         </div>
-        {posts?.map((post) => (
-          <li key={post.id}>
-            <h2>{post.username}</h2>
-            <p>{post.email}</p>
+        {users?.map((user) => (
+          <li key={user.id}>
+            <h2>{user.username}</h2>
+            <p>{user.email}</p>
           </li>
         ))}
       </div>
