@@ -118,7 +118,7 @@ export default function ProfileAction() {
         </div>
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
-            {post.desc}
+            <div className="post">{post.desc}</div>
             {/*online ? (
               <>
                 <div className="post">{post.desc}</div>
