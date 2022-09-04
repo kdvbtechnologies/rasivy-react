@@ -8,8 +8,8 @@ export const loginSlice = createSlice({
   reducers: {
     // post method
     setLogin: (state, { payload }) => {
-      //state.login = payload;
-      state.login.push(payload);
+      state.login = payload;
+      //state.login.push(payload);
     },
   },
 });
