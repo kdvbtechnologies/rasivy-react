@@ -8,7 +8,7 @@ export default function Posts() {
   const { t } = useTranslation();
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts.posts.posts);
+  const posts = useSelector((state) => state.posts.posts);
 
   //getAllPost
   async function MyPosts() {
@@ -41,7 +41,7 @@ export default function Posts() {
         <div className="posts" key={post.id}>
           {online ? (
             <>
-              <div className="post">{post.desc}</div>
+              <div className="post">{post.posts.desc}</div>
             </>
           ) : (
             <>
