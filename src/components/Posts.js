@@ -14,7 +14,7 @@ export default function Posts() {
   async function MyPosts() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => dispatch(setPosts(res.data.posts)));
+      .then((res) => dispatch(setPosts(res.data)));
   }
   MyPosts();
 
