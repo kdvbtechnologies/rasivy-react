@@ -118,7 +118,8 @@ export default function ProfileAction() {
         </div>
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
-            {online ? (
+            {post.desc}
+            {/*online ? (
               <>
                 <div className="post">{post.desc}</div>
                 <h6>{post.userId}</h6>
@@ -127,7 +128,7 @@ export default function ProfileAction() {
               <>
                 <h1>{t("--check-internet")}</h1>
               </>
-            )}
+            )*/}
           </div>
         ))}
         {users?.map((user) => (
