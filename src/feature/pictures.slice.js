@@ -6,10 +6,12 @@ export const picturesSlice = createSlice({
     pictures: null,
   },
   reducers: {
+    // get method
     setPicturesData: (state, { payload }) => {
       state.pictures = payload;
     },
 
+    // post method
     addPicture: (state, { payload }) => {
       state.pictures.push(payload);
     },

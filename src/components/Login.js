@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setLogin } from "../feature/login.slice";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -10,6 +12,7 @@ export default function Login() {
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
+  const dispatch = useDispatch();
 
   //SignIn
   const SignIn = async (e) => {
@@ -23,6 +26,7 @@ export default function Login() {
       },
     }).then((res) => {
       console.log(res);
+      dispatch(setLogin(res));
       const tokenStore = res.data.token;
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
       setAfterLogin(`${t("--signin-success")}`);

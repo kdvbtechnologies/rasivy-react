@@ -27,9 +27,9 @@ export default function ProfileAction() {
   }
   MyPost();
 
-  function Post(e) {
+  async function Post(e) {
     e.preventDefault();
-    axios({
+    await axios({
       method: "post",
       url: `https://api-adoony.herokuapp.com/api/post/add`,
       data: {
