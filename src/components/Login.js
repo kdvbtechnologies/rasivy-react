@@ -42,7 +42,7 @@ export default function Login() {
           <h1>{afterLogin}</h1>
         </>
       ) : (
-        <div className="signin-form">
+        <form action="" onSubmit={SignIn} className="signin-form">
           <div className="signin">
             <div className="inputs">
               <h2>{t("--signin")}</h2>
@@ -63,12 +63,12 @@ export default function Login() {
             </div>
             <br />
             <div className="btn-signin">
-              <button align="center" type="submit" onClick={SignIn}>
+              <button align="center" type="submit">
                 {t("--signin-btn")}
               </button>
             </div>
           </div>
-        </div>
+        </form>
       )}
     </>
   );
