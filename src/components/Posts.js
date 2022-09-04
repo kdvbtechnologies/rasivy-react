@@ -42,6 +42,7 @@ export default function Posts() {
           {online ? (
             <>
               <div className="post">{post.desc}</div>
+              <h6>{posts.userId}</h6>
             </>
           ) : (
             <>
