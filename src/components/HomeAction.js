@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 //import Posts from "./Posts";
 import Login from "./Login";
 import Signup from "./Signup";
-import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../feature/posts.slice";
 import { useState, useEffect } from "react";
@@ -14,7 +13,6 @@ import axios from "axios";
 export default function HomeAction() {
   //const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
-  const { t } = useTranslation();
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
@@ -58,16 +56,8 @@ export default function HomeAction() {
         <br />
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
-            {online ? (
-              <>
-                <div className="post">{post.desc}</div>
-                <h6>{post.userId}</h6>
-              </>
-            ) : (
-              <>
-                <h1>{t("--check-internet")}</h1>
-              </>
-            )}
+            <div className="post">{post.desc}</div>
+            <h6>{post.userId}</h6>
           </div>
         ))}
       </div>
