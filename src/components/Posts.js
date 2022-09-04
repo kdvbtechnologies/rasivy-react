@@ -14,7 +14,7 @@ export default function Posts() {
   async function MyPosts() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => dispatch(setPosts(res.data)));
+      .then((res) => dispatch(setPosts(res.data.posts)));
   }
   MyPosts();
 
@@ -41,7 +41,7 @@ export default function Posts() {
         <div className="posts" key={post.id}>
           {online ? (
             <>
-              <div className="post">{post.posts.desc}</div>
+              <div className="post">{post.desc}</div>
             </>
           ) : (
             <>
