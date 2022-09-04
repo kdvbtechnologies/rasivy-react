@@ -1,13 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-//import { useState } from "react";
+import { useState } from "react";
 //import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addPicture, setPicturesData } from "../feature/pictures.slice";
-import { setPosts } from "../feature/posts.slice";
-import { useState, useEffect } from "react";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -21,35 +19,6 @@ export default function ProfileAction() {
 
   const dispatch = useDispatch();
   const users = useSelector((state) => state.pictures.pictures);
-
-  const [online, setOnline] = useState(navigator.onLine);
-  const posts = useSelector((state) => state.posts.posts);
-
-  //getAllPost
-  async function MyPosts() {
-    await axios
-      .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => dispatch(setPosts(res.data)));
-  }
-  MyPosts();
-
-  // online
-  useEffect(() => {
-    //update network status
-    function handleStatusChange() {
-      setOnline(navigator.onLine);
-    }
-    //Listen to the online status
-    window.addEventListener("online", handleStatusChange);
-    //Listen to the offline status
-    window.addEventListener("offline", handleStatusChange);
-    //Ici c'est pour nettoyer apres l'effet, pour ameliorer les performances
-    return () => {
-      window.removeEventListener("online", handleStatusChange);
-      window.removeEventListener("offline", handleStatusChange);
-    };
-  }, [online]);
-  //console.log(online);
 
   async function MyPost() {
     await axios
@@ -116,21 +85,7 @@ export default function ProfileAction() {
             </button>
           </div>
         </div>
-        {posts?.map((post) => (
-          <div className="posts" key={post.id}>
-            <div className="post">{post.desc}</div>
-            {/*online ? (
-              <>
-                <div className="post">{post.desc}</div>
-                <h6>{post.userId}</h6>
-              </>
-            ) : (
-              <>
-                <h1>{t("--check-internet")}</h1>
-              </>
-            )*/}
-          </div>
-        ))}
+
         {users?.map((user) => (
           <li key={user.id}>
             <h2>{user.username}</h2>
