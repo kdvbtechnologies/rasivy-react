@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setLogin } from "../feature/login.slice";
 
 export default function Login() {
@@ -13,6 +13,7 @@ export default function Login() {
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
   const dispatch = useDispatch();
+  const login = useSelector((state) => state.login.login);
 
   //SignIn
   const SignIn = async (e) => {
@@ -36,6 +37,7 @@ export default function Login() {
       }
     });
   };
+  console.log(login);
 
   return (
     <>
