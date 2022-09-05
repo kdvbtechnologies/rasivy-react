@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setLogin } from "../feature/login.slice";
+//import { useDispatch, useSelector } from "react-redux";
+//import { useDispatch } from "react-redux";
+//import { setLogin } from "../feature/login.slice";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -12,8 +13,8 @@ export default function Login() {
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
   const getUsername = "Sarah Labelle";
-  const dispatch = useDispatch();
-  const login = useSelector((state) => state.login.login);
+  //const dispatch = useDispatch();
+  //const login = useSelector((state) => state.login.login);
 
   //SignIn
   const SignIn = async (e) => {
@@ -26,18 +27,16 @@ export default function Login() {
         password: passwordd,
       },
     }).then((res) => {
-      console.log(res);
-      dispatch(setLogin(res));
-      if (!res) {
-        const tokenStore = res.data.token;
-        localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
-        setAfterLogin(`${t("--signin-success")}`);
-        localStorage.removeItem("https://jamelfase.com/user-email");
-        localStorage.setItem("https://jamelfase.com/username", getUsername);
-      }
+      console.log(res.data);
+      //dispatch(setLogin(res));
+      const tokenStore = res.data.token;
+      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+      setAfterLogin(`${t("--signin-success")}`);
+      localStorage.removeItem("https://jamelfase.com/user-email");
+      localStorage.setItem("https://jamelfase.com/username", getUsername);
     });
   };
-  console.log(login);
+  //console.log(login);
 
   return (
     <>
