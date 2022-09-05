@@ -12,7 +12,7 @@ export default function Login() {
   const [afterLogin, setAfterLogin] = useState("");
   const getEmail = localStorage.getItem("https://jamelfase.com/user-email");
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
-  const getUsername = "Sarah Labelle";
+  //const getUsername = "Sarah Labelle";
   //const dispatch = useDispatch();
   //const login = useSelector((state) => state.login.login);
 
@@ -30,10 +30,15 @@ export default function Login() {
       console.log(res.data);
       //dispatch(setLogin(res));
       const tokenStore = res.data.token;
+      const emailStore = res.data.email;
+      const idStore = res.data.id;
+      const usernameStore = res.data.username;
       localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+      localStorage.setItem("https://jamelfase.com/user-email-json", emailStore);
+      localStorage.setItem("https://jamelfase.com/user-id", idStore);
+      localStorage.setItem("https://jamelfase.com/username", usernameStore);
       setAfterLogin(`${t("--signin-success")}`);
       localStorage.removeItem("https://jamelfase.com/user-email");
-      localStorage.setItem("https://jamelfase.com/username", getUsername);
     });
   };
   //console.log(login);
