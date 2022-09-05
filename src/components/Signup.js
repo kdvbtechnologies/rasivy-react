@@ -10,7 +10,6 @@ export default function Signup() {
   const [errors, setErrors] = useState("");
 
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
-  const getToken = localStorage.getItem("https://jamelfase.com/user-token");
 
   //Signup
   const Signup = async (e) => {
@@ -44,44 +43,40 @@ export default function Signup() {
         </>
       ) : (
         <>
-          {!getToken && (
-            <>
-              <form className="signup-form">
-                <h1>{t("--signup")}</h1>
-                <div className="inputs">
-                  <input
-                    type="text"
-                    placeholder={t("--username")}
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </div>
-                <div className="inputs">
-                  <input
-                    type="email"
-                    placeholder={t("--email")}
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="inputs">
-                  <input
-                    type="password"
-                    placeholder={t("--password")}
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                <br />
-                <button type="submit" onClick={Signup}>
-                  {t("--signup-btn")}
-                </button>
-              </form>
-            </>
-          )}
+          <form className="signup-form">
+            <h1>{t("--signup")}</h1>
+            <div className="inputs">
+              <input
+                type="text"
+                placeholder={t("--username")}
+                name="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div className="inputs">
+              <input
+                type="email"
+                placeholder={t("--email")}
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="inputs">
+              <input
+                type="password"
+                placeholder={t("--password")}
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <br />
+            <button type="submit" onClick={Signup}>
+              {t("--signup-btn")}
+            </button>
+          </form>
         </>
       )}
     </>

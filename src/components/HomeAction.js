@@ -16,6 +16,9 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
+  const [token] = useState(
+    localStorage.getItem("https://jamelfase.com/user-token") === "false"
+  );
 
   //getAllPost
   async function MyPosts() {
@@ -50,7 +53,7 @@ export default function HomeAction() {
       </Helmet>
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
-        <Signup />
+        {!token && <Signup />}
         <Login />
         <br />
         <br />
