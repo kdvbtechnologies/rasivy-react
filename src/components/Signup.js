@@ -44,7 +44,7 @@ export default function Signup() {
         </>
       ) : (
         <>
-          {!getToken && (
+          {getToken && (
             <>
               <form className="signup-form">
                 <h1>{t("--signup")}</h1>
