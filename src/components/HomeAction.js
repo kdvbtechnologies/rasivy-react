@@ -55,7 +55,7 @@ export default function HomeAction() {
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <div className="post">{post.desc}</div>
-            <h6>{post.userId}</h6>
+            <h2>{post.username}</h2>
           </div>
         ))}
       </div>
