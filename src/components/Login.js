@@ -45,7 +45,7 @@ export default function Login() {
       localStorage.setItem("https://jamelfase.com/user-id", idStore);
       localStorage.setItem("https://jamelfase.com/username", usernameStore);
       setAfterLogin(`${t("--signin-success")}`);
-      setAfterLoginn("hello, welcome to Rinabel Group");
+      setAfterLoginn("");
       localStorage.removeItem("https://jamelfase.com/user-email");
     });
   };
