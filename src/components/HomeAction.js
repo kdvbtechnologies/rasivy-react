@@ -17,7 +17,7 @@ export default function HomeAction() {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
   const [token] = useState(
-    localStorage.getItem("https://jamelfase.com/user-token") === "false"
+    localStorage.getItem("https://jamelfase.com/user-token") === "true"
   );
 
   //getAllPost
