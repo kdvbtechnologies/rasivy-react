@@ -9,7 +9,8 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
 
-  //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
+  const getToken = localStorage.getItem("https://jamelfase.com/user-token");
+  const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
 
   //Signup
   const Signup = async (e) => {
@@ -37,7 +38,7 @@ export default function Signup() {
 
   return (
     <>
-      {errors ? (
+      {getUserId || getToken ? (
         <>
           <h2 style={{ color: "blue" }}>{errors}</h2>
         </>
