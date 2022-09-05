@@ -9,7 +9,9 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
 
-  const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
+  const getUserIdSignup = localStorage.getItem(
+    "https://jamelfase.com/user-id-signup"
+  );
   const getToken = localStorage.getItem("https://jamelfase.com/user-token");
 
   //Signup
@@ -31,14 +33,14 @@ export default function Signup() {
         setErrors(`${t("--signup-success")}`);
         //console.log(errors);
       }
-      localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
+      localStorage.setItem("https://jamelfase.com/user-id-signup", userIdStore);
       localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
     });
   };
 
   return (
     <>
-      {getUserId ? (
+      {getUserIdSignup ? (
         <>
           <h2 style={{ color: "blue" }}>{errors}</h2>
         </>
