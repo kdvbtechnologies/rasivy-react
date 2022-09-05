@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 //import axios from "axios";
 //import Posts from "./Posts";
 import Login from "./Login";
-import Signup from "./Signup";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../feature/posts.slice";
 import { useState, useEffect } from "react";
@@ -16,7 +15,6 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
-  const token = localStorage.getItem("https://jamelfase.com/user-token");
 
   //getAllPost
   async function MyPosts() {
@@ -51,7 +49,6 @@ export default function HomeAction() {
       </Helmet>
 
       <div id="home" className={`${dark ? "dark" : "light"}`}>
-        {!token && <Signup />}
         <Login />
         <br />
         <br />
