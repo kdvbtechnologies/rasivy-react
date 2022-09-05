@@ -26,12 +26,14 @@ export default function Login() {
       },
     }).then((res) => {
       console.log(res);
-      dispatch(setLogin(res.data));
-      const tokenStore = res.data.token;
-      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
-      setAfterLogin(`${t("--signin-success")}`);
-      localStorage.removeItem("https://jamelfase.com/user-email");
-      localStorage.setItem("https://jamelfase.com/username", getUsername);
+      dispatch(setLogin(res));
+      if (res) {
+        const tokenStore = res.data.token;
+        localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+        setAfterLogin(`${t("--signin-success")}`);
+        localStorage.removeItem("https://jamelfase.com/user-email");
+        localStorage.setItem("https://jamelfase.com/username", getUsername);
+      }
     });
   };
 
