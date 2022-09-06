@@ -9,7 +9,6 @@ import { setPosts } from "../feature/posts.slice";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import ProfileClickNav from "./ProfileClickNav";
 
 export default function HomeAction() {
   //const { t } = useTranslation();
@@ -63,7 +62,6 @@ export default function HomeAction() {
             <div className="post">{post.desc}</div>
           </div>
         ))}
-        <ProfileClickNav posts={posts} />
       </div>
     </>
   );
