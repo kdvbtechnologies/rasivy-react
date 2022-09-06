@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../feature/posts.slice";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 export default function HomeAction() {
   //const { t } = useTranslation();
@@ -52,6 +53,11 @@ export default function HomeAction() {
         <Login />
         <br />
         <br />
+        <div>
+          <NavLink className="navlink" to="/ProfileClick">
+            <li>My profile Click</li>
+          </NavLink>
+        </div>
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <h5>{post.username}</h5>
