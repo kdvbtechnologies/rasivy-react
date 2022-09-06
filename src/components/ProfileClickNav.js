@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ProfileClickNav() {
+export default function ProfileClickNav({ posts }) {
   const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const navigate = useNavigate();
@@ -16,8 +16,12 @@ export default function ProfileClickNav() {
       <div id="menu-navigation" className={`${dark ? "dark" : "light"}`}>
         <div className="back-btn">
           <button onClick={() => navigate(-1)}>{t("--return")}</button>
-          <h1>Profil de Zacharie</h1>
         </div>
+        {posts?.map((post) => (
+          <div className="posts" key={post.id}>
+            <h5>{post.username}</h5>
+          </div>
+        ))}
       </div>
     </>
   );
