@@ -43,6 +43,11 @@ export default function HomeAction() {
   }, [online]);
   //console.log(online);
 
+  // profile
+  function ProfileClick() {
+    console.log;
+  }
+
   return (
     <>
       <Helmet>
@@ -56,7 +61,11 @@ export default function HomeAction() {
 
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
-            <NavLink className="navlink" to="/ProfileClick">
+            <NavLink
+              onClick={localStorage.setItem("click", post.userId)}
+              className="navlink"
+              to="/ProfileClick"
+            >
               <h5>{post.username}</h5>
             </NavLink>
             <div className="post">{post.desc}</div>
