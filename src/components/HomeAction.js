@@ -16,6 +16,7 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
+  //const [postss, setPostss] = useState("");
 
   //getAllPost
   async function MyPosts() {
@@ -43,9 +44,9 @@ export default function HomeAction() {
   }, [online]);
   //console.log(online);
 
-  /* profile
+  /*profile
   function ProfileClick() {
-    console.log;
+    localStorage.setItem("click", post.userId)
   }*/
 
   return (
@@ -61,11 +62,7 @@ export default function HomeAction() {
 
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
-            <NavLink
-              onChange={localStorage.setItem("click", post.userId)}
-              className="navlink"
-              to="/ProfileClick"
-            >
+            <NavLink className="navlink-profile-click" to="/ProfileClick">
               <h5>{post.username}</h5>
             </NavLink>
             <div className="post">{post.desc}</div>

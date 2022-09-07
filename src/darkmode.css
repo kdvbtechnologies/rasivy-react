@@ -333,6 +333,10 @@ input[type="password"], input[type="email"] {
 	align-items: center;
   }
 
+  .navlink-profile-click {
+	text-decoration: none;
+  }
+
 
   /* friends - PostAction.js */
 
