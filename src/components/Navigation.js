@@ -41,7 +41,7 @@ export default function Navigation() {
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="6vmin"
+                  width="4vmin"
                   height="auto"
                   className="svg-navbar-icon"
                   x="0"
@@ -62,7 +62,7 @@ export default function Navigation() {
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="6vmin"
+                  width="4vmin"
                   height="auto"
                   className="svg-navbar-icon"
                   x="0"
@@ -79,7 +79,7 @@ export default function Navigation() {
             <NavLink className="navlink" to="/P/Post">
               <li>
                 <svg
-                  width="6vmin"
+                  width="4vmin"
                   height="auto"
                   className="svg-navbar-icon"
                   viewBox="0 0 20 20"
@@ -93,7 +93,7 @@ export default function Navigation() {
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="6vmin"
+                  width="4vmin"
                   height="auto"
                   className="svg-navbar-icon"
                   x="0"
@@ -111,7 +111,7 @@ export default function Navigation() {
             <NavLink className="navlink" to="/P/Menu">
               <li>
                 <svg
-                  width="6vmin"
+                  width="4vmin"
                   height="auto"
                   className="svg-navbar-icon"
                   viewBox="0 0 20 20"
