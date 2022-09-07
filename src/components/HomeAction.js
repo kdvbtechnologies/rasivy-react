@@ -43,10 +43,10 @@ export default function HomeAction() {
   }, [online]);
   //console.log(online);
 
-  // profile
+  /* profile
   function ProfileClick() {
     console.log;
-  }
+  }*/
 
   return (
     <>
