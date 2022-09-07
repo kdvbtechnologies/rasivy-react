@@ -20,7 +20,7 @@ export default function HomeAction() {
   //getAllPost
   async function MyPosts() {
     await axios
-      .get("https://api-adoony.herokuapp.com/api/post")
+      .post("https://api-adoony.herokuapp.com/api/post")
       .then((res) => dispatch(setPosts(res.data)));
   }
   MyPosts();
