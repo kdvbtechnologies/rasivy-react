@@ -62,7 +62,7 @@ export default function HomeAction() {
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <NavLink
-              onClick={localStorage.setItem("click", post.userId)}
+              onChange={localStorage.setItem("click", post.userId)}
               className="navlink"
               to="/ProfileClick"
             >
