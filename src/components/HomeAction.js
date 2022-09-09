@@ -64,7 +64,7 @@ export default function HomeAction() {
           <div className="posts" key={post.id}>
             <NavLink className="navlink-profile-click" to="/ProfileClick">
               <div className="p">
-                <p>i</p>
+                <p>.</p>
               </div>
               <h5>{post.username}</h5>
             </NavLink>
