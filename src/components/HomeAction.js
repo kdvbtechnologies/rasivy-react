@@ -63,6 +63,9 @@ export default function HomeAction() {
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <NavLink className="navlink-profile-click" to="/ProfileClick">
+              <div className="p">
+                <p>i</p>
+              </div>
               <h5>{post.username}</h5>
             </NavLink>
             <div className="post">{post.desc}</div>
