@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 //import { useDispatch, useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addPicture } from "../feature/pictures.slice";
+import Signupp from "./Signupp";
+import Loginn from "./Loginn";
 
 export default function ProfileAction() {
   const { t } = useTranslation();
@@ -68,6 +70,7 @@ export default function ProfileAction() {
           </>
         )}
         <h1>{t("--post")}</h1>
+        <hr />
         <br />
         <div>
           <div>
@@ -84,20 +87,25 @@ export default function ProfileAction() {
             {t("--post-btn")}
           </button>
         </div>
+        <br />
+        <br />
+        <br />
         <div>
           <button
-            style={{ background: signup ? "red" : "blue" }}
+            style={{ color: signup ? "red" : "blue" }}
             onClick={() => setSignup(true)}
           >
             Login
           </button>
           <button
-            style={{ background: signup ? "blue" : "red" }}
+            style={{ color: signup ? "blue" : "red" }}
             onClick={() => setSignup(false)}
           >
             Signup
           </button>
         </div>
+        <br />
+        {signup ? <Signupp /> : <Loginn />}
       </div>
     </>
   );
