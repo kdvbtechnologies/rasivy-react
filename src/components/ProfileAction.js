@@ -103,7 +103,6 @@ export default function ProfileAction() {
             Signup
           </button>
         </div>
-        <br />
         {signup ? <Loginn /> : <Signupp /> }
       </div>
     </>
