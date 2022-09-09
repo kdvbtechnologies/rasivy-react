@@ -338,7 +338,7 @@ input[type="password"], input[type="email"] {
 	color: black;
   }
 
-  .navlink-profile-click p {
+  .navlink-profile-click .p {
 	color: red;
 	border-radius: 50%;
   }
