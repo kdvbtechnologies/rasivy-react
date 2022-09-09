@@ -84,8 +84,18 @@ export default function ProfileAction() {
           </button>
         </div>
         <div>
-          <button onClick={() => setSignup(true)}>Login</button>
-          <button onClick={() => setSignup(false)}>Signup</button>
+          <button
+            style={{ background: signup ? "red" : "blue" }}
+            onClick={() => setSignup(true)}
+          >
+            Login
+          </button>
+          <button
+            style={{ background: signup ? "blue" : "red" }}
+            onClick={() => setSignup(false)}
+          >
+            Signup
+          </button>
         </div>
       </div>
     </>
