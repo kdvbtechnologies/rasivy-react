@@ -340,6 +340,7 @@ input[type="password"], input[type="email"] {
 
   .navlink-profile-click .p {
 	border: 3px solid rgb(45, 161, 60);
+	border-radius: 50%;
   }
 
 
