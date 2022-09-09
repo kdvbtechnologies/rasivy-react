@@ -69,8 +69,9 @@ export default function ProfileAction() {
             <h1>{t("--profil")}</h1>
           </>
         )}
+		<hr />
         <h1>{t("--post")}</h1>
-        <hr />
+        
         <br />
         <div>
           <div>
