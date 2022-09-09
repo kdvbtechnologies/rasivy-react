@@ -338,19 +338,6 @@ input[type="password"], input[type="email"] {
 	color: black;
   }
 
-  .navlink-profile-click .p {
-	background-color: transparent; /* Green */
-	border: none;
-	color: rgb(226, 226, 226);
-	padding: 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-  }
-
   .navlink-profile-click .p p {
 	border-radius: 50%;
   }
