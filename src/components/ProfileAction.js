@@ -71,7 +71,6 @@ export default function ProfileAction() {
         )}
 		<hr />
         <h1>{t("--post")}</h1>
-        
         <br />
         <div>
           <div>
@@ -88,7 +87,6 @@ export default function ProfileAction() {
             {t("--post-btn")}
           </button>
         </div>
-        <br />
         <br />
         <br />
         <div>
