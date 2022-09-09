@@ -338,6 +338,10 @@ input[type="password"], input[type="email"] {
 	color: black;
   }
 
+  .navlink-profile-click p {
+	color: red;
+  }
+
 
   /* friends - PostAction.js */
 
