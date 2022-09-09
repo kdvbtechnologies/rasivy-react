@@ -339,10 +339,11 @@ input[type="password"], input[type="email"] {
   }
 
   .navlink-profile-click .p p{
+	background-color: #059819;
 	height: 80px;
-  width: 80px;
-  border-radius: 100px;
-  cursor: pointer;
+	width: 80px;
+	border-radius: 100px;
+	cursor: pointer;
   }
 
 
