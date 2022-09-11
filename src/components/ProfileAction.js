@@ -91,13 +91,13 @@ export default function ProfileAction() {
         <br />
         <div>
           <button
-            style={{ color: signup ? "blue" : "black" , cursor: pointer }}
+            style={{ color: signup ? "blue" : "black" }}
             onClick={() => setSignup(true)}
           >
             Login
           </button>
           <button
-            style={{ color: signup ? "black" : "blue" , cursor: pointer }}
+            style={{ color: signup ? "black" : "blue" }}
             onClick={() => setSignup(false)}
           >
             Signup
