@@ -16,11 +16,9 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
-  const postUsername = useSelector((state) => state.posts.posts.username);
   //const [postss, setPostss] = useState("");
 
   console.log(posts);
-  console.log(postUsername);
   //getAllPost
   async function MyPosts() {
     await axios
