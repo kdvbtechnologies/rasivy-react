@@ -19,6 +19,7 @@ export default function HomeAction() {
   const postUsername = useSelector((state) => state.posts.posts.username);
   //const [postss, setPostss] = useState("");
 
+  console.log(posts);
   console.log(postUsername);
   //getAllPost
   async function MyPosts() {
