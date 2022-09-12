@@ -18,7 +18,6 @@ export default function HomeAction() {
   const posts = useSelector((state) => state.posts.posts);
   //const [postss, setPostss] = useState("");
 
-  console.log(posts);
   //getAllPost
   async function MyPosts() {
     await axios
