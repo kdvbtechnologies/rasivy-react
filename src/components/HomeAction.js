@@ -16,8 +16,10 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
+  const postUsername = useSelector((state) => state.posts.posts.username);
   //const [postss, setPostss] = useState("");
 
+  console.log(postUsername);
   //getAllPost
   async function MyPosts() {
     await axios
@@ -63,6 +65,7 @@ export default function HomeAction() {
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <NavLink className="navlink-profile-click" to="/ProfileClick">
+              <p>{post.username[0]}</p>
               <h5>{post.username}</h5>
             </NavLink>
             <div className="post">{post.desc}</div>
