@@ -18,6 +18,8 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signup, setSignup] = useState("");
+  const [signupError, setSignupError] = useState("");
+  const [loginError, setLoginError] = useState("");
   //const getUserId = localStorage.getItem("https://jamelfase.com/user-id");
   //const getUsername = "Sarah Labelle";
   //const dispatch = useDispatch();
@@ -33,21 +35,30 @@ export default function Login() {
         email: emaill || getEmail,
         password: passwordd,
       },
-    }).then((res) => {
-      console.log(res.data);
-      //dispatch(setLogin(res));
-      const tokenStore = res.data.token;
-      const emailStore = res.data.email;
-      const idStore = res.data.id;
-      const usernameStore = res.data.username;
-      localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
-      localStorage.setItem("https://jamelfase.com/user-email-json", emailStore);
-      localStorage.setItem("https://jamelfase.com/user-id", idStore);
-      localStorage.setItem("https://jamelfase.com/username", usernameStore);
-      setAfterLogin(`${t("--signin-success")}`);
-      setAfterLoginn("");
-      localStorage.removeItem("https://jamelfase.com/user-email");
-    });
+    })
+      .then((res) => {
+        console.log(res.data);
+        //dispatch(setLogin(res));
+        const tokenStore = res.data.token;
+        const emailStore = res.data.email;
+        const idStore = res.data.id;
+        const usernameStore = res.data.username;
+        localStorage.setItem("https://jamelfase.com/user-token", tokenStore);
+        localStorage.setItem(
+          "https://jamelfase.com/user-email-json",
+          emailStore
+        );
+        localStorage.setItem("https://jamelfase.com/user-id", idStore);
+        localStorage.setItem("https://jamelfase.com/username", usernameStore);
+        setAfterLogin(`${t("--signin-success")}`);
+        setAfterLoginn("");
+        localStorage.removeItem("https://jamelfase.com/user-email");
+      })
+      .catch((err) => {
+        if (err) {
+          setLoginError("Impossible de se connecter, veuillez reéssayer !");
+        }
+      });
   };
   //console.log(login);
 
@@ -62,21 +73,31 @@ export default function Login() {
         email,
         password,
       },
-    }).then((res) => {
-      const userIdStore = res.data.message;
-      const userEmailStore = res.data.email;
-      //console.log(res.data);
-      if (userIdStore) {
-        setSignup(`${t("--signup-success")}`);
-        //console.log(errors);
-      }
-      localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
-      localStorage.setItem("https://jamelfase.com/user-email", userEmailStore);
-    });
+    })
+      .then((res) => {
+        const userIdStore = res.data.message;
+        const userEmailStore = res.data.email;
+        //console.log(res.data);
+        if (userIdStore) {
+          setSignup(`${t("--signup-success")}`);
+          //console.log(errors);
+        }
+        localStorage.setItem("https://jamelfase.com/user-id", userIdStore);
+        localStorage.setItem(
+          "https://jamelfase.com/user-email",
+          userEmailStore
+        );
+      })
+      .catch((err) => {
+        if (err) {
+          setSignupError("Impossible de s'inscrire, veuillez reéssayer !");
+        }
+      });
   };
 
   return (
     <>
+      <h2 align="center">{signupError}</h2>
       {getToken ? (
         <>
           <h2 style={{ color: "blue" }}>{signup || afterLoginn}</h2>
@@ -120,6 +141,7 @@ export default function Login() {
         </>
       )}
 
+      <h2 align="center">{loginError}</h2>
       {getToken ? (
         <>
           <h1>{afterLogin}</h1>

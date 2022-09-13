@@ -1,4 +1,4 @@
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 //import { useState } from "react";
 //import axios from "axios";
@@ -11,7 +11,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 
 export default function HomeAction() {
-  //const { t } = useTranslation();
+  const { t } = useTranslation();
   const [dark] = useState(localStorage.getItem("dark-mode") === "true");
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
@@ -26,12 +26,11 @@ export default function HomeAction() {
       .then((res) => dispatch(setPosts(res.data)))
       .catch((err) => {
         if (err) {
-          setError(
-            "Impossible de charger les publications, veuillez actualiser la page !"
-          );
+          setError(`${t("--Unable-to-load-posts")}`);
         }
       });
   }
+
   MyPosts();
 
   // online
