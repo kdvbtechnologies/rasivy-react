@@ -39,6 +39,8 @@ i18n
           "--logout-action": "Do you want to log out of jamelfase ?",
           "--Unable-to-load-posts":
             "Unable to load posts, please refresh the page !",
+          "--unable-to-login": "Unable to Login, please try again !",
+          "--unable-to-signup": "Unable to Signup, please try again !",
         },
       },
 
@@ -73,6 +75,8 @@ i18n
           "--logout-action": "Deseja sair do jamelfase ?",
           "--Unable-to-load-posts":
             "Não foi possível carregar as postagens, atualize a página !",
+          "--unable-to-login": "Não foi possível conectar, tente novamente !",
+          "--unable-to-signup": "Não foi possível registrar, tente novamente !",
         },
       },
 
@@ -108,6 +112,10 @@ i18n
           "--logout-action": "Voulez-vous vous déconnecter de jamelfase ?",
           "--Unable-to-load-posts":
             "Impossible de charger les publications, veuillez actualiser la page !",
+          "--unable-to-login":
+            "Impossible de se connecter, veuillez reéssayer !",
+          "--unable-to-signup":
+            "Impossible de s'inscrire, veuillez reéssayer !",
         },
       },
     },

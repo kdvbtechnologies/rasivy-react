@@ -56,7 +56,7 @@ export default function Login() {
       })
       .catch((err) => {
         if (err) {
-          setLoginError("Impossible de se connecter, veuillez reéssayer !");
+          setLoginError(`${t("--unable-to-login")}`);
         }
       });
   };
@@ -90,7 +90,7 @@ export default function Login() {
       })
       .catch((err) => {
         if (err) {
-          setSignupError("Impossible de s'inscrire, veuillez reéssayer !");
+          setSignupError(`${t("--unable-to-signup")}`);
         }
       });
   };
