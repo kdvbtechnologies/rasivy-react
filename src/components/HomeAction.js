@@ -66,7 +66,9 @@ export default function HomeAction() {
         <Login />
         <br />
         <br />
-        <h2 align="center">{error}</h2>
+        <h2 style={{ color: "red" }} align="center">
+          {error}
+        </h2>
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <NavLink className="navlink-profile-click" to="/ProfileClick">

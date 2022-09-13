@@ -97,7 +97,9 @@ export default function Login() {
 
   return (
     <>
-      <h2 align="center">{signupError}</h2>
+      <h2 style={{ color: "red" }} align="center">
+        {signupError}
+      </h2>
       {getToken ? (
         <>
           <h2 style={{ color: "blue" }}>{signup || afterLoginn}</h2>
@@ -141,7 +143,9 @@ export default function Login() {
         </>
       )}
 
-      <h2 align="center">{loginError}</h2>
+      <h2 style={{ color: "red" }} align="center">
+        {loginError}
+      </h2>
       {getToken ? (
         <>
           <h1>{afterLogin}</h1>
