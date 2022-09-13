@@ -77,11 +77,11 @@ export default function ProfileAction() {
           </>
         )}
         <hr />
-        <h2>{t("--post")}</h2>
-        <br />
         <h2 style={{ color: "red" }} align="center">
           {addPostError}
         </h2>
+        <h2>{t("--post")}</h2>
+        <br />
         <div>
           <div>
             <input
