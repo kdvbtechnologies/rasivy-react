@@ -41,6 +41,7 @@ i18n
             "Unable to load posts, please refresh the page !",
           "--unable-to-login": "Unable to Login, please try again !",
           "--unable-to-signup": "Unable to Signup, please try again !",
+          "--unable-to-add-post": "An error has occurred, please try again !",
         },
       },
 
@@ -77,6 +78,7 @@ i18n
             "Não foi possível carregar as postagens, atualize a página !",
           "--unable-to-login": "Não foi possível conectar, tente novamente !",
           "--unable-to-signup": "Não foi possível registrar, tente novamente !",
+          "--unable-to-add-post": "Ocorreu um erro, tente novamente !",
         },
       },
 
@@ -116,6 +118,8 @@ i18n
             "Impossible de se connecter, veuillez reéssayer !",
           "--unable-to-signup":
             "Impossible de s'inscrire, veuillez reéssayer !",
+          "--unable-to-add-post":
+            "Une erreur est survenue, veuillez reéssayer !",
         },
       },
     },

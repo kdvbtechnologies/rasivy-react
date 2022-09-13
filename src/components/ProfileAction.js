@@ -19,6 +19,7 @@ export default function ProfileAction() {
   const user = localStorage.getItem("https://jamelfase.com/user-id");
   const navigate = useNavigate();
   const [signup, setSignup] = useState(true);
+  const [addPostError, setAddPostError] = useState("");
 
   const dispatch = useDispatch();
   //const users = useSelector((state) => state.pictures.pictures);
@@ -44,10 +45,16 @@ export default function ProfileAction() {
         "Content-Type": "application/json",
       },
       withCredentials: true,
-    }).then((res) => {
-      dispatch(addPicture(res));
-      //window.location = "/";
-    });
+    })
+      .then((res) => {
+        dispatch(addPicture(res));
+        //window.location = "/";
+      })
+      .catch((err) => {
+        if (err) {
+          setAddPostError(`${t("--unable-to-add-post")}`);
+        }
+      });
   }
 
   return (
@@ -69,9 +76,12 @@ export default function ProfileAction() {
             <h1>{t("--profil")}</h1>
           </>
         )}
-		<hr />
-        <h1>{t("--post")}</h1>
+        <hr />
+        <h2>{t("--post")}</h2>
         <br />
+        <h2 style={{ color: "red" }} align="center">
+          {addPostError}
+        </h2>
         <div>
           <div>
             <input
@@ -103,7 +113,7 @@ export default function ProfileAction() {
             Signup
           </button>
         </div>
-        {signup ? <Loginn /> : <Signupp /> }
+        {signup ? <Loginn /> : <Signupp />}
       </div>
     </>
   );
