@@ -16,13 +16,21 @@ export default function HomeAction() {
   const [online, setOnline] = useState(navigator.onLine);
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
+  const [error, setError] = useState("");
   //const [postss, setPostss] = useState("");
 
   //getAllPost
   async function MyPosts() {
     await axios
       .get("https://api-adoony.herokuapp.com/api/post")
-      .then((res) => dispatch(setPosts(res.data)));
+      .then((res) => dispatch(setPosts(res.data)))
+      .catch((err) => {
+        if (err) {
+          setError(
+            "Impossible de charger les publications, veuillez actualiser la page !"
+          );
+        }
+      });
   }
   MyPosts();
 
@@ -59,7 +67,7 @@ export default function HomeAction() {
         <Login />
         <br />
         <br />
-
+        <h2 align="center">{error}</h2>
         {posts?.map((post) => (
           <div className="posts" key={post.id}>
             <NavLink className="navlink-profile-click" to="/ProfileClick">
