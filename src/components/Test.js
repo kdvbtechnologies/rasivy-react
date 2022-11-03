@@ -2,11 +2,12 @@ import { useEffect } from "react";
 
 export default function Test() {
   function installButton() {
-    console.log("toutes les contitions sont reunies");
+    console.log("download");
+    prompt.prompt();
   }
 
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", installButton);
+    window.addEventListener("click", installButton);
   }, []);
 
   return (
