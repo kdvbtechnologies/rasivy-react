@@ -1,25 +1,35 @@
-//import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Test() {
-  let deferredPrompt;
-  window.addEventListener("beforeinstallprompt", (e) => {
-    deferredPrompt = e;
-  });
-  console.log(deferredPrompt);
-
-  /*
-  function installButton(e) {
-    console.log("fenetre download");
-    deferredPrompt = e;
-  }
+  const [supportsPWA, setSupportsPWA] = useState(false);
+  const [promptInstall, setPromptInstall] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", installButton);
+    async function handler(e) {
+      e.preventDefault();
+      console.log("we are being triggered");
+      setSupportsPWA(true);
+      setPromptInstall(e);
+    }
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => window.removeEventListener("transitionend", handler);
   }, []);
-*/
+
+  function onClick(evt) {
+    evt.preventDefault();
+    if (!promptInstall) {
+      return;
+    }
+    promptInstall.prompt();
+  }
+  if (!supportsPWA) {
+    return null;
+  }
+
   return (
     <>
-      <button>Install</button>
+      <button onClick={onClick}>Install</button>
     </>
   );
 }
