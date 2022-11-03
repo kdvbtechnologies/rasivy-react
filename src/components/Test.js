@@ -2,16 +2,16 @@ import { useEffect } from "react";
 
 export default function Test() {
   function installButton() {
-    console.log("one");
+    console.log("toutes les contitions sont reunies");
   }
 
   useEffect(() => {
-    window.addEventListener("click", installButton);
+    window.addEventListener("beforeinstallprompt", installButton);
   }, []);
 
   return (
     <>
-      <button onClick={installButton}>Install</button>
+      <button>Install</button>
     </>
   );
 }
