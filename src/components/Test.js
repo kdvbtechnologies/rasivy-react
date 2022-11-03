@@ -16,13 +16,14 @@ export default function Test() {
     return () => window.removeEventListener("transitionend", handler);
   }, []);
 
-  function onClick(evt) {
-    evt.preventDefault();
+  function onClick(e) {
+    e.preventDefault();
     if (!promptInstall) {
       return;
     }
     promptInstall.prompt();
   }
+
   if (!supportsPWA) {
     return null;
   }
