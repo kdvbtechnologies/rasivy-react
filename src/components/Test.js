@@ -24,9 +24,12 @@ export default function Test() {
     promptInstall.prompt();
   }
 
+/*
   if (!supportsPWA) {
     return null;
   }
+*/
+console.log(supportsPWA);
 
   return (
     <>
