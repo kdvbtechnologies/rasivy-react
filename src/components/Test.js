@@ -1,10 +1,11 @@
 //import { useEffect } from "react";
 
 export default function Test() {
+  let deferredPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
-    const deferredPrompt = e;
-    console.log(deferredPrompt);
+    deferredPrompt = e;
   });
+  console.log(deferredPrompt);
 
   /*
   function installButton(e) {
