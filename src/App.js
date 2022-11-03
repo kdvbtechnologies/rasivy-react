@@ -11,6 +11,7 @@ import Profile from "./Pages/Profile";
 import Settings from "./Pages/Settings";
 import Logout from "./Pages/Logout";
 import ProfileClick from "./Pages/ProfileClick";
+import Test from "./components/Test";
 
 export default function App() {
   return (
