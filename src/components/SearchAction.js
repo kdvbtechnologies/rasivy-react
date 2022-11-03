@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
+import Test from "./Test";
 //import cookie from "js-cookie";
 //import axios from "axios";
 
@@ -80,6 +81,7 @@ export default function SearchAction() {
           <button>Search</button>
         </div>
       </div>
+      <Test />
     </>
   );
 }
