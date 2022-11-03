@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 export default function Test() {
-  //const [supportsPWA, setSupportsPWA] = useState(false);
+  const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
 
   useEffect(() => {
     async function handler(e) {
       e.preventDefault();
       console.log("we are being triggered");
-      //setSupportsPWA(true);
+      setSupportsPWA(true);
       setPromptInstall(e);
     }
     window.addEventListener("beforeinstallprompt", handler);
@@ -24,11 +24,9 @@ export default function Test() {
     promptInstall.prompt();
   }
 
-/*
   if (!supportsPWA) {
     return null;
   }
-*/
 
   return (
     <>
